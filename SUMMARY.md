@@ -32,7 +32,6 @@
     * Firebase
     * Local Veri Tutma
 * Mobile UI Tasarım
-* Geliştirme Ortamı
 * Google Play Store Deployment
 * AppStore Deployment
 * Exponent JS
