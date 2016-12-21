@@ -1,3 +1,8 @@
-# My Awesome Book
+# React Native Türkçe
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+Hızlı, cross platform, mobile uygulama yazmak için React Native
+
+
+
+
+
