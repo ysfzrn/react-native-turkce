@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Babel, ES2015, ES6, ES7 Nedir ?](babel-es2015-es6-es7-nedir-.md)
-    * Arrow Fonksiyonu
+    * [Arrow Fonksiyonu](arrow-fonksiyonu.md)
     * Async
 * [React JS Nedir ?](chapter1.md)
     * [JSX Nedir ?](jsx-nedir-.md)
@@ -31,6 +31,7 @@
         * Heroku Deployment
     * Firebase
     * Local Veri Tutma
+* Kendi Native Componentini Yaz
 * Mobile UI Tasarım
 * Google Play Store Deployment
 * AppStore Deployment
