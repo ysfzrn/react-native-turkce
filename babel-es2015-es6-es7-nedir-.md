@@ -18,7 +18,7 @@ Eski tarz JavaScript yazmıyoruz demiştik. Kullandığımız yeni tarzımızın
 
 \(Spoiler: Zamanla ECMAScript'in sentaksını görüp nasıl ya, bu fonksiyon mu şimdi gibisinden tepkiler vereceğinize eminim ve bu çok normal ama alıştıkça seviyorsunuz. Eğer sevmezseniz, kasmayın ve siz eski tarzda yazmaya devam edin. Zaten mevcut uygulamaların production hallerinin, hep eski tarzda yazıldığı söyleniyor. Babel kullanmalısınız ama ES6 ve ES7 ile yazmak zorunda değilsiniz. \)
 
-Gelecek bölümde, **ES6, ES7** ve **JSX ** in daha da içine girelim.  
+Gelecek bölümde, **ES6, ES7** ve **JSX ** in daha da içine girelim.
 
 
 
@@ -36,5 +36,5 @@ Gelecek bölümde, **ES6, ES7** ve **JSX ** in daha da içine girelim.
 
 
 
-Babel'in kendi plugin dökümantasyonu: [https://babeljs.io/docs/plugins/\#transform-plugins](https://babeljs.io/docs/plugins/#transform-plugins) 
+Babel'in kendi plugin dökümantasyonu: [https://babeljs.io/docs/plugins/\#transform-plugins](https://babeljs.io/docs/plugins/#transform-plugins)
 
