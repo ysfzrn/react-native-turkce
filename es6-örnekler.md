@@ -1,8 +1,8 @@
-### ES6 Örnekler 
+# ES6 Örnekler
 
-\(**UYARI:** Bu sayfaya JS Bin'den kodu gömülmüştür. Kullandığınız browser açmıyorsa lütfen adres çubuğundan **load unsafe script **seçeneğini seçiniz. \) 
+\(**UYARI:** Bu sayfaya JS Bin'den kod gömülmüştür. Kullandığınız browser açmıyorsa lütfen adres çubuğundan **load unsafe script **seçeneğini seçiniz. \)
 
-**Block Scoped Declaration**
+### **Block Scoped Declaration**
 
 ```javascript
 const a = 1
@@ -25,11 +25,31 @@ if (true) {
 
 **let ** ifadesi değişkenler için uygundur.  Yukarıdaki örnekte üst blokta tanımlanmış **const a **ifadesine bir kere atama yapılmış daha sonra başka bir değişiklik yapılınca buna izin vermemiş. ama farklı bir blokta tekrar atama yapılabilmiştir.   ** **
 
+### **Arrow Function \(=&gt;\)**
 
+Arrow ya da fat arrow function denilen \(=&gt;\) bu fonksiyon başta kafa karıştırıcı olabilir. Normal bir fonksiyondan temel anlamda 2 tane farkı vardır.
 
-**Arrow Function \(=&gt;\)**
+Birincisi, ES5 ile yazılmış bir JavaScript kodunda, bir fonksiyonu bind etmek için kullandığımız, `this` kodu eğer biz arrow function kullanıyorsak gerekli değildir. Çünkü arrow function için fonksiyonun kendi bloğu ya da dış blok aynı kapsamdadır.Bir örnekle bakalım;
+
+```javascript
+//ES5:
+ function merhaba(){
+    this.msj = 'Merhaba';
+    this.selamver = function(adi){
+       return this.msj + adi
+    }.bind(this)
+ }
+
+ //ES6:
+ function merhaba(){
+    this.msj = 'Merhaba';
+    this.selamver = (adi) =>{
+       return this.msj + adi
+    }
+ }
+```
+
+ES5 ile yazılan örnekte kisi 
 
 [source code](http://jsbin.com/docuhuy/2/edit?js,console)
-
-
 
