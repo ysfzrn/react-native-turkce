@@ -27,9 +27,9 @@ if (true) {
 
 ### **Arrow Function \(=&gt;\)**
 
-Arrow ya da fat arrow function denilen \(=&gt;\) bu fonksiyon başta kafa karıştırıcı olabilir. Normal bir fonksiyondan temel anlamda 2 tane farkı vardır.
+Arrow ya da fat arrow function denilen \(=&gt;\) bu fonksiyon başta kafa karıştırıcı olabilir. Normal bir fonksiyondan temel anlamda bir kaç tane farkı vardır.
 
-Birincisi, ES5 ile yazılmış bir JavaScript kodunda, bir fonksiyonu bind etmek için kullandığımız, `this` kodu eğer biz arrow function kullanıyorsak gerekli değildir. Çünkü arrow function için fonksiyonun kendi bloğu ya da dış blok aynı kapsamdadır.Bir örnekle bakalım;
+Birincisi; ES5 ile yazılmış bir JavaScript kodunda, bir fonksiyonu bind etmek için kullandığımız, `this` kodu eğer biz arrow function kullanıyorsak gerekli değildir. Çünkü arrow function için fonksiyonun kendi bloğu ya da dış blok aynı kapsamdadır.Bir örnekle bakalım;
 
 ```javascript
 //ES5:
@@ -49,9 +49,9 @@ Birincisi, ES5 ile yazılmış bir JavaScript kodunda, bir fonksiyonu bind etmek
  }
 ```
 
-ES5 ile yazılan örnekte selam ver fonksiyonu kendi üst bloğundaki msj'a ulaşmak için bind edilmesi gerekirken;
+ES5 ile yazılan örnekte `selamver` fonksiyonu kendi üst bloğundaki `msj` 'a ulaşmak için `bind` edilmesi gerekirken; ES6 ile yazılan halinde, arrow function kullanılmış ve `bind` edilmesine gerek kalmadan `msj` değişkenine ulaşılmıştır
 
-ES6 ile yazılan halinde, arrow function kullanılmış ve bind edilmesine gerek kalmadan msj değişkenine ulaşılmıştır
+İkincisi; 
 
 [source code](http://jsbin.com/docuhuy/2/edit?js,console)
 
