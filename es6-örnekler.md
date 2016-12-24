@@ -23,5 +23,7 @@ if (true) {
 
 **let ** ifadesi değişkenler için uygundur.  Yukarıdaki örnekte üst blokta tanımlanmış **const a **ifadesine bir kere atama yapılmış daha sonra başka bir değişiklik yapılınca buna izin vermemiş. ama farklı bir blokta tekrar atama yapılabilmiştir.   ** **
 
+Naber
+
 [source code](http://jsbin.com/xezun/1/embed?js,console)
 
