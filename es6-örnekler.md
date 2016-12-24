@@ -70,5 +70,6 @@ halfES6(8);  //4
 halfES6_2(10); //5
 ```
 
+[sourcecode]('http://jsbin.com/docuhuy/2/edit?html,js,console')
 
 
