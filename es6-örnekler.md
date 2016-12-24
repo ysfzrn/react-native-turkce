@@ -1,4 +1,4 @@
-# ES6 Örnekler
+# ES6 ve ES7 Örnekler
 
 \(**UYARI:** Bu sayfaya JS Bin'den kod gömülmüştür. Kullandığınız browser açmıyorsa lütfen adres çubuğundan **load unsafe script **seçeneğini seçiniz. \)
 
@@ -144,8 +144,10 @@ class Cat extends Animal {
 
 ```javascript
 const arabalar = ['mercedes','fiat','bmw']
-const yeniArabalar = [...arabalar]
+const yeniArabalar = [...arabalar]  //arabalar dizisinin elemalarıyla, yeni bir dizi oluşturduk
 //arabalar = yeniarabalar
+
+const birSuruAraba = [...arabalar, 'kartal','tempra','lada'] //arabalar dizisiyle birlikte, yeni arabalar ekleyip birSuruAraba dizisini oluşturduk
 
 const meyveler = [
    {adi:'muz', renk:'sarı'},
@@ -156,7 +158,15 @@ console.log(yenimeyveler[0].adi) //muz
 
 yeniMeyveler[0].adi = 'ayva'
 console.log(yenimeyveler[0].adi) //ayva
- 
+```
+
+### Static Class
+
+```javascript
+class Cat {
+  static legCount = 4
+}
+console.log(Cat.legCount) // 4
 ```
 
 

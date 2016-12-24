@@ -3,8 +3,7 @@
 * [Introduction](README.md)
 * [Yararlandığım Kaynaklar](yararlandığım-kaynaklar.md)
 * [Babel, ES2015, ES6, ES7 Nedir ?](babel-es2015-es6-es7-nedir-.md)
-    * [ES6 Örnekler](es6-örnekler.md)
-    * Async
+    * [ES6 ve ES7 Örnekler](es6-örnekler.md)
 * [React JS Nedir ?](chapter1.md)
     * [JSX Nedir ?](jsx-nedir-.md)
     * Props Mantığı
