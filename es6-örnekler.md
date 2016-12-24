@@ -1,4 +1,6 @@
-### ES6 Örnekler
+### ES6 Örnekler 
+
+\(**UYARI:** Bu sayfaya JS Bin'den kodu gömülmüştür. Kullandığınız browser açmıyorsa lütfen adres çubuğundan **load unsafe script **seçeneğini seçiniz. \) 
 
 **Block Scoped Declaration**
 
@@ -23,9 +25,11 @@ if (true) {
 
 **let ** ifadesi değişkenler için uygundur.  Yukarıdaki örnekte üst blokta tanımlanmış **const a **ifadesine bir kere atama yapılmış daha sonra başka bir değişiklik yapılınca buna izin vermemiş. ama farklı bir blokta tekrar atama yapılabilmiştir.   ** **
 
+
+
+**Arrow Function \(=&gt;\)**
+
 [source code](http://jsbin.com/docuhuy/2/edit?js,console)
-
-
 
 
 
