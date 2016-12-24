@@ -70,6 +70,13 @@ halfES6(8);  //4
 halfES6_2(10); //5
 ```
 
-[sourcecode]('http://jsbin.com/docuhuy/2/edit?html,js,console')
+&lt;a class="jsbin-embed" href="http://jsbin.com/docuhuy/2/embed?live"&gt;JS Bin demo&lt;/a&gt;&lt;script src="http://static.jsbin.com/js/embed.js"&gt;&lt;/script&gt;
+
+<div class="intrinsic-container">
+  <iframe src="//www.youtube.com/embed/KMYrIi_Mt8A" allowfullscreen></iframe>
+</div>
+
+
+
 
 

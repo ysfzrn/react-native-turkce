@@ -1,6 +1,7 @@
 {
     "plugins": [
         "jsbin",
-        "youtube"
+        "youtube",
+        "responsive-iframes"
     ]
 }
