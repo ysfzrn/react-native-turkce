@@ -49,7 +49,9 @@ Birincisi, ES5 ile yazılmış bir JavaScript kodunda, bir fonksiyonu bind etmek
  }
 ```
 
-ES5 ile yazılan örnekte kisi 
+ES5 ile yazılan örnekte selam ver fonksiyonu kendi üst bloğundaki msj'a ulaşmak için bind edilmesi gerekirken;
+
+ES6 ile yazılan halinde, arrow function kullanılmış ve bind edilmesine gerek kalmadan msj değişkenine ulaşılmıştır
 
 [source code](http://jsbin.com/docuhuy/2/edit?js,console)
 
