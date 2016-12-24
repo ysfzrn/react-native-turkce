@@ -72,3 +72,42 @@ halfES6_2(10); //5
 
 [http://jsbin.com/docuhuy/2/embed?live](http://jsbin.com/docuhuy/2/embed?live"&gt;JS)
 
+### Modules
+
+```javascript
+//Modülleri import etme işlemi
+
+//ES5;
+var ReactNative = require('react-native');
+
+//ES6;
+import ReactNative from 'react-native'
+```
+
+```javascript
+//Modülleri export etme işlemi
+
+//ES5;
+module.exports=(App)
+
+//ES6;
+export default App;
+export {View, Text, Image } ;
+```
+
+### Default Parametre
+
+```javascript
+const printAnimal = (animal = 'cat') => {
+  console.log(animal)
+}
+printAnimal() // cat
+printAnimal('dog') // dog
+```
+
+### Class
+
+ES5 ' de, `class` yaratmak için sdaece fonksiyon kullanabiliriz. `MyFunction.prototype` ile method atıyabiliriz. ES6, `class` için bize daha kolay bir sentaks veriyor.  
+
+
+
