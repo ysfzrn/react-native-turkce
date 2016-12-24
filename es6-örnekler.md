@@ -70,11 +70,6 @@ halfES6(8);  //4
 halfES6_2(10); //5
 ```
 
-&lt;a src="http://static.jsbin.com/js/embed.js"&gt;&lt;/script&gt;
-
-<div class="intrinsic-container">
-  <iframe src="//www.youtube.com/embed/KMYrIi_Mt8A" allowfullscreen></iframe>
-</div>
 
 
 
