@@ -107,5 +107,57 @@ printAnimal('dog') // dog
 
 ### Class
 
-ES5 ' de, `class` yaratmak için sadece fonksiyon kullanabiliriz. `MyFunction.prototype` ile method atıyabiliriz. ES6, `class` için bize daha kolay bir sentaks veriyor.
+ES5 ' de, `class` yaratmak için sadece fonksiyon kullanabiliriz ve`MyFunction.prototype` ile method atıyabiliriz. ES6, `class` için bize daha kolay bir sentaks veriyor.
+
+ES6 bize javascript ile  nesneye yönelik programlama imkânı veriyor. `inheritance` yapmak, `static` ve `instance` fonksiyonlar oluşturmak mümkün. Bide bir tane özel bir fonksiyonumuz var; `constructor` . `constructor`, bir class yaratıldığında otomatik olarak çağrılır.  Ayrıca `static` kodu ile de static class fonksiyonlar tanımlayabiliriz. inheritance için de kullandığımız keyword, `extends`
+
+```javascript
+class Animal {
+  constructor(name) {
+    this.name = name
+  }
+
+  static beProud() {
+    console.log('I AM AN ANIMAL')
+  }
+
+  printName() {
+    console.log(this.name)
+  }
+}
+
+const animal = new Animal('Cat')
+animal.printName() // Cat
+Animal.beProud() // I AM AN ANIMAL
+```
+
+```javascript
+class Cat extends Animal {
+      printName() {
+        super.printName()
+        console.log(`My name is ${this.name}`)  //ES6 concat işlemine dikkat ediniz `${}`
+      }
+    }
+```
+
+### Array Spread
+
+```javascript
+const arabalar = ['mercedes','fiat','bmw']
+const yeniArabalar = [...arabalar]
+//arabalar = yeniarabalar
+
+const meyveler = [
+   {adi:'muz', renk:'sarı'},
+   {adi:'elma', renk:'kırmızı'}, 
+]
+const yeniMeyveler = [...meyveler]
+console.log(yenimeyveler[0].adi) //muz
+
+yeniMeyveler[0].adi = 'ayva'
+console.log(yenimeyveler[0].adi) //ayva
+ 
+```
+
+
 
