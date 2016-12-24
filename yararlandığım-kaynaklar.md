@@ -15,7 +15,7 @@ Kendi dökümantasyonu için söyleyecek çok bir şey yok. React Native yazıyo
 
 #### React Native Express {#0a81}
 
-React Native öğrenmeye hızlı bir başlangıç yapmak istiyorsanız, oldukça faydalı bir kaynak. Benim de bu dökümanda, özellikle Babel ile ilgili örnekler için faydalandığım kaynak. 
+React Native öğrenmeye hızlı bir başlangıç yapmak istiyorsanız, oldukça faydalı bir kaynak. 
 
 #### StackOverFlow {#2f40}
 
