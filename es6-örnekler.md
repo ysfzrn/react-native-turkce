@@ -55,14 +55,14 @@ ES5 ile yazılan örnekte `selamver` fonksiyonu kendi üst bloğundaki `msj` 'a 
 
 ```javascript
 var half = function(x){
-  console.log(x/2);
+  return x/2
 }
 
 var halfES6 = (x)=>{
-  console.log(x/2);
+  return x/2
 }
 
-var halfES6_2 = (x)=> console.log(x/2);
+var halfES6_2 = ( x => x/2 )
 
 
 half(6);     //3
