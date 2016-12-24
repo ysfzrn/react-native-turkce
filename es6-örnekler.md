@@ -107,7 +107,5 @@ printAnimal('dog') // dog
 
 ### Class
 
-ES5 ' de, `class` yaratmak için sdaece fonksiyon kullanabiliriz. `MyFunction.prototype` ile method atıyabiliriz. ES6, `class` için bize daha kolay bir sentaks veriyor.  
-
-
+ES5 ' de, `class` yaratmak için sadece fonksiyon kullanabiliriz. `MyFunction.prototype` ile method atıyabiliriz. ES6, `class` için bize daha kolay bir sentaks veriyor.
 
