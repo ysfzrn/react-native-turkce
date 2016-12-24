@@ -1,7 +1,6 @@
 {
     "plugins": [
         "jsbin",
-        "youtube",
-        "exercises"
+        "youtube"
     ]
 }
