@@ -169,5 +169,40 @@ class Cat {
 console.log(Cat.legCount) // 4
 ```
 
+### Object Spread
+
+ES6 daki Array Spread gibi,  Object Spread \( `...` \) objenin elemanlarını dağıtır. ES7 ile gelen bir özelliktir.
+
+{...originalObj} bu bizim ilk objemiz olsun. Biz bunu Object Spread ile kopyasını alıp, istediğimiz bir özelliğini değiştirerek yeni objemizi yaratalım.
+
+```
+class Cat {
+```
+
+```javascript
+const cat = {
+  name: 'Luna',
+  friends: {best: 'Ellie'},
+  legs: 4,
+}
+const strangeCat = {...cat, legs: 6} 
+//cat objesinin kopyası şeklinde yeni bir obje yaratacakken, legs özelliğini yeni objemizde değiştirdik
+```
+
+### Async ve Await
+
+Asenkron iş planına sahip uygulamamızı hem daha mantıklı hem de daha okunur kılan async , ES7 ile gelmiştir. await de onunla beraber kullanılır. async fonksiyonu, asenkron operasyon tamamlanana veya hata alana kadar bir sonraki kod bloğunun çalışmasını engeller.
+
+```javascript
+const taskRunner = async () => {
+  try {
+    const firstValue = await asyncTask1()
+    const secondValue = await asyncTask2(firstValue)
+  } catch(e) {
+    console.error("Something went wrong! Caught exception:", e)
+  }
+}
+```
+
 
 
