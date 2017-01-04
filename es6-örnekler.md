@@ -51,7 +51,7 @@ Birincisi; ES5 ile yazılmış bir JavaScript kodunda, bir fonksiyonu bind etmek
 
 ES5 ile yazılan örnekte `selamver` fonksiyonu kendi üst bloğundaki `msj` 'a ulaşmak için `bind` edilmesi gerekirken; ES6 ile yazılan halinde, arrow function kullanılmış ve `bind` edilmesine gerek kalmadan `msj` değişkenine ulaşılmıştır
 
-İkincisi; Eğer fonksiyonunuz bir parametre alıyorsa süslü parantez `{}` ve `return` kullanmanıza ihtiyaç yok. Kullanırsanız da bir şey değişmez. Örneğin;
+İkincisi; Eğer fonksiyonunuz bir parametre alıyorsa, süslü parantez `{}` ve `return` kullanmanıza gerek yok. Kullanırsanız da bir şey değişmez. Örneğin;
 
 ```javascript
 var half = function(x){
@@ -72,7 +72,7 @@ halfES6_2(10); //5
 
 [http://jsbin.com/docuhuy/2/embed?live](http://jsbin.com/docuhuy/2/embed?live"&gt;JS)
 
-### Modules
+### Modüller
 
 ```javascript
 //Modülleri import etme işlemi
