@@ -191,7 +191,7 @@ const strangeCat = {...cat, legs: 6}
 
 ### Async ve Await
 
-Asenkron iş planına sahip uygulamamızı hem daha mantıklı hem de daha okunur kılan async , ES7 ile gelmiştir. await de onunla beraber kullanılır. async fonksiyonu, asenkron operasyon tamamlanana veya hata alana kadar bir sonraki kod bloğunun çalışmasını engeller.
+Asenkron iş planına sahip uygulamamızı hem daha mantıklı hem de daha okunur kılan async , ES7 ile gelmiştir. `await` de onunla beraber kullanılır. async fonksiyonu, asenkron operasyon tamamlanana veya hata alana kadar bir sonraki kod bloğunun çalışmasını engeller.
 
 ```javascript
 const taskRunner = async () => {
@@ -199,7 +199,7 @@ const taskRunner = async () => {
     const firstValue = await asyncTask1()
     const secondValue = await asyncTask2(firstValue)
   } catch(e) {
-    console.error("Something went wrong! Caught exception:", e)
+    console.error("Bir şeyler ters gitti sanki", e)
   }
 }
 ```
