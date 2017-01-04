@@ -135,7 +135,7 @@ Animal.beProud() // I AM AN ANIMAL
 class Cat extends Animal {
       printName() {
         super.printName()
-        console.log(`My name is ${this.name}`)  //ES6 concat işlemine dikkat ediniz `${}`
+        console.log(`My name is ${this.name}`)  //ES6'nın güzelliklerinden concat işlemine dikkat ediniz `${}`
       }
     }
 ```
