@@ -23,11 +23,11 @@ if (true) {
 
 **const **bildiğimiz "CONSTANT" kelimesinin kısaltması, sabit yani tanımlandığı blokta kendisine yalnızca bir kere atama yapılabilir
 
-**let ** ifadesi değişkenler için uygundur.  Yukarıdaki örnekte üst blokta tanımlanmış **const a **ifadesine bir kere atama yapılmış daha sonra başka bir değişiklik yapılınca buna izin vermemiş. ama farklı bir blokta tekrar atama yapılabilmiştir.   ** **
+**let ** ifadesi değişkenler için uygundur.  Yukarıdaki örnekte üst blokta tanımlanmış **const "a" **ifadesine bir kere atama yapılmış daha sonra başka bir değişiklik yapılınca buna izin verilmemiş. ama farklı bir blokta tekrar atama yapılabilmiştir.   ** **
 
 ### **Arrow Function \(=&gt;\)**
 
-Arrow ya da fat arrow function denilen \(=&gt;\) bu fonksiyon başta kafa karıştırıcı olabilir. Normal bir fonksiyondan temel anlamda bir kaç tane farkı vardır.
+Arrow\(=&gt;\) ya da fat arrow function  \(==&gt;\) denilen bu fonksiyon başta kafa karıştırıcı olabilir. Normal bir fonksiyondan temel anlamda bir kaç tane farkı vardır.
 
 Birincisi; ES5 ile yazılmış bir JavaScript kodunda, bir fonksiyonu bind etmek için kullandığımız, `this` kodu eğer biz arrow function kullanıyorsak gerekli değildir. Çünkü arrow function için fonksiyonun kendi bloğu ya da dış blok aynı kapsamdadır.Bir örnekle bakalım;
 
