@@ -2,4 +2,4 @@
 
 
 
-[source code](http://jsbin.com/xezun/1/embed?js,console)
+[source code](http://jsbin.com/mebesol/edit?html,js,output)
