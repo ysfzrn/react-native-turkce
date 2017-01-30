@@ -6,8 +6,8 @@
   * [ES6 ve ES7 Örnekler](es6-örnekler.md)
 * [React JS Nedir ?](chapter1.md)
   * [JSX Nedir ?](jsx-nedir-.md)
-  * Props Mantığı
-  * State Mantığı
+  * [Props Mantığı](props-mantigi.md)
+  * [State Mantığı](state-mantigi.md)
   * LifeCycle Methodlar
 * [React Native Nedir ?](react-native-nedir-.md)
 * Installation
@@ -15,10 +15,10 @@
     * [npm Nedir ?](npm-nedir.md)
   * [Window Installation](window-installation.md)
   * [Macintosh Installation](macintosh-installation.md)
-* React Native Başlangıç
+* [React Native Başlangıç](react-native-baslangic.md)
 * [Style ve FlexBox](flexbox-style.md)
 * [Temel Component'ler](temel-componentler.md)
-* Component API'lar
+* [Component API'lar](component-api'lar.md)
 * [Popüler Third Party Component'ler](popüler-component-kütüphaneleri.md)
 * State Yönetimi
   * Redux
@@ -26,12 +26,12 @@
 * React Native - Animasyon
 * Veri Yönetimi
   * REST API Entegrasyonu
-    * Node JS Örnek
+    * [Node JS Örnek](node-js-ornek.md)
     * Meteor JS Örnek
-    * Heroku Deployment
+    * [Heroku Deployment](heroku-deployment.md)
   * Firebase
   * Local Veri Tutma
-* Kendi Native Componentini Yaz
+* [Kendi Native Componentini Yaz](kendi-native-componentini-yaz.md)
 * Mobile UI Tasarım
 * Google Play Store Deployment
 * AppStore Deployment
