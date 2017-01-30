@@ -8,9 +8,11 @@ Yukarıdaki basit bir React componenti. React ve ReactDOM kütüphanelerini scri
 
 Sonra Javascript derleyicimizi, JSX seçtik \( ES6/Babel de seçebilirdik \)
 
-Burada dikkatinizi çeken bir şey oldu mu ? Biz javascript kodumuza, HTML kodu yazdık :\) 
+Burada dikkatinizi çeken bir şey oldu mu ? Biz javascript kodumuza, HTML kodu yazdık :\)
 
 Önceden bahsettiğimiz, React ın bize sunduğu lego tasarlar gibi uygulama geliştirmek tam olarak böyle, parça parça HTML kodlarını component olarak yazıp hepsini belli bir hiyerarşiyle bir araya getirmek.
 
 [source code](http://jsbin.com/mebesol/4/edit?,js,output)
+
+Aslında en yukarıda yaptığımız JavaScript içine HTLM kod yazarak yaptığımız şey tam olarak React.createElement yerine HTML tagleri kullanmak. Bana sorarsanız HTML yazmak daha kolay. 
 
