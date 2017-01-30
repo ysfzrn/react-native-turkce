@@ -1,4 +1,6 @@
 # React JS Nedir ?
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+Öncelikle bir framework değildir. Sadece uygulamanızın ön yüz kısmını ilgilendiren bir View, UI Kütüphanesidir. 
+
+React ' ın bize sunduğu şey bir kod taslağı ve bu taslağını kullanarak parça parça componentler oluşturup, lego oynar gibi uygulamamızı tasarlamak. 
 
