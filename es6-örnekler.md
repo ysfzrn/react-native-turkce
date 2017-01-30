@@ -1,6 +1,6 @@
 # ES6 ve ES7 Örnekler
 
-\(**UYARI:** Bu sayfaya JS Bin'den kod gömülmüştür. Kullandığınız browser açmıyorsa lütfen adres çubuğundan **load unsafe script **seçeneğini seçiniz. \)
+
 
 ### **Block Scoped Declaration**
 
