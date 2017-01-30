@@ -1,6 +1,6 @@
 # JSX Nedir ?
 
-\(Bu sayfada jsbin den gömülü kod kullanılmaktadır. Eğer kodu göremiyorsanız, browserınızdali **load unsafe script **seçeneğini seçmelisiniz\)
+\(Bu sayfada jsbin den gömülü kod kullanılmaktadır. Eğer kodu göremiyorsanız, browserınızda adres çubuğundaki **load unsafe script **seçeneğini seçmelisiniz\)
 
 [source code](http://jsbin.com/mebesol/2/edit?,js,output)
 
@@ -14,5 +14,5 @@ Burada dikkatinizi çeken bir şey oldu mu ? Biz javascript kodumuza, HTML kodu 
 
 [source code](http://jsbin.com/mebesol/4/edit?,js,output)
 
-Aslında en yukarıda yaptığımız JavaScript içine HTLM kod yazarak yaptığımız şey tam olarak React.createElement yerine HTML tagleri kullanmak. Bana sorarsanız HTML yazmak daha kolay. 
+Aslında en yukarıda yaptığımız JavaScript içine HTLM kod yazarak yaptığımız şey tam olarak React.createElement yerine HTML tagleri kullanmak. Bana sorarsanız HTML yazmak daha kolay.
 
