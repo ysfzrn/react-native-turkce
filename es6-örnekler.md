@@ -239,5 +239,19 @@ console' a yazan değerler
 */
 ```
 
+Tüm generator işlemlerini sırayla yapılmasını istiyorsanız
+
+```javascript
+for (let word of greeter){
+      console.log(word);
+}
+
+console' a yazılan
+"start"
+"You called greet"
+"hello"
+"world"
+```
+
 
 
