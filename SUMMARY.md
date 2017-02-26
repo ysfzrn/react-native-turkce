@@ -11,7 +11,7 @@
   * LifeCycle Methodlar
 * [React Native Nedir ?](react-native-nedir-.md)
 * Installation
-  * Geliştirme Ortamı
+  * [Geliştirme Ortamı](gelistirme-ortami.md)
     * [npm Nedir ?](npm-nedir.md)
   * [Window Installation](window-installation.md)
   * [Macintosh Installation](macintosh-installation.md)
