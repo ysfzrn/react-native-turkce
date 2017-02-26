@@ -1,7 +1,5 @@
 # ES6 ve ES7 Örnekler
 
-
-
 ### **Block Scoped Declaration**
 
 ```javascript
@@ -202,6 +200,57 @@ const taskRunner = async () => {
     console.error("Bir şeyler ters gitti sanki", e)
   }
 }
+```
+
+### ES6 Generator
+
+Aşamalı, iterative biçimde ilerlemesi gereken bir fonksiyona ihtiyaç duyuyorsanız ES6 generator ler tam size göre.
+
+```javascript
+function* greet(){
+   console.log('You called greet');
+   yield "hello";
+   yield "world";
+}
+
+console.log('start')
+let greeter =  greet();
+let next = greeter.next();
+console.log(next)
+let done = greeter.next();
+console.log(done)
+
+console' a yazan değerler
+/*
+"start"
+"You called greet"
+[object Object] {
+  done: false,
+  value: "hello"
+}
+[object Object] {
+  done: false,
+  value: "world"
+}
+[object Object] {
+  done: true,
+  value: undefined
+}
+*/
+```
+
+Tüm generator işlemlerini sırayla yapılmasını istiyorsanız
+
+```javascript
+for (let word of greeter){
+      console.log(word);
+}
+
+console' a yazılan
+"start"
+"You called greet"
+"hello"
+"world"
 ```
 
 
