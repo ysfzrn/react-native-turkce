@@ -50,7 +50,9 @@ Burada üç tane stateless \(bazıları **dumb component **diyor\) component, **
 
 Bir tane de state almaya müsait statefull \( bazıları **container component **diyor \) component, **MyComponent** var.
 
-Burada herhangi bir asenkron state değişimi sorunu ile karşılaşmamanız adına en dıştaki, hiyerarşide en üstte bulunan componentte state i belirleyip değiştirip, alttaki componentlere dağıtmanız. Aksi takdirde aşağıdan yukarı bir state yönetimi Redux gibi state yönetimini kullanmadan neredeyse imkansız. 
+Burada herhangi bir asenkron state değişimi sorunu ile karşılaşmamanız adına en dıştaki, hiyerarşide en üstte bulunan componentte state i belirleyip değiştirip, alttaki componentlere dağıtmanız. Aksi takdirde aşağıdan yukarı bir state yönetimi Redux gibi state yönetimini kullanmadan neredeyse imkansız.
+
+Şimdi bir tane state tanımlayalım ve bir timer yardımıyla saniyede bir arttıralım. Alttaki componentlere dağıtalım her componentte kendi içinde state'i nasıl değerlendirir, nasıl şekil alır o componentin davranışına kalsın.
 
 
 
