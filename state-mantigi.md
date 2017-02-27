@@ -54,5 +54,9 @@ Burada herhangi bir asenkron state değişimi sorunu ile karşılaşmamanız ad�
 
 Şimdi bir tane state tanımlayalım ve bir timer yardımıyla saniyede bir arttıralım. Alttaki componentlere dağıtalım her componentte kendi içinde state'i nasıl değerlendirir, nasıl şekil alır o componentin davranışına kalsın.
 
+[source code](http://jsbin.com/mebesol/15/edit?js,output)
 
+Burada Container componentimizdeki state timer yardımıyla count state'ini her bir saniyede bir arttırıp state'i altındaki componentlere props olarak veriyor. **FlexItem **componenti de çift sayılarda kendi count propsunu , tekli sayılarda da children propsunu göstererek bir davranış sergiliyor. 
+
+Sonuç olarak burada bizim yaptığımız ** **yukarıdan aşağıya doğru senkron bir state yönetimini göstermekti. Çok karmaşık işlemlerde state yönetimini daha önceden de söylediğimiz gibi Redux ile React Native yazarak yapmaya çalışacağız.  Ama eğer siz state yönetiminde herhangi bir sorun yaşamıyorsanız Redux ya da Mobx gibi state yönetim sistemine ihtiyacınız yok. 
 
