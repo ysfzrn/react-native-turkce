@@ -16,5 +16,5 @@ const MyButton = (props)=>{
 
 # ![](/assets/Desktop22.png)
 
-Yukarıda gördüğünüz bir önyüz. Ve bu UI **Top, Left, Right **ve** Bottom **componentleriyle  4 e bölünmüş durumda.
+Yukarıda gördüğünüz bir önyüz. Ve bu UI **Top, Left, Right **ve** Bottom **componentleriyle  4 e bölünmüş durumda. Bu componentler aldıkları propslar ile kendi içlerinde bağımsız şekil alabiliyorlar. Peki farklı componentler arasındaki olası ilişkiyi nasıl sağlayacağız ? İşte bu anda **state mantığı** devreye giriyor 
 
