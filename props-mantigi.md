@@ -10,11 +10,9 @@ const MyButton = (props)=>{
 }
 ```
 
- Üzerindeki yazıyı dışarıdan props aracılığıyla alan basit bir button componenti. Bu componenti tekrar tekrar farklı props'lar ile kullanabiliriz.  Aşağıdaki örneği inceleyebilirsiniz.
+Üzerindeki yazıyı dışarıdan props aracılığıyla alan basit bir button componenti. Bu componenti tekrar tekrar farklı props'lar ile kullanabiliriz.  Aşağıdaki örneği inceleyebilirsiniz.
 
 [source code](http://jsbin.com/mebesol/9/edit?html,js,output)
-
-
 
 # ![](/assets/Desktop22.png)
 
