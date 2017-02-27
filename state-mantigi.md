@@ -43,10 +43,12 @@ class LinkButton extends React.Component {
 
 ![](/assets/Desktop22.png)
 
-Bir önceki sayfadaki ekranımızı,  propslar yardımı ile jsbin de composition yaparak oluşturalım.
+Bir önceki sayfadaki ekranımızı,  propslar yardımı ile jsbin de composition yaparak oluşturalım.  
 [source code](http://jsbin.com/mebesol/12/edit?js,output)
 
+Burada üç tane stateless \(bazıları **dumb component **diyor\) component **FlexItem, FlexColumn, FlexRow** var.
 
+Bir tane de state almaya müsait statefull \( bazıları **container component **diyor \) component **MyComponent** var.
 
 
 
