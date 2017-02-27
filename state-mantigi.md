@@ -19,8 +19,6 @@ class MyComponent extends React.Component {
 
 State ne yapar;  statefull component denilen, kendi içinde state tanımı mevcut olan componentin her state'i değiştiğinde componentin **render** fonksiyonunun tekrardan çalışmasını sağlar.
 
-
-
 **Stateless Component Örneği**
 
 ```js
@@ -30,8 +28,6 @@ const MyComponent = (props)=>{
   )
 } 
 ```
-
-
 
 **Statefull Component Örneği**
 
@@ -47,5 +43,10 @@ class LinkButton extends React.Component {
 
 ![](/assets/Desktop22.png)
 
-Bir önceki sayfadaki ekranımızı propslar yardımı ile jsbin de composition yaparak oluşturalım.
+Bir önceki sayfadaki ekranımızı,  propslar yardımı ile jsbin de composition yaparak oluşturalım.
+[source code](http://jsbin.com/mebesol/12/edit?js,output)
+
+
+
+
 
