@@ -52,13 +52,19 @@ Component mount edilmeden hemen önce çağrılır. Dolayısıyla render\(\) met
 
 ##### **render\( \)**
 
-`React.Component` class'ı için olmazsa olmaz, çağrılmazsa sorun çıkaracak tek method **`render( )`**
+`React.Component` class'ı için olmazsa olmaz, çağrılmazsa sorun çıkaracak tek method `render( )`
 
-Bu method çağrılınca karşılığında size, ona verdiğiniz props ve state'e göre  **&lt;div /&gt;, &lt;img /&gt;** gibi sizin tanımladığınız bir DOM componentinin görünümü verecektir.
+Bu method çağrılınca karşılığında size, ona verdiğiniz props ve state'e göre  &lt;div /&gt;, &lt;img /&gt; gibi sizin tanımladığınız bir DOM componentinin görünümü verecektir.
 
-**render\( \)** methodunda, eğer siz hiçbir şey mount etmek istemiyorsanız  dönüş değeri olarak,  **null**, **false **değerlerini de verebilirsiniz. Higher order component'lerde veya koşullu bir componenti render ederken çok işinize yarayacaktır.
+`render( )` methodunda, eğer siz hiçbir şey mount etmek istemiyorsanız  dönüş değeri olarak,  **null**, **false **değerlerini de verebilirsiniz. Higher order component'lerde veya koşullu bir componenti render ederken çok işinize yarayacaktır.
 
-**render\( \) **methodu **pure** olmalı. React ile uğraşırken bu cümleyi çok görürsünüz. state' e göre size dönüş üreten bir fonksiyon içinde state değiştirmek, sizi ve browser'ınızı sonsuz döngüye sokacaktır.
+`render( )` methodu **pure** olmalı. React ile uğraşırken bu cümleyi çok görürsünüz. state' e göre size dönüş üreten bir fonksiyon içinde state değiştirmek, sizi ve browser'ınızı sonsuz döngüye sokacaktır.
 
-**render\( \)** methodu DOM elementlerinin bir görüntüsünü, yani asıl tabiriyle virtual, sanal DOM size üretir. Eğer DOM yapısına direkt müdahele etmek istiyorsanız, render\( \) methodu yerine **componentDidMount\( \)** methodu kullanmanız önerilir.     ** **
+`render( )` methodu DOM elementlerinin bir görüntüsünü, yani asıl tabiriyle virtual, sanal DOM size üretir. Eğer DOM yapısına direkt müdahele etmek istiyorsanız, render\( \) methodu yerine **componentDidMount\( \)** methodu kullanmanız önerilir.     ** **
+
+##### componentDidMount\( \)
+
+Component mount edildiğinde apar topar çağrılan methodumuz. DOM'a etki eden bir şeyin tanımlanması gereken yer burası. Atıyorum **D3.js **gibi third party bir library kullanacaksanız, başlangıç değerlerini burada atayın. Bir API çağıracaksanız, bir şeyi fetch edecekseniz en müsait yer bu method.
+
+
 
