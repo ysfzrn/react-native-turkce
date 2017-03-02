@@ -31,8 +31,6 @@ Bir component DOM'dan çıkarılmak üzereyken çağrılan fonksiyondur.
 
 * componentWillMount
 
-
-
 **constructor\(\)**
 
 ```js
@@ -49,4 +47,8 @@ constructor methodu içinde componentin propslarını kullanmak isterseniz, `sup
 Başlangıç state'i tanımlamak ve bir fonksiyonu componente bind etmek için en uygun yer constructor. Bu iki tanımlamaya ihtiyacınız yoksa constructor methodunu tanımlamayabilirsiniz.
 
 **componentWillMount\(\)**
+
+Component mount edilmeden hemen önce çağrılır. Dolayısıyla render\(\) methodundan da önce çağrılır. Bu yüzden bu method içinde state değiştirip, render\(\) methodunu tekrardan çalıştırmamalıyız. Önerileni, bu methodu sadece server rendering yaparken kullanmamız. render\(\) 'dan önce çalışmasını istediğiniz bir fonksiyon varsa constructor\(\) buradan daha uygun bir yer
+
+
 
