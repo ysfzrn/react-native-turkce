@@ -66,5 +66,41 @@ Bu method çağrılınca karşılığında size, ona verdiğiniz props ve state'
 
 Component mount edildiğinde apar topar çağrılan methodumuz. DOM'a etki eden bir şeyin tanımlanması gereken yer burası. Atıyorum **D3.js **gibi third party bir library kullanacaksanız, başlangıç değerlerini burada atayın. Bir API çağıracaksanız, bir şeyi fetch edecekseniz en müsait yer bu method.
 
+##### componentWillReceiveProps\( nextProps \)
+
+Component yeni, değişmiş props'unu alıp mount edilmeden önce çağrılır. Eğer props'a göre state değiştirmeye ihtiyaç duyarsanız, aşağıda örnekteki gibi kullanabilirsiniz;
+
+```js
+componentWillReceiveProps( nextProps ){
+    if(this.props.open !== nextProps.open){
+        this.setState({ reset : true })
+    }
+}
+```
+
+React, bu methodu component yeni props almasa da çağırabilir, bunun bir garantisi yok. O yüzden nextProps ve this.props karşılaştırmasına göre işlem yapmanız avantajınıza olacaktır.
+
+React bu methodu başlangıçta çağırmaz. Sadece component mount edildikten sonraki süreçte update olursa bu method çalışır.
+
+##### shouldComponentUpdate\( nextProps, nextState \)
+
+Yeni props ve state alınıp, render edilmeden önce bu method çağrılır. React ' da herhangi bir state değişince otomatik olarak render methodu çalışır. Bu da aslında kendisiyle alakası olmayan state değişiminden, başka bir componentin etkilenmesi ve boşuna render edilip,  zaten hali hazırda olan aynı görseli oluşturması demek. Bu yüzden props veya state değişikliği, ilgili componentinizi etkilemiyorsa,  bu methodu kullanıp, ciddi bir performans kazanabilirsiniz. 
+
+```js
+shouldComponentUpdate( nextProps, nextState ){
+    if(nextState.open === this.state.open){   
+           return false    //"open" state i değişmediyse componenti tekrar render etme
+    }
+}
+```
+
+> shouldComponentUpdate false dönerse, componentWillUpdate\(\), render\(\) ve componentDidUpdate\(\) methodları çalışmaz
+
+
+
+##### componentWillUpdate\( nextProps, nextState \)
+
+Bu method, yeni props ve state alındığında, **render\(\)** dan önce çalışır. React bu methodu başlangıçta çağırmaz.  Bu method içinde state set edilmez. Bunun yerine önceden bahsettiğimiz **componentWillReceiveProps\(\) kullanılabilir**
+
 
 
