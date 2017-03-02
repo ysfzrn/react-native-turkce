@@ -54,11 +54,11 @@ Component mount edilmeden hemen önce çağrılır. Dolayısıyla render\(\) met
 
 React.Component class'ı için olmazsa olmaz, çağrılmazsa sorun çıkaracak tek method `render( )`
 
-Bu method çağrılınca karşılığında size, ona verdiğiniz props ve state'e &lt;div /&gt;, &lt;img /&gt; gibi sizin tanımladığınız bir DOM componenti görünümü verecek.
+Bu method çağrılınca karşılığında size, ona verdiğiniz props ve state'e göre  &lt;div /&gt;, &lt;img /&gt; gibi sizin tanımladığınız bir DOM componentinin görünümü verecektir.
 
-render\( \) methoduna, eğer siz hiçbir şey mount etmek istemiyorsanız  dönüş değeri olarak,  **null**, **false **değerlerini de verebilirsiniz. Higher order component'lerde veya koşullu bir componenti render ederken çok işinize yarayacaktır.
+render\( \) methodunda, eğer siz hiçbir şey mount etmek istemiyorsanız  dönüş değeri olarak,  **null**, **false **değerlerini de verebilirsiniz. Higher order component'lerde veya koşullu bir componenti render ederken çok işinize yarayacaktır.
 
-render\( \) methodu pure olmalı. React ile uğraşırken bu cümleyi çok görürsünüz. state' e göre size dönüş üreten bir fonksiyon içinde state değiştirmek sizi ve browser'ınızı sonsuz döngüye sokacaktır.
+render\( \) methodu pure olmalı. React ile uğraşırken bu cümleyi çok görürsünüz. state' e göre size dönüş üreten bir fonksiyon içinde state değiştirmek, sizi ve browser'ınızı sonsuz döngüye sokacaktır.
 
-render\( \) methodu DOM elementlerin bir görüntüsünü, yani asıl tabiriyle virtual, sanal DOM size üretir. Eğer DOM yapısına direkt müdahele etmek istiyorsanız, render\( \) methodu yerinde componentDidMount\( \) methodu kullanmanız önerilir.     ** ** 
+render\( \) methodu DOM elementlerinin bir görüntüsünü, yani asıl tabiriyle virtual, sanal DOM size üretir. Eğer DOM yapısına direkt müdahele etmek istiyorsanız, render\( \) methodu yerine componentDidMount\( \) methodu kullanmanız önerilir.     ** **
 
