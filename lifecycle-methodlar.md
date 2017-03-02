@@ -33,7 +33,7 @@ Bir component DOM'dan çıkarılmak üzereyken çağrılan fonksiyondur.
 
 
 
-**constructor\( \)**
+##### **constructor\( \)**
 
 ```js
  constructor(props) {
@@ -50,13 +50,13 @@ Başlangıç state'i tanımlamak ve bir fonksiyonu componente bind etmek için e
 
 
 
-**componentWillMount\( \)**
+##### **componentWillMount\( \)**
 
 Component mount edilmeden hemen önce çağrılır. Dolayısıyla render\(\) methodundan da önce çağrılır. Bu yüzden bu method içinde state değiştirip, render\(\) methodunu tekrardan çalıştırmamalıyız. Önerileni, bu methodu sadece server rendering yaparken kullanmamız. render\(\) 'dan önce çalışmasını istediğiniz bir fonksiyon varsa constructor\(\) buradan daha uygun bir yer
 
 
 
-**render\( \)**
+##### **render\( \)**
 
 React.Component class'ı için olmazsa olmaz, çağrılmazsa sorun çıkaracak tek method `render( )`
 
