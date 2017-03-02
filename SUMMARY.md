@@ -6,9 +6,9 @@
   * [ES6 ve ES7 Örnekler](es6-örnekler.md)
 * [React JS Nedir ?](chapter1.md)
   * [JSX Nedir ?](jsx-nedir-.md)
+  * [Lifecycle Methodlar](lifecycle-methodlar.md)
   * [Props Mantığı](props-mantigi.md)
   * [State Mantığı](state-mantigi.md)
-  * LifeCycle Methodlar
 * [React Native Nedir ?](react-native-nedir-.md)
 * Installation
   * [Geliştirme Ortamı](gelistirme-ortami.md)
