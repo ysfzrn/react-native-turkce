@@ -31,8 +31,6 @@ Bir component DOM'dan çıkarılmak üzereyken çağrılan fonksiyondur.
 
 * componentWillMount
 
-
-
 ##### **constructor\( \)**
 
 ```js
@@ -48,23 +46,19 @@ constructor methodu içinde componentin propslarını kullanmak isterseniz, `sup
 
 Başlangıç state'i tanımlamak ve bir fonksiyonu componente bind etmek için en uygun yer constructor. Bu iki tanımlamaya ihtiyacınız yoksa constructor methodunu tanımlamayabilirsiniz.
 
-
-
 ##### **componentWillMount\( \)**
 
 Component mount edilmeden hemen önce çağrılır. Dolayısıyla render\(\) methodundan da önce çağrılır. Bu yüzden bu method içinde state değiştirip, render\(\) methodunu tekrardan çalıştırmamalıyız. Önerileni, bu methodu sadece server rendering yaparken kullanmamız. render\(\) 'dan önce çalışmasını istediğiniz bir fonksiyon varsa constructor\(\) buradan daha uygun bir yer
 
-
-
 ##### **render\( \)**
 
-React.Component class'ı için olmazsa olmaz, çağrılmazsa sorun çıkaracak tek method `render( )`
+`React.Component` class'ı için olmazsa olmaz, çağrılmazsa sorun çıkaracak tek method **`render( )`**
 
-Bu method çağrılınca karşılığında size, ona verdiğiniz props ve state'e göre  &lt;div /&gt;, &lt;img /&gt; gibi sizin tanımladığınız bir DOM componentinin görünümü verecektir.
+Bu method çağrılınca karşılığında size, ona verdiğiniz props ve state'e göre  **&lt;div /&gt;, &lt;img /&gt;** gibi sizin tanımladığınız bir DOM componentinin görünümü verecektir.
 
-render\( \) methodunda, eğer siz hiçbir şey mount etmek istemiyorsanız  dönüş değeri olarak,  **null**, **false **değerlerini de verebilirsiniz. Higher order component'lerde veya koşullu bir componenti render ederken çok işinize yarayacaktır.
+**render\( \)** methodunda, eğer siz hiçbir şey mount etmek istemiyorsanız  dönüş değeri olarak,  **null**, **false **değerlerini de verebilirsiniz. Higher order component'lerde veya koşullu bir componenti render ederken çok işinize yarayacaktır.
 
-render\( \) methodu pure olmalı. React ile uğraşırken bu cümleyi çok görürsünüz. state' e göre size dönüş üreten bir fonksiyon içinde state değiştirmek, sizi ve browser'ınızı sonsuz döngüye sokacaktır.
+**render\( \) **methodu **pure** olmalı. React ile uğraşırken bu cümleyi çok görürsünüz. state' e göre size dönüş üreten bir fonksiyon içinde state değiştirmek, sizi ve browser'ınızı sonsuz döngüye sokacaktır.
 
-render\( \) methodu DOM elementlerinin bir görüntüsünü, yani asıl tabiriyle virtual, sanal DOM size üretir. Eğer DOM yapısına direkt müdahele etmek istiyorsanız, render\( \) methodu yerine componentDidMount\( \) methodu kullanmanız önerilir.     ** **
+**render\( \)** methodu DOM elementlerinin bir görüntüsünü, yani asıl tabiriyle virtual, sanal DOM size üretir. Eğer DOM yapısına direkt müdahele etmek istiyorsanız, render\( \) methodu yerine **componentDidMount\( \)** methodu kullanmanız önerilir.     ** **
 
