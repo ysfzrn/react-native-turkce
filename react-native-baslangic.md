@@ -20,29 +20,49 @@ React JS yazarken, kullandığımız temel html taglerini nerdeyse aynı özelli
 
 Şimdi bir tane  işin içine Redux, Navigation, rest karıştırmadan klasik olarak basit bir Todo List uygulamasını React Native'de adım adım yapalım.
 
-Global olarak RN cli'yi yüklemediyseniz ya da nerdeyse 2 haftada bir versiyonu çıkıyor güncel versiyon için ne olur ne olmaz diye global olarak cli'yi tekrar yükleyelim. 
+Global olarak RN cli'yi yüklemediyseniz ya da nerdeyse 2 haftada bir versiyonu çıkıyor güncel versiyon için ne olur ne olmaz diye global olarak cli'yi tekrar yükleyelim.
+
+
 
 > npm install -g react-native-cli
+
+    Projenizde bir üst versiyona geçmek için `react-native upgrade` komutunu çalıştırabilirsiniz.
 
 
 
 Workspace klasörümüzde projemizi başlatalım
 
-> react-native init todoapp
+> react-native init mytodolist
+
+
 
 Projemizin içine girelim \(bunu yazıyorum çünkü olduğu yerde run etmeye çalışıp hata alıyor diyenler oluyor \)
 
-> cd todoapp
+> cd mytodolist
 
-Projemiz run ederken, aşağıdaki komutları kullanıyoruz.
 
-Android için 
+
+Projemizi run ederken, aşağıdaki komutları kullanıyoruz.
+
+Android için  \( Genymotion ı veya emulatorü açtın mı,  java adresini doğru verdin mi ? \)
 
 > react-native run-android
 
-IOS için
+IOS için       \( Xcode yüklü ise sadece aşağıdaki kodu çalıştır \)
 
 > react-native run-ios
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
