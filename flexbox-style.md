@@ -1,6 +1,6 @@
 # Style ve FlexBox
 
-CSS'de kullandığımız, `display:flex` ile benzer. 
+CSS'de kullandığımız, `display:flex` ile benzer.
 
 |  | Options \(Default:Bold\) | Description |
 | :---: | :---: | :--- |
