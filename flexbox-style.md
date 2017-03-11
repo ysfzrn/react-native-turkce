@@ -36,3 +36,15 @@ Burada Container componenti primary axis boyunca oransal olarak 6x parçaya böl
 
 Aynı oranı **primary axis**'miz  **row** olsaydı bu kez şöyle bir layout elde etmiş olacaktık.![](/assets/Screen Shot 2017-03-11 at 22.13.06.png)
 
+Şimdi yapmak istediğimiz uygulamaya bir göz atalım.
+
+![](/assets/Screen Shot 2017-03-11 at 23.14.28.png)
+
+Burada 2 tane container elementimiz olsun ve telefonun ekranını 1 e 5 oranında paylaşsınlar. Button componentinin pozisyonu fixed olduğundan onu bu durumdan ben ayrı tutuyorum. Aşağıdaki resimde bunu nasıl gerçekleştirdik inceleyebilirsiniz.
+
+![](/assets/Screen Shot 2017-03-11 at 23.30.01.png)
+
+
+
+
+
