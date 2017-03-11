@@ -16,7 +16,7 @@
 * [React Native Başlangıç](react-native-baslangic.md)
 * [Style ve FlexBox](flexbox-style.md)
 * [Temel Component'ler](temel-componentler.md)
-* \[Component API'lar\]\(component-api'lar.md\)
+* [\[Component API'lar\]\(component-api'lar.md\)](component-apilarcomponent-apilarmd.md)
 * [Popüler Third Party Component'ler](popüler-component-kütüphaneleri.md)
 * State Yönetimi
   * Redux
