@@ -44,5 +44,27 @@ Burada temel container elementimiz ekranı kaplasın, 2 tane de container elemen
 
 ![](/assets/Screen Shot 2017-03-11 at 23.30.01.png)
 
-TouchableOpacity componentinin style'ı button objesine yazılmış. Pozisyonu fixed olacak demiştik. React Native'de `positin:fixed `methodu yok. Onun yerine position özelliğine `'relative'` veya `'absolute'` değerlerini verebilirsiniz. Bilindik `left, right, bottom` değerleriyle de ekranın en altına çakılmış durumda. TouchableOpacity gördüğünüz gibi props olarak children kabul ediyor. HTML de ki `<button>Ekle</button>` yerine biz burada `<Text />` componentini kullanmak zorundayız. Ayrıca TouchableOpacity elementine de flexBox stilleri yazdığımıza dikkat edin. \(`alignItems` ve `justifyContent` \)
+TouchableOpacity componentinin style'ı button objesine yazılmış. Pozisyonu fixed olacak demiştik. React Native'de `positin:fixed`methodu yok. Onun yerine position özelliğine `'relative'` veya `'absolute'` değerlerini verebilirsiniz. Bilindik `left, right, bottom` değerleriyle de ekranın en altına çakılmış durumda. TouchableOpacity gördüğünüz gibi props olarak children kabul ediyor. HTML de ki `<button>Ekle</button>` yerine biz burada `<Text />` componentini kullanmak zorundayız. Ayrıca TouchableOpacity elementine de flexBox stilleri yazdığımıza dikkat edin. \(`alignItems` ve `justifyContent` \)
+
+Şimdi inputContainer'a bir TextInput ekleyelim. TextInput, container'ın en sonunda dursun diye, justifyContent'e 'flex-end' diyelim.
+
+> justifyContent primary axis'e etki ediyordu. primary axis, default olarak `flexDirection:'column'` yani dikey. Burada`justifyContent:'flex-end' `demek, child elementi dikey olarak sona at demek.
+
+```js
+ ...
+ <View style={styles.inputContainer}>
+      <TextInput />
+ </View>
+ ...
+ 
+ inputContainer:{
+		flex:1,
+		justifyContent:'flex-end',
+		paddingLeft:16,
+		paddingRight:16
+ },
+ ....
+```
+
+  
 
