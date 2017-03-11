@@ -11,14 +11,12 @@
   * [State Mantığı](state-mantigi.md)
 * [React Native Nedir ?](react-native-nedir-.md)
 * Installation
-  * [Geliştirme Ortamı](gelistirme-ortami.md)
-    * [npm Nedir ?](npm-nedir.md)
   * [Window Installation](window-installation.md)
   * [Macintosh Installation](macintosh-installation.md)
 * [React Native Başlangıç](react-native-baslangic.md)
 * [Style ve FlexBox](flexbox-style.md)
 * [Temel Component'ler](temel-componentler.md)
-* [Component API'lar](component-api'lar.md)
+* \[Component API'lar\]\(component-api'lar.md\)
 * [Popüler Third Party Component'ler](popüler-component-kütüphaneleri.md)
 * State Yönetimi
   * Redux
