@@ -48,7 +48,7 @@ TouchableOpacity componentinin style'ı button objesine yazılmış. Pozisyonu f
 
 Şimdi inputContainer'a bir TextInput ekleyelim. TextInput, container'ın en sonunda dursun diye, justifyContent'e 'flex-end' diyelim.
 
-> justifyContent primary axis'e etki ediyordu. primary axis, default olarak `flexDirection:'column'` yani dikey. Burada`justifyContent:'flex-end' `demek, child elementi dikey olarak sona at demek.
+> justifyContent primary axis'e etki ediyordu. primary axis, default olarak `flexDirection:'column'` yani dikey. Burada`justifyContent:'flex-end'`demek, child elementi dikey olarak sona at demek.
 
 ```js
  ...
@@ -56,15 +56,15 @@ TouchableOpacity componentinin style'ı button objesine yazılmış. Pozisyonu f
       <TextInput />
  </View>
  ...
- 
+
  inputContainer:{
-		flex:1,
-		justifyContent:'flex-end',
-		paddingLeft:16,
-		paddingRight:16
+        flex:1,
+        justifyContent:'flex-end',
+        paddingLeft:16,
+        paddingRight:16
  },
  ....
 ```
 
-  
+Şimdi bir de listemize eklemeler yapılınca çoğaltacağımız, ListItem componenti yapalım. 
 
