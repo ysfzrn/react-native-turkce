@@ -1,14 +1,12 @@
 # REACT NATİVE BAŞLANGIÇ
 
-Şimdi bir tane  işin içine Redux, Navigation, rest karıştırmadan klasik olarak basit bir Todo List uygulamasını React Native'de adım adım yapalım. 
+Şimdi bir tane  işin içine Redux, Navigation, rest karıştırmadan klasik olarak basit bir Todo List uygulamasını React Native'de adım adım yapalım.
 
 Uygulamamızın görseli şöyle olsun.
 
-                                                     ![](/assets/todolist.png)
+![](/assets/todolist.png)
 
-
-
-Global olarak RN cli'yi yüklemediyseniz 
+Global olarak RN cli'yi yüklemediyseniz
 
 > npm install -g react-native-cli
 
@@ -59,9 +57,7 @@ AppRegistry.registerComponent('mytodolist', () => Main);
 
 Yeni klasör yapımız aşağıdaki gibi oldu, ![](/assets/Screen Shot 2017-03-11 at 20.39.53.png)
 
-Bir sonraki adımımızda Main componentimizi aşağıdaki gibi düzenlemeye başlayabiliriz. En yukarıdaki görseli elde etmek için biraz flexbox olayına el atalım.  
+Bir sonraki adımımızda Main componentimizi aşağıdaki gibi düzenlemeye başlayabiliriz. En yukarıdaki görseli elde etmek için biraz flexbox olayına el atalım.
 
 ![](/assets/Screen Shot 2017-03-11 at 20.54.41.png)
-
-
 
