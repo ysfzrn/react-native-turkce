@@ -1,6 +1,6 @@
 # Style ve FlexBox
 
-CSS'de kullandığımız, `display:flex` ile benzer.
+CSS'de kullandığımız, `display:flex` ile benzer. 
 
 |  | Options \(Default:Bold\) | Description |
 | :---: | :---: | :--- |
@@ -66,5 +66,5 @@ TouchableOpacity componentinin style'ı button objesine yazılmış. Pozisyonu f
  ....
 ```
 
-Şimdi bir de listemize eklemeler yapılınca çoğaltacağımız, ListItem componenti yapalım. 
+Şimdi bir de listemize eklemeler yapılınca çoğaltacağımız, ListItem componenti yapalım.
 
