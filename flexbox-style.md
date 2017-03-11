@@ -40,11 +40,9 @@ Aynı oranı **primary axis**'miz  **row** olsaydı bu kez şöyle bir layout el
 
 ![](/assets/Screen Shot 2017-03-11 at 23.14.28.png)
 
-Burada 2 tane container elementimiz olsun ve telefonun ekranını 1 e 5 oranında paylaşsınlar. Button componentinin pozisyonu fixed olduğundan onu bu durumdan ben ayrı tutuyorum. Aşağıdaki resimde bunu nasıl gerçekleştirdik inceleyebilirsiniz.
+Burada temel container elementimiz ekranı kaplasın, 2 tane de container elementimiz olsun ve telefonun ekranını 1 e 5 oranında paylaşsınlar. Button componentinin pozisyonu fixed olduğundan onu bu durumdan ben ayrı tutuyorum. Aşağıdaki resimde bunu nasıl gerçekleştirdik inceleyebilirsiniz.
 
 ![](/assets/Screen Shot 2017-03-11 at 23.30.01.png)
 
-
-
-
+TouchableOpacity componentinin style'ı button objesine yazılmış. Pozisyonu fixed olacak demiştik. React Native'de `positin:fixed `methodu yok. Onun yerine position özelliğine `'relative'` veya `'absolute'` değerlerini verebilirsiniz. Bilindik `left, right, bottom` değerleriyle de ekranın en altına çakılmış durumda. TouchableOpacity gördüğünüz gibi props olarak children kabul ediyor. HTML de ki `<button>Ekle</button>` yerine biz burada `<Text />` componentini kullanmak zorundayız. Ayrıca TouchableOpacity elementine de flexBox stilleri yazdığımıza dikkat edin. \(`alignItems` ve `justifyContent` \)
 
