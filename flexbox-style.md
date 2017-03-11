@@ -1,6 +1,6 @@
 # Style ve FlexBox
 
-CSS'de kullandığımız, `display:flex` ile benzer. 
+CSS'de kullandığımız, `display:flex` ile benzer.
 
 |  | Options \(Default:Bold\) | Description |
 | :---: | :---: | :--- |
@@ -61,7 +61,7 @@ TouchableOpacity componentinin style'ı button objesine yazılmış. Pozisyonu f
         flex:1,
         justifyContent:'flex-end',
         paddingLeft:16,
-        paddingRight:16
+        paddingRight:16,
  },
  ....
 ```
