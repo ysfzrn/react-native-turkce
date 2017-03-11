@@ -30,7 +30,7 @@ React Native de style tanımlamalarını, kendi kütüphanesinin içinde bulunan
 
 Container kartımız **flex:1** ve tüm ekranı kaplıyor. Ayrıca **flexDirection** olarak **column** almış **primary axis** dikey.. Böylece child elementler dikey olarak sıralanıyor.
 
-Mavi kart **flex:1**, Beyaz kart **flex:3**, Kırmızı kart **flex:2** değerlerini almış.
+Mavi Kart **flex:1**, Beyaz Kart **flex:3**, Kırmızı Kart **flex:2** değerlerini almış.
 
 Burada Container componenti primary axis boyunca oransal olarak 6x parçaya bölmüşler. Mavi'ye 1x, Beyaz'a 3x, Kırmızı'ya 2x oranında pay düşmüş. Resimde de bu oranı rahatlıkla görebilirsiniz.
 
