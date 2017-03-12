@@ -143,10 +143,10 @@ Son olarak şekillediriğimiz ekran bu şekilde olmuş oldu,
 
 ```js
 import { StyleSheet,View, Text,TouchableOpacity,
-	 TextInput, Platform  } from 'react-native';
+     TextInput, Platform  } from 'react-native';
 ...
      <View style={styles.inputContainer}>
-      	   <TextInput style={ styles.textStyle}  />
+             <TextInput style={ styles.textStyle}  />
      </View>
 ...
 textStyle:{
@@ -158,14 +158,20 @@ textStyle:{
           borderRadius:12
         },
         android:{
-          
+
         }
       })
 },
 ....
 ```
 
-Şimdi tam istediğimiz gibi oldu.
+Şimdi tam istediğimiz gibi oldu. Kodun tamamı için [https://gist.github.com/ysfzrn/b445768d85bb5092aa4937d8cb7b3731](https://gist.github.com/ysfzrn/b445768d85bb5092aa4937d8cb7b3731)
 
 ![](/assets/Screen Shot 2017-03-12 at 03.48.19.png)
+
+
+
+
+
+
 
