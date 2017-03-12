@@ -68,3 +68,54 @@ TouchableOpacity componentinin style'ı button objesine yazılmış. Pozisyonu f
 
 Şimdi bir de listemize eklemeler yapılınca çoğaltacağımız, ListItem componenti yapalım.
 
+![](/assets/ListItem.png)
+
+Bu componentte de flexbox'ın nimetlerinden faydalanalım. Flex bir container ımız olsun. Bunun içindeki child componentler merkezi olarak hizalansın. Ancak sağa doğru yaslı duran bir butonumuz olsun.Bu yazılanların kodu şöyle oluşuyor.
+
+```js
+const ListItem=(props)=>{
+	return(	
+		<View style={styles.listItemContainer} >
+		  <Text> Todo List 1 </Text>
+		  <TouchableOpacity style={ styles.listItemButton } />
+		</View>
+	)
+}
+
+....
+listItemContainer:{
+		height:48,
+		borderRadius:12,
+		borderWidth:1,
+		borderColor:'#979797',
+		margin:14,
+		position:'relative',
+
+		flexDirection:'row',  //yatay hizalansın
+		alignItems:'center',  //child componentler merkezi hizalansın
+		paddingLeft:31,
+	},
+listItemButton:{
+	position:'absolute',        
+	right:16,	             //sağa 16px lik uzaklıkta yaslı olsun
+	width:26,
+	height:26,
+	borderRadius:13,
+	backgroundColor:'green',
+}
+
+....
+```
+
+Sonra da main componentimiz de aşağıdaki gibi ListItem componentimizi çağıralım
+
+```js
+ ...
+ <View style={styles.listContainer}>
+      	  <ListItem />
+ </View>
+ ...
+```
+
+ 
+
