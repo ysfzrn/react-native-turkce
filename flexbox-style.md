@@ -117,13 +117,13 @@ Sonra da main componentimiz de aşağıdaki gibi ListItem componentimizi çağı
  ...
 ```
 
-Şimdi ListItem da buttonumuzun props alarak rengini belirleyelim. 
+Şimdi ListItem da buttonumuzun props alarak rengini belirleyelim.
 
 ```js
 <TouchableOpacity style={ styles.listItemButton } />
 ```
 
-Hali hazırda listItemButton isimli bir style'ı var. bu listItemButton objesinde bir backgroundColor tanımı yapılmış. O tanım kalsa bir sorun yaratmaz ama kaldıralım. 
+Hali hazırda listItemButton isimli bir style'ı var. bu listItemButton objesinde bir backgroundColor tanımı yapılmış. O tanım kalsa bir sorun yaratmaz ama kaldıralım.
 
 ```js
 const ListItem=(props)=>{
@@ -133,9 +133,39 @@ const ListItem=(props)=>{
 }
 ```
 
-Yukarıdaki koda dikkat edin. style propsu bir obje alıyor {  }. Bu objenin içine biz array tanımlıyoruz { \[ \] }. bu array içine biz istediğimiz kadar style objesi yerleştirebiliriz.{  \[  {  },  {  }  \] }  
+Yukarıdaki koda dikkat edin. style propsu bir obje alıyor {  }. Bu objenin içine biz array tanımlıyoruz { \[ \] }. bu array içine biz istediğimiz kadar style objesi yerleştirebiliriz.{  \[  {  },  {  }  \] }
 
 Son olarak şekillediriğimiz ekran bu şekilde olmuş oldu,
 
 ![](/assets/Screen Shot 2017-03-12 at 03.20.55.png)
+
+Şimdi IOS da da istediğimiz gibi görünüyor mu ona bakalım. ![](/assets/Screen Shot 2017-03-12 at 03.35.55.png)Maalesef görünmüyor :\( . %90 oranında aynısı da olsa,  TextInput ortalıkta yok. Çünkü IOS da height alanı zorunlu. Ve IOS tasarımda genelde materialden farklı olarak, text girişlerinde bir border oluyor. Şimdi textInput'a ios da ayrı, android de ayrı çalışacak şekilde bir style ekleyelim. Bunun için React Native'de **Platform** isimli bir API var. Bu bizim hangi işletim sistemi kodu çalıştırıyor söyleyecek.
+
+```js
+import { StyleSheet,View, Text,TouchableOpacity,
+	 TextInput, Platform  } from 'react-native';
+...
+     <View style={styles.inputContainer}>
+      	   <TextInput style={ styles.textStyle}  />
+     </View>
+...
+textStyle:{
+      ...Platform.select({
+        ios: {
+          height:40, 
+          paddingLeft:12, 
+          borderWidth:1, 
+          borderRadius:12
+        },
+        android:{
+          
+        }
+      })
+},
+....
+```
+
+Şimdi tam istediğimiz gibi oldu.
+
+![](/assets/Screen Shot 2017-03-12 at 03.48.19.png)
 
