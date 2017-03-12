@@ -165,13 +165,7 @@ textStyle:{
 ....
 ```
 
-Şimdi tam istediğimiz gibi oldu. Kodun tamamı için [https://gist.github.com/ysfzrn/b445768d85bb5092aa4937d8cb7b3731](https://gist.github.com/ysfzrn/b445768d85bb5092aa4937d8cb7b3731)
+Şimdi tam istediğimiz gibi oldu. Kodun tamamı için [https://gist.github.com/ysfzrn/a825488f65fabcf6e41ede93a678d83c](https://gist.github.com/ysfzrn/a825488f65fabcf6e41ede93a678d83c)
 
 ![](/assets/Screen Shot 2017-03-12 at 03.48.19.png)
-
-
-
-
-
-
 
