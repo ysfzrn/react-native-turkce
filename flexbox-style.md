@@ -74,34 +74,34 @@ Bu componentte de flexbox'ın nimetlerinden faydalanalım. Flex bir container ı
 
 ```js
 const ListItem=(props)=>{
-	return(	
-		<View style={styles.listItemContainer} >
-		  <Text> Todo List 1 </Text>
-		  <TouchableOpacity style={ styles.listItemButton } />
-		</View>
-	)
+    return(    
+        <View style={styles.listItemContainer} >
+          <Text> Todo List 1 </Text>
+          <TouchableOpacity style={ styles.listItemButton } />
+        </View>
+    )
 }
 
 ....
 listItemContainer:{
-		height:48,
-		borderRadius:12,
-		borderWidth:1,
-		borderColor:'#979797',
-		margin:14,
-		position:'relative',
+        height:48,
+        borderRadius:12,
+        borderWidth:1,
+        borderColor:'#979797',
+        margin:14,
+        position:'relative',
 
-		flexDirection:'row',  //yatay hizalansın
-		alignItems:'center',  //child componentler merkezi hizalansın
-		paddingLeft:31,
-	},
+        flexDirection:'row',  //yatay hizalansın
+        alignItems:'center',  //child componentler merkezi hizalansın
+        paddingLeft:31,
+    },
 listItemButton:{
-	position:'absolute',        
-	right:16,	             //sağa 16px lik uzaklıkta yaslı olsun
-	width:26,
-	height:26,
-	borderRadius:13,
-	backgroundColor:'green',
+    position:'absolute',        
+    right:16,                 //sağa 16px lik uzaklıkta yaslı olsun
+    width:26,
+    height:26,
+    borderRadius:13,
+    backgroundColor:'green',
 }
 
 ....
@@ -112,10 +112,30 @@ Sonra da main componentimiz de aşağıdaki gibi ListItem componentimizi çağı
 ```js
  ...
  <View style={styles.listContainer}>
-      	  <ListItem />
+            <ListItem />
  </View>
  ...
 ```
 
- 
+Şimdi ListItem da buttonumuzun props alarak rengini belirleyelim. 
+
+```js
+<TouchableOpacity style={ styles.listItemButton } />
+```
+
+Hali hazırda listItemButton isimli bir style'ı var. bu listItemButton objesinde bir backgroundColor tanımı yapılmış. O tanım kalsa bir sorun yaratmaz ama kaldıralım. 
+
+```js
+const ListItem=(props)=>{
+    ...
+          <TouchableOpacity style={[styles.listItemButton,{backgroundColor:props.statusColor } ] } />
+   ...
+}
+```
+
+Yukarıdaki koda dikkat edin. style propsu bir obje alıyor {  }. Bu objenin içine biz array tanımlıyoruz { \[ \] }. bu array içine biz istediğimiz kadar style objesi yerleştirebiliriz.{  \[  {  },  {  }  \] }  
+
+Son olarak şekillediriğimiz ekran bu şekilde olmuş oldu,
+
+![](/assets/Screen Shot 2017-03-12 at 03.20.55.png)
 
