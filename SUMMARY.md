@@ -17,6 +17,8 @@
 * [Style ve FlexBox](flexbox-style.md)
 * [Temel Component'ler](temel-componentler.md)
   * [View](temel-componentler/view.md)
+  * [Text](temel-componentler/text.md)
+  * [Image](temel-componentler/image.md)
 * [Component API'lar \(Yazılacak\)](component-apilarcomponent-apilarmd.md)
 * [Popüler Third Party Component'ler \(Yazılacak\)](popüler-component-kütüphaneleri.md)
 * [State Yönetimi \(Yazılacak\)](state-yonetimi-yazilacak.md)
