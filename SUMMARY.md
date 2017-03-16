@@ -12,26 +12,26 @@
 * [React Native Nedir ?](react-native-nedir-.md)
 * Installation
   * [Window Installation](window-installation.md)
-  * [Macintosh Installation](macintosh-installation.md)
+  * [Macintosh Installation \(Yazılacak\)](macintosh-installation.md)
 * [React Native Başlangıç](react-native-baslangic.md)
 * [Style ve FlexBox](flexbox-style.md)
-* [Temel Component'ler](temel-componentler.md)
-* [\[Component API'lar\]\(component-api'lar.md\)](component-apilarcomponent-apilarmd.md)
-* [Popüler Third Party Component'ler](popüler-component-kütüphaneleri.md)
-* State Yönetimi
+* [Temel Component'ler \(Yazılacak\)](temel-componentler.md)
+* [Component API'lar \(Yazılacak\)](component-apilarcomponent-apilarmd.md)
+* [Popüler Third Party Component'ler \(Yazılacak\)](popüler-component-kütüphaneleri.md)
+* State Yönetimi \(Yazılacak\)
   * Redux
-* Navigation Experimental
-* React Native - Animasyon
-* Veri Yönetimi
+* Navigation Experimental \(Yazılacak\)
+* [React Native - Animasyon \(Yazılacak\)](react-native-animasyon.md)
+* Veri Yönetimi \(Yazılacak\)
   * REST API Entegrasyonu
     * [Node JS Örnek](node-js-ornek.md)
     * Meteor JS Örnek
     * [Heroku Deployment](heroku-deployment.md)
   * Firebase
   * Local Veri Tutma
-* [Kendi Native Componentini Yaz](kendi-native-componentini-yaz.md)
-* Mobile UI Tasarım
-* Google Play Store Deployment
-* AppStore Deployment
+* [Kendi Native Componentini Yaz \(Yazılacak\)](kendi-native-componentini-yaz.md)
+* Mobile UI Tasarım \(Yazılacak\)
+* Google Play Store Deployment \(Yazılacak\)
+* AppStore Deployment \(Yazılacak\)
 * Exponent JS
 
