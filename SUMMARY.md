@@ -15,10 +15,11 @@
   * [Macintosh Installation \(Yazılacak\)](macintosh-installation.md)
 * [React Native Başlangıç](react-native-baslangic.md)
 * [Style ve FlexBox](flexbox-style.md)
-* [Temel Component'ler \(Yazılacak\)](temel-componentler.md)
+* [Temel Component'ler](temel-componentler.md)
+  * [View](temel-componentler/view.md)
 * [Component API'lar \(Yazılacak\)](component-apilarcomponent-apilarmd.md)
 * [Popüler Third Party Component'ler \(Yazılacak\)](popüler-component-kütüphaneleri.md)
-* State Yönetimi \(Yazılacak\)
+* [State Yönetimi \(Yazılacak\)](state-yonetimi-yazilacak.md)
   * Redux
 * Navigation Experimental \(Yazılacak\)
 * [React Native - Animasyon \(Yazılacak\)](react-native-animasyon.md)
