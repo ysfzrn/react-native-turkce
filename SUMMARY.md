@@ -19,6 +19,8 @@
   * [View](temel-componentler/view.md)
   * [Text](temel-componentler/text.md)
   * [Image](temel-componentler/image.md)
+  * [ScrollView](temel-componentler/scrollview.md)
+  * [ListView](temel-componentler/listview.md)
 * [Component API'lar \(Yazılacak\)](component-apilarcomponent-apilarmd.md)
 * [Popüler Third Party Component'ler \(Yazılacak\)](popüler-component-kütüphaneleri.md)
 * [State Yönetimi \(Yazılacak\)](state-yonetimi-yazilacak.md)
