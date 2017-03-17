@@ -25,11 +25,11 @@
 * [Popüler Third Party Component'ler \(Yazılacak\)](popüler-component-kütüphaneleri.md)
   * airbnb/react-native-maps
   * react-native-vector-icons
-  * [winx/react-native-interactable](popüler-component-kütüphaneleri/react-native-interactable.md)
+  * [wix/react-native-interactable](popüler-component-kütüphaneleri/react-native-interactable.md)
   * native-base
   * react-native-camera
-  * airbnb/native-navigation
   * airbnb/lottie-react-native
+  * [wix/react-native-navigation](popüler-component-kütüphaneleri/airbnbnative-navigation.md)
 * [State Yönetimi \(Yazılacak\)](state-yonetimi-yazilacak.md)
   * Redux
 * Navigation Experimental \(Yazılacak\)
