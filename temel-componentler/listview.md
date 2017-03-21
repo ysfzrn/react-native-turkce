@@ -24,9 +24,7 @@ Son olarak datayı `DataSource.cloneWithRows(inputArray)` olarak çağırmalıs�
 
 Şimdi her şeyi baştan olarak yazalım.
 
-
-
-1-Bizim bir elimizde array olsun.
+**1-Bizim bir elimizde array olsun.**
 
 ```js
 import React, { Component } from "react";
@@ -42,7 +40,7 @@ const rows = [
 ];
 ```
 
-2-Şimdi constructor ' da DataSource' u yaratalım
+**2-Şimdi constructor ' da DataSource' u yaratalım**
 
 ```js
   constructor() {
@@ -53,7 +51,7 @@ const rows = [
    }
 ```
 
-3-Data yı `DataSource.cloneWithRows(inputArray)` olarak çağıralım
+**3-Data yı `DataSource.cloneWithRows(inputArray)` olarak çağıralım**
 
 ```js
  constructor() {
@@ -67,7 +65,7 @@ const rows = [
   }
 ```
 
-4- ListView kullanıma hazır
+**4- ListView kullanıma hazır**
 
 ```js
 <ListView
@@ -76,11 +74,7 @@ const rows = [
  />
 ```
 
-Örneğin tamamı için burayı inceleyebilirsiniz 
+Örneğin tamamı için burayı inceleyebilirsiniz
 
 [https://sketch.expo.io/SJxhqQRoe](https://sketch.expo.io/SJxhqQRoe)
-
-
-
-
 
