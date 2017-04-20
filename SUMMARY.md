@@ -43,7 +43,7 @@
   * Local Veri Tutma
 * [Kendi Native Componentini Yaz \(Yazılacak\)](kendi-native-componentini-yaz.md)
 * Mobile UI Tasarım \(Yazılacak\)
-* Google Play Store Deployment \(Yazılacak\)
+* [Android Apk Oluşturma](google-play-store-deployment-yazilacak.md)
 * AppStore Deployment \(Yazılacak\)
 * Exponent JS
 
