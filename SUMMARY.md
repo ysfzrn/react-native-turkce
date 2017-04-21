@@ -22,28 +22,8 @@
   * [ScrollView](temel-componentler/scrollview.md)
   * [ListView](temel-componentler/listview.md)
 * [Component API'lar \(Yazılacak\)](component-apilarcomponent-apilarmd.md)
-* [Popüler Third Party Component'ler \(Yazılacak\)](popüler-component-kütüphaneleri.md)
-  * airbnb/react-native-maps
-  * react-native-vector-icons
-  * [wix/react-native-interactable](popüler-component-kütüphaneleri/react-native-interactable.md)
-  * native-base
-  * react-native-camera
-  * airbnb/lottie-react-native
-  * [wix/react-native-navigation](popüler-component-kütüphaneleri/airbnbnative-navigation.md)
+* [React Native - Animasyon \(Yazılacak\)](react-native-animasyon.md)
 * [State Yönetimi \(Yazılacak\)](state-yonetimi-yazilacak.md)
   * Redux
-* Navigation Experimental \(Yazılacak\)
-* [React Native - Animasyon \(Yazılacak\)](react-native-animasyon.md)
-* Veri Yönetimi \(Yazılacak\)
-  * REST API Entegrasyonu
-    * [Node JS Örnek](node-js-ornek.md)
-    * Meteor JS Örnek
-    * [Heroku Deployment](heroku-deployment.md)
-  * Firebase
-  * Local Veri Tutma
-* [Kendi Native Componentini Yaz \(Yazılacak\)](kendi-native-componentini-yaz.md)
-* Mobile UI Tasarım \(Yazılacak\)
 * [Android Apk Oluşturma](google-play-store-deployment-yazilacak.md)
-* AppStore Deployment \(Yazılacak\)
-* Exponent JS
 
