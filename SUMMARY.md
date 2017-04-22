@@ -21,8 +21,8 @@
   * [Image](temel-componentler/image.md)
   * [ScrollView](temel-componentler/scrollview.md)
   * [ListView](temel-componentler/listview.md)
-* [Component API'lar \(Yazılacak\)](component-apilarcomponent-apilarmd.md)
-* [React Native - Animasyon \(Yazılacak\)](react-native-animasyon.md)
+* [Component API'lar](component-apilarcomponent-apilarmd.md)
+  * [Animasyon](component-apilarcomponent-apilarmd/animasyon.md)
 * [State Yönetimi \(Yazılacak\)](state-yonetimi-yazilacak.md)
   * Redux
 * [Android Apk Oluşturma](google-play-store-deployment-yazilacak.md)
