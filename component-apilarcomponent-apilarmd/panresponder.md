@@ -39,8 +39,6 @@ Görevimizi anladıysak şimdi yapılacakları adım adım sıralayalım.
 4. Hover effect ekleyelim
 5. Sürüklediğimiz componenti drop ettikten sonraki kontrolleri ekleyelim.
 
-
-
 ### 1.BOARD
 
 Bizden istenen 3x3 bir board. Bu board'daki her bir karede sayfada kendine ait koordinatlarını, içinin boş olup olmadığını, üstünde bir componentin sürüklenip sürüklenmediğini bilecek. Bunun için bir başlangıç objesi set edelim.
@@ -133,7 +131,7 @@ class Hole extends Component {
 
   render() {
     const { hole } = this.props;
-    
+
     return (
       <View style={styles.container}  />
     );
@@ -155,7 +153,6 @@ const styles = StyleSheet.create({
 
 //make this component available to the app
 export default Hole;
-
 ```
 
 ![](/assets/Screen Shot 2017-05-07 at 02.44.57.png)
@@ -164,7 +161,9 @@ export default Hole;
 
 ![](/assets/Screen Shot 2017-05-07 at 02.46.45.png)
 
-Sıra geldi karelerimizin sayfadaki pozisyonlarını bulmaya. Bunun için react-native'de birkaç yöntem var. Ama en pratiği her element yaratıldığında tetiklenen **onLayout** merhodu .
+Sıra geldi karelerimizin sayfadaki pozisyonlarını bulmaya. Bunun için react-native'de birkaç yöntem var. Ama en pratiği her element yaratıldığında tetiklenen **onLayout** methodu.
 
+![](/assets/Screen Shot 2017-05-07 at 02.52.52.png)
 
+Bir şeyler ters gidiyor. onLayout methodunu çağırdık koordinatları aldık ama bu koordinatlar hole componentin kendi üstündeki View'e göre  boardContainer'a göre değerleri. Bize sayfaya göre olanı lazım. Bunun için benim boardContainer'ın koordinatlarına ihtiyacım var.
 
