@@ -360,7 +360,5 @@ _Listenerları componentWillUnmount'da remove etmeyi unutmayın_
 
 ### 3-Hover Effect Ekleme
 
-PanResponder sisteminde onPanResponderMove ile ekranın neresinde sürüklenme işlemi oluyor anlayabiliyorduk. Hover effect yaparken de bunu kullanacağız. onPanResponderMove aktif iken gerekli değerleri alıp, üst component'e function props fırlatıp, effect oluşma işlemini de üst component'e halledeceğiz. 
-
-
+PanResponder sisteminde onPanResponderMove ile ekranın neresinde sürüklenme işlemi oluyor anlayabiliyorduk. Hover effect yaparken de bunu kullanacağız. onPanResponderMove aktif iken gerekli değerleri alıp, üst component'e function props fırlatıp, effect oluşma işlemini de üst component'e halledeceğiz. \(...devam edecek\)
 
