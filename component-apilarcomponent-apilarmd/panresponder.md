@@ -339,7 +339,7 @@ this.state.pan değiştikçe değişecek olan style yapıp, View'den oluşan bal
 
 ![](/assets/digdagdoe2.gif)
 
-Yine bir şeyler ters gidiyor. İlk defa sürüklerken bir sorun olmuyor fakat ikinci kez topa dokunduğumuzda topun pozisyonu uzaklara kaçıveriyor. Bunu çözmek için 2 tane global değişken yaratacağız ve bu iki değişkeni dinleyen listenerlarımız olacak. Topu son bıraktığımız yerin değerini kendilerinde tutup,  ikinci kez dokunduğumuzda tekrar tetiklenen, **onPanResponderGrant** methodunda bunlarda tuttuğumuz değerleri **this.state.pan** state'ine atacağız. O da dolayısıyla elementin style'ını update edecek.
+Yine bir şeyler ters gidiyor. İlk defa sürüklerken bir sorun olmuyor fakat ikinci kez topa dokunduğumuzda topun pozisyonu uzaklara kaçıveriyor. Bunu çözmek için 2 tane global değişken yaratacağız **\(this.\_animatedValueX, this.animatedValueY\) ** ve bu iki değişkeni dinleyen listenerlarımız olacak. Topu son bıraktığımız yerin değerini kendilerinde tutup,  ikinci kez dokunduğumuzda tekrar tetiklenen, **onPanResponderGrant** methodunda bunlarda tuttuğumuz değerleri **this.state.pan** state'ine atacağız. O da dolayısıyla elementin style'ını update edecek.
 
 _Listenerları componentWillUnmount'da remove etmeyi unutmayın_
 
@@ -356,7 +356,7 @@ _Listenerları componentWillUnmount'da remove etmeyi unutmayın_
 ...
 ```
 
-![](/assets/Screen Shot 2017-05-07 at 05.12.14.png)
+![](/assets/Screen Shot 2017-05-07 at 05.23.26.png)
 
 ### 3-Hover Effect Ekleme
 
