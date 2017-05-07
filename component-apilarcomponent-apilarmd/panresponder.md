@@ -180,21 +180,24 @@ Bir şeyler ters gidiyor. onLayout methodunu çağırdık koordinatları aldık 
     return (
       <View style={styles.container}>
         <Header />
-        {mainx !== null && mainy !== null
-          ? <View style={styles.boardContainer} onLayout={this.handleLayout}>
-              {holes.map((hole, i) => {
-                return <Hole key={i} mainx={mainx} main={mainy} />;
-              })}
-            </View>
-          : <ActivityIndicator />}
-
+        <View style={styles.boardContainer} onLayout={this.handleLayout}>
+          {mainx !== null && mainy !== null
+            ? holes.map((hole, i) => {
+                return <Hole key={i} mainx={mainx} mainy={mainy} />;
+              })
+            : <ActivityIndicator />}
+        </View>
       </View>
     );
   }
   ...
 ```
 
+Şimdi hole.js componentimizde koordinat bulma işlemine mainx ve mainy props'larını da katalım. Aşağıdaki koordinatlar gayet doğru gözüküyor.
 
+![](/assets/Screen Shot 2017-05-07 at 03.50.29.png)
+
+Yukarıda karelere ait array'i yaratırken bir başlangıç objesi set etmiştik ve onda pozisyon değereri {x:0, y:0} şeklindeydi. Şimdi o state'deki array'i değiştirelim.Bunun için hole.js içinde handleLayout methodun da üstte kullanılmak üzere bir function props fırlatalım.
 
 
 
