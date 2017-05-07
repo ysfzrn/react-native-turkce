@@ -29,6 +29,8 @@ Bir elemente drag-drop özelliği eklemek istediğimizde,  yukarıdaki kod parç
 2. Sürükleyip bıraktığımız kutu dolu ise, top tekrar yerine gitsin
 3. Bütün board kareleri dolduğunda yan yana olan tüm renkler aynı ise Kazandınız, değil ise Kaybettiniz diye bir Alert çıkarsın.
 
+Kodun tamamı için [https://github.com/ysfzrn/react-native-panresponder-demo](https://github.com/ysfzrn/react-native-panresponder-demo)
+
 ![](/assets/digdagdoe.gif)
 
 Görevimizi anladıysak şimdi yapılacakları adım adım sıralayalım.
@@ -458,7 +460,7 @@ Tekrar PanResponder componentimize dönüp yeni bir method ekliyoruz, `onPanResp
     this.state.pan.flattenOffset();
     this.props.onDrop(ball, evt.nativeEvent.pageX, evt.nativeEvent.pageY);
   };
-...  
+...
 ```
 
 Üst component'te onDrop props'unu karşılayalım
@@ -487,12 +489,12 @@ Burada bir util fonksiyon daha yazalım, selectDropZone diye. Buda bizim balls v
 export const selectDropZone = (holes, itemX, itemY, width, height,balls, ball,headerHeight) => {
   for (let i = 0; i < holes.length; i++) {
     if (isDropZone(holes[i], itemX, itemY, width, height,headerHeight)) {
-      
+
       holes[i].hovering = false;
       holes[i].filled = true;
       holes[i].color = ball.color;
       holes[i].value = ball.value;
-    
+
       balls = selectBall(balls, ball);
     }
   }
@@ -547,7 +549,7 @@ hole ve ball componentlerimizin style'larının yeni state'e göre şekil almas�
 
 ![](/assets/digdagdoe6.gif)
 
-Şimdi top bırakıldığında boardContainer'da değilse yada dolu bir karenin üzerindeyse yerine geriye dönmesini isteyelim. İşin burası çok basit sadece release methoduna Animated fonksiyonu ekleyeceğiz. 
+Şimdi top bırakıldığında boardContainer'da değilse yada dolu bir karenin üzerindeyse yerine geriye dönmesini isteyelim. İşin burası çok basit sadece release methoduna Animated fonksiyonu ekleyeceğiz.
 
 ```jsx
 // ./src/components/ball.js
@@ -569,7 +571,5 @@ Animated.spring'de diyoruz ki; top bırakıldığında this.state.pan başlangı
 
 ![](/assets/digdagdoe7.gif)
 
-
-
-
+Bu kadar, kodun tamamı için [https://github.com/ysfzrn/react-native-panresponder-demo](https://github.com/ysfzrn/react-native-panresponder-demo)
 
