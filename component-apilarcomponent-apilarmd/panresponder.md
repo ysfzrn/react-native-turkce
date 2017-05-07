@@ -360,5 +360,89 @@ _Listenerları componentWillUnmount'da remove etmeyi unutmayın_
 
 ### 3-Hover Effect Ekleme
 
-PanResponder sisteminde onPanResponderMove ile ekranın neresinde sürüklenme işlemi oluyor anlayabiliyorduk. Hover effect yaparken de bunu kullanacağız. onPanResponderMove aktif iken gerekli değerleri alıp, üst component'e function props fırlatıp, effect oluşma işlemini de üst component'e halledeceğiz. \(...devam edecek\)
+PanResponder sisteminde `onPanResponderMove` ile ekranın neresinde sürüklenme işlemi oluyor anlayabiliyorduk. Hover effect yaparken de bunu kullanacağız. `onPanResponderMove` aktif iken gerekli değerleri alıp, üst component'e function props fırlatıp, effect oluşma işlemini de üst component'e halledeceğiz.
+
+```jsx
+   // ./src/components/ball.js 
+  ...
+ handleResponderMove = (evt, gestureState) => {
+    this.state.pan.setValue({ x: gestureState.dx, y: gestureState.dy });
+    this.props.onPositionChanging(evt.nativeEvent.pageX, evt.nativeEvent.pageY);
+ };
+ ...
+```
+
+```jsx
+// ./src/app.js
+...
+{balls.map((item, i) => {
+            return (
+              <Ball
+                key={i}
+                ball={item}
+                onPositionChanging={this.handlePositionChanging}
+              />
+            );
+})}
+...
+```
+
+nativeEvent ve gestureState kavramları için;  Panresponder sisteminde herbir method bu iki değişkeni bize otomatik verir. Bu iki değişken \(evt.nativeEvent ve gestureState\) aslında bir obje ve biz burada dokunduğumuz yerin nativeEvent içerisinde sayfaya göre konumunu pageX ve pageY değişkenlerinden alıyoruz. Daha fazla ayrıntı için resmi dökümanda [şuraya](https://facebook.github.io/react-native/docs/panresponder.html) bakabilirsiniz
+
+Şimdi bir kaç util fonksiyonu yazalım. Bunlardan biri ben bir karenin üstünde miyim değil miyim onu söyleyecek olan isDropZone fonksiyonu diğeri üstündeyken holes state'ini değiştirecek olan hoverDropZone fonksiyonu. İşin logic tarafına girmiyorum. Çünkü gayet koddan okunabilir diye düşünüyorum.
+
+```js
+// ./src/util/index.js
+
+export const isDropZone = (hole, itemX, itemY, width, height, headerHeight) => {
+  if (
+    !hole.filled &&
+    (hole.x <= itemX && hole.x + width >= itemX) &&
+    (hole.y+headerHeight < itemY && hole.y + height+headerHeight > itemY)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+export const hoverDropZone = (holes, itemX, itemY, width, height,headerHeight) => {
+  for (let i = 0; i < holes.length; i++) {
+    if (isDropZone(holes[i], itemX, itemY, width, height,headerHeight)) {
+        holes[i].hovering = true;
+    } else {
+        holes[i].hovering = false;
+    }
+  }
+
+  return holes;
+};
+```
+
+Burada ayrıntı belki de algoritmayı kurarken yaptığım bir hata, sayfadaki header boyutuna da ihtiyacım var. İşin açıkçası karelerin koordinatlarını hesaplarken onu da içine katıp bu parametreye burada ihtiyaç duymayabilirdik. Ama sorun değil.
+
+Şimdi app.js'de handlePositionChanging methodunda hoverDropZone'u çağıralım. Ordan dönen holes array'i ile state'i güncelleyelim.  
+
+```js
+// ./src/app.js
+...
+ handlePositionChanging = (itemX, itemY) => {
+    let _holes = this.state.holes;
+
+    _holes = hoverDropZone(
+      _holes,
+      itemX,
+      itemY,
+      SharedStyle.hole.width,
+      SharedStyle.hole.height,
+      SharedStyle.header.height
+    );
+    this.setState({ holes: _holes });
+  };
+ ... 
+```
+
+Şimdi this.state.holes state'i sorumlu olduğu kareye kendi üzerinde neler döndüğünü anlatabilir. Kareye ona göre style ekleyelim.
+
+![](/assets/digdagdoe4.gif)
 
