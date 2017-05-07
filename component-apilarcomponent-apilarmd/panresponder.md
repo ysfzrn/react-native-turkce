@@ -165,5 +165,38 @@ Sıra geldi karelerimizin sayfadaki pozisyonlarını bulmaya. Bunun için react-
 
 ![](/assets/Screen Shot 2017-05-07 at 02.52.52.png)
 
-Bir şeyler ters gidiyor. onLayout methodunu çağırdık koordinatları aldık ama bu koordinatlar hole componentin kendi üstündeki View'e göre  boardContainer'a göre değerleri. Bize sayfaya göre olanı lazım. Bunun için benim boardContainer'ın koordinatlarına ihtiyacım var.
+Bir şeyler ters gidiyor. onLayout methodunu çağırdık koordinatları aldık ama bu koordinatlar hole componentin kendi üstündeki View'e göre  boardContainer'a göre değerleri. Bize sayfaya göre olanı lazım. Bunun için bizim boardContainer'ın koordinatlarına da ihtiyacımız var. app.js'e dönüp boardContainer'ın koordinatlarını alıp, hole componentin her birine bunları gönderelim. onLayout merhodu component mount edildikten sonra çağrıldığı için bir render koşulu ekleyelim. mainx ve mainy belli değil ise ekranda bir loader gösterelim.
+
+```jsx
+//..src/app.js
+...
+  handleLayout = e => {
+    const { x, y } = e.nativeEvent.layout;
+    this.setState({ mainx: x, mainy: y });
+  };
+
+  render() {
+    const { holes, mainx, mainy } = this.state;
+    return (
+      <View style={styles.container}>
+        <Header />
+        {mainx !== null && mainy !== null
+          ? <View style={styles.boardContainer} onLayout={this.handleLayout}>
+              {holes.map((hole, i) => {
+                return <Hole key={i} mainx={mainx} main={mainy} />;
+              })}
+            </View>
+          : <ActivityIndicator />}
+
+      </View>
+    );
+  }
+  ...
+```
+
+
+
+
+
+
 
