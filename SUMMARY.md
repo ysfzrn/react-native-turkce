@@ -24,9 +24,6 @@
 * [Component API'lar](component-apilarcomponent-apilarmd.md)
   * [Animasyon \(Yazılacak\)](component-apilarcomponent-apilarmd/animasyon.md)
   * [PanResponder](component-apilarcomponent-apilarmd/panresponder.md)
-    * [Board Yarat](component-apilarcomponent-apilarmd/panresponder/board-yarat.md)
-    * [PanResponder Element Yarat](component-apilarcomponent-apilarmd/panresponder/panresponder-element-yarat.md)
-    * Hover Effect
 * [State Yönetimi \(Yazılacak\)](state-yonetimi-yazilacak.md)
   * Redux
 * [Android Apk Oluşturma](google-play-store-deployment-yazilacak.md)

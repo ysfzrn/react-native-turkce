@@ -38,7 +38,329 @@ Görevimizi anladıysak şimdi yapılacakları adım adım sıralayalım.
 3. Hover effect ekleyelim
 4. Sürüklediğimiz componenti drop ettikten sonraki kontrolleri ekleyelim.
 
+### 1.BOARD
 
+Bizden istenen 3x3 bir board. Bu board'daki her bir karede sayfada kendine ait koordinatlarını, içinin boş olup olmadığını, üstünde bir componentin sürüklenip sürüklenmediğini bilecek. Bunun için bir başlangıç objesi set edelim.
+
+```js
+   const initObj = {
+      x: 0,
+      y: 0,
+      hovering: false,
+      filled: false,
+      color: MyStyle.color.white,
+      value: null
+    };
+```
+
+Uygulamamız açılır açılmaz board'ı çizmek için componentDidMount methodunda 3x3 lük board bilgisini tutacak bir array oluşturalım. Bu array'ın her bir elemanı az önceki yarattığımız, **initObj** objesinden oluşsun. Oluşturduğumuz geçici array'ı state'e set edelim. Bunu aşağıda **digHole **isimli fonksiyonda topladım. Bunu componentDidMount methodunda çağıralım.
+
+```js
+//  ./src/app.js
+
+digHole = () => {
+    const initObj = {
+      x: 0,
+      y: 0,
+      hovering: false,
+      filled: false,
+      color: '#FFFFFF'
+      value: null
+    };
+    let _holes = [];
+
+    for (let i = 0; i < 9; i++) {
+      _holes.push(initObj);
+    }
+    this.setState({ holes: _holes });
+  };
+```
+
+Güzel artık elimde görselleştirebileceğim bir data'm var. Ama ondan önce bizim componentlerimiz arası width, height, konum ilişkisi oldukça fazla olacak. Bu yüzden bir tane componentlerin bu değerlerini bir araya toplamak adına bir kendimize ait customStyle objesini bir javascript dosyasında tutalım ve kullanacağımız yerlerde import edelim. Bunun için **src **klasörümüzde bir tane util klasörü yaratalım içine de **SharedStyle.js **isimli dosya ekleyelim. \(initObj objesindeki color değerini de bu style'a göre değiştirelim\)
+
+```js
+// ./src/util/SharedStyle.js
+const SharedStyle ={
+  text:{
+      small:12,
+      regular:18,
+      large:24,
+      xlarge:32
+  },
+  color:{
+      primary:'#673AB7',
+      primaryBlack:'#311B92',
+      secondary:'#009688',
+      secondaryBlack:'#004D40',
+      white:'#FFFFFF',
+      disable:'gray',
+      red:'#f44336',
+      yellow:'#2196F3',
+      blue:'#ffeb3b'
+  },
+  hole:{
+      width:80,
+      height:80,
+      borderWidth:1
+  },
+  header:{
+      height:64,
+      marginBottom:5
+  }
+}
+
+export default SharedStyle
+```
+
+Tekrar app.js' e dönelim. Bir adet header componenti ve Board'umuz için bir boardContainer yaratalım.boardContainer style'a dikkat edin. SharedStyle'da verdiğimiz **width** ve **borderWidth** değerlerin 3 katının toplamını verdik ki boardContainer'ımız tam anlamıyla karelerimiz için kapsayıcı olsun.
+
+![](/assets/Screen Shot 2017-05-07 at 02.32.12.png)
+
+Önce bir tane **Hole.js** isimli bir component yapıp holes state'inde tuttuğumuz datayı görselleştirmeye başlayalım.
+
+```jsx
+// ./src/components/hole.js
+
+import React, { Component } from "react";
+import { View, Text, StyleSheet } from "react-native";
+import SharedStyle from "../util/SharedStyle";
+
+// create a component
+class Hole extends Component {
+
+  render() {
+    const { hole } = this.props;
+
+    return (
+      <View style={styles.container}  />
+    );
+  }
+}
+
+// define your styles
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
+    width: SharedStyle.hole.width,
+    height: SharedStyle.hole.height,
+    backgroundColor: SharedStyle.color.white,
+    borderWidth: SharedStyle.hole.borderWidth,
+    borderColor: SharedStyle.color.primaryBlack
+  }
+});
+
+//make this component available to the app
+export default Hole;
+```
+
+![](/assets/Screen Shot 2017-05-07 at 02.44.57.png)
+
+**boardContainer tam bir kapsayıcı olmuşa benzemiyor. Bunun için boardContainer'a, flexWrap i eklememiz gerekiyor.**
+
+![](/assets/Screen Shot 2017-05-07 at 02.46.45.png)
+
+Sıra geldi karelerimizin sayfadaki pozisyonlarını bulmaya. Bunun için react-native'de birkaç yöntem var. Ama en pratiği her element yaratıldığında tetiklenen **onLayout** methodu.
+
+![](/assets/Screen Shot 2017-05-07 at 02.52.52.png)
+
+Bir şeyler ters gidiyor. onLayout methodunu çağırdık koordinatları aldık ama bu koordinatlar hole componentin kendi üstündeki View'e göre  boardContainer'a göre değerleri. Bize sayfaya göre olanı lazım. Bunun için bizim boardContainer'ın koordinatlarına da ihtiyacımız var. app.js'e dönüp boardContainer'ın koordinatlarını alıp, hole componentin her birine bunları gönderelim. onLayout merhodu component mount edildikten sonra çağrıldığı için bir render koşulu ekleyelim. mainx ve mainy belli değil ise ekranda bir loader gösterelim.
+
+```jsx
+//..src/app.js
+...
+  handleLayout = e => {
+    const { x, y } = e.nativeEvent.layout;
+    this.setState({ mainx: x, mainy: y });
+  };
+
+  render() {
+    const { holes, mainx, mainy } = this.state;
+    return (
+      <View style={styles.container}>
+        <Header />
+        <View style={styles.boardContainer} onLayout={this.handleLayout}>
+          {mainx !== null && mainy !== null
+            ? holes.map((hole, i) => {
+                return <Hole key={i} mainx={mainx} mainy={mainy} />;
+              })
+            : <ActivityIndicator />}
+        </View>
+      </View>
+    );
+  }
+  ...
+```
+
+Şimdi hole.js componentimizde koordinat bulma işlemine mainx ve mainy props'larını da katalım. Aşağıdaki koordinatlar gayet doğru gözüküyor.
+
+![](/assets/Screen Shot 2017-05-07 at 03.50.29.png)
+
+Yukarıda karelere ait array'i yaratırken bir başlangıç objesi set etmiştik ve onda pozisyon değereri {x:0, y:0} şeklindeydi. Şimdi o state'deki array'i değiştirelim.Bunun için hole.js içinde handleLayout methodun da üstte kullanılmak üzere bir function props fırlatalım.
+
+```jsx
+ // ./src/components/hole.js
+
+ handleLayout = e => {
+    const {mainx, mainy,index } = this.props
+    const { x, y } = e.nativeEvent.layout;
+    this.setState({ x: mainx+x, y: mainy+y });
+    this.props.onHoleLayout(mainx + x, mainy + y, index);
+  };
+```
+
+Object spread yardımı ile holeLayout methodunda state'imizi güncelleyelim.![](/assets/Screen Shot 2017-05-07 at 04.00.26.png)
+
+### 
+
+### 2. PanResponder Element Yaratalım
+
+Toplamda bizim 9 tane topumuz olacak. Bunların kendine özgü renkleri olacak. Ve sürüklenip bırakılan top bir daha sürüklenmeyecek. Bu verilere dayanarak kendimize yine state'te tutacağımız bir array yaratalım.
+
+```js
+balls:[
+        { id: 1, value: "R", color: SharedStyle.color.red, selected: false },
+        { id: 2, value: "R", color: SharedStyle.color.red, selected: false },
+        { id: 3, value: "R", color: SharedStyle.color.red, selected: false },
+        { id: 4, value: "Y", color: SharedStyle.color.yellow, selected: false },
+        { id: 5, value: "Y", color: SharedStyle.color.yellow, selected: false },
+        { id: 6, value: "Y", color: SharedStyle.color.yellow, selected: false },
+        { id: 7, value: "B", color: SharedStyle.color.blue, selected: false },
+        { id: 8, value: "B", color: SharedStyle.color.blue, selected: false },
+        { id: 9, value: "B", color: SharedStyle.color.blue, selected: false }
+]
+```
+
+Bu array'i görselleştireceğimiz bir ball.js isimli bir component yaratalım sonra da ona drag&drop özellikleri ekleyelim.
+
+```jsx
+// ./src/components/Ball.js
+import React, { Component } from "react";
+import { View, Text, StyleSheet,PanResponder } from "react-native";
+
+// create a component
+class Ball extends Component {
+
+  componentWillMount() {
+    this.panResponder = PanResponder.create({
+      onStartShouldSetPanResponder: (evt, gestureState) => true,
+      onMoveShouldSetPanResponder: (evt, gestureState) => true,
+    })
+  }
+
+
+  render() {
+    return <View style={styles.container}  {...this.panResponder.panHandlers}/>;
+  }
+}
+```
+
+Başlangıçta componentimiz touch eventlere tepki versin ve touch eventlerle hareket edebilmesi için `onStartShouldSetPanResponder` ve `onMoveShouldSetPanResponder` fonksiyonlarının true döndürmesini sağladık. Bu fonksiyonlar tetiklendikten sonra iki tane daha fonksiyon tetiklenecektir. Bunlardan birincisi başlangıç değerlerini set edebileceğimiz, `onPanResponderGrant`;  parmağımız componenti sürüklemeye başlayınca ekranda dokunduğumuz yerlerin coordinatlarını almamızı sağlayan `onPanResponderMove`.
+
+> Önemli: Biz PanResponer API'ı kullanırken elementin değerlerini filan almıyoruz. Biz ekranda dokunduğumuz yerlerin koordinat değerlerini alıp, elementin style'ını değiştiriyoruz.
+
+Şimdi başlangıç değerlerimizi set edelim. Burada Animated API kullanacağız. bunun için ilk önce constructor'da  bir Animated state yaratalım.
+
+```jsx
+// ./src/components/Ball.js
+...
+class Ball extends Component {
+   constructor(props) {
+     super(props);
+     this.state = {
+       pan: new Animated.ValueXY()
+     };
+ } 
+ ...
+```
+
+Şimdi onResponderGrant'da bu state'imize değer verelim.
+
+```jsx
+// ./src/components/Ball.js
+...
+ componentWillMount() {
+    this.panResponder = PanResponder.create({
+      onStartShouldSetPanResponder: (evt, gestureState) => true,
+      onMoveShouldSetPanResponder: (evt, gestureState) => true,
+      onPanResponderGrant: (e, gestureState) => {
+        this.state.pan.setValue({ x: 0, y: 0 });
+      },
+    })
+  }
+ ...
+```
+
+Component'i tutup elimizle sürükleyince tetiklenecek olan `onPanResponderMove`için bir fonksiyon atayalım.
+
+```jsx
+// ./src/components/Ball.js
+...
+  componentWillMount() {
+    this.panResponder = PanResponder.create({
+      onStartShouldSetPanResponder: (evt, gestureState) => true,
+      onMoveShouldSetPanResponder: (evt, gestureState) => true,
+      onPanResponderGrant: (e, gestureState) => {
+        this.state.pan.setValue({ x: 0, y: 0 });
+      },
+      onPanResponderMove: this.handleResponderMove,
+    })
+  }
+
+  handleResponderMove = (evt, gestureState) => {
+    this.state.pan.setValue({ x: gestureState.dx, y: gestureState.dy });
+  };}
+ ...
+```
+
+this.state.pan değiştikçe değişecek olan style yapıp, View'den oluşan ball componentini Animated.View'e çevirelim.
+
+```jsx
+// ./src/components/Ball.js
+...  render() {
+    const animatedStyle = {
+      transform: this.state.pan.getTranslateTransform(),
+      backgroundColor: "red"
+    };
+
+    return (
+      <Animated.View
+        style={[styles.container, animatedStyle]}
+        {...this.panResponder.panHandlers}
+      />
+    );
+  }
+ ...
+```
+
+> getTranslateTranform, tranform:\[{translateX: value }, {translateY:value}  \] işini yapan Animated value ile kullanılabilen hazır bir fonksiyon
+
+Şimdi örnek tek bir Ball componentini app.js' e import edip neler oluyor bir bakalım.
+
+![](/assets/digdagdoe2.gif)
+
+Yine bir şeyler ters gidiyor. İlk defa sürüklerken bir sorun olmuyor fakat ikinci kez topa dokunduğumuzda topun pozisyonu uzaklara kaçıveriyor. Bunu çözmek için 2 tane global değişken yaratacağız ve bu iki değişkeni dinleyen listenerlarımız olacak. Topu son bıraktığımız yerin değerini kendilerinde tutup,  ikinci kez dokunduğumuzda tekrar tetiklenen, **onPanResponderGrant** methodunda bunlarda tuttuğumuz değerleri **this.state.pan** state'ine atacağız. O da dolayısıyla elementin style'ını update edecek.
+
+_Listenerları componentWillUnmount'da remove etmeyi unutmayın_
+
+![](/assets/digdagdoe3.gif)
+
+Şimdi tüm toplarımızı map edelim
+
+```jsx
+// ./src/app.js
+...
+{balls.map((item, i) => {
+            return <Ball key={i} ball={item} />;
+})}
+...
+```
+
+![](/assets/Screen Shot 2017-05-07 at 05.12.14.png)
+
+### 3-Hover Effect Ekleme
+
+PanResponder sisteminde onPanResponderMove ile ekranın neresinde sürüklenme işlemi oluyor anlayabiliyorduk. Hover effect yaparken de bunu kullanacağız. onPanResponderMove aktif iken gerekli değerleri alıp, üst component'e function props fırlatıp, effect oluşma işlemini de üst component'e halledeceğiz. 
 
 
 
