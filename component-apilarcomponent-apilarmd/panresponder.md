@@ -199,7 +199,63 @@ Bir şeyler ters gidiyor. onLayout methodunu çağırdık koordinatları aldık 
 
 Yukarıda karelere ait array'i yaratırken bir başlangıç objesi set etmiştik ve onda pozisyon değereri {x:0, y:0} şeklindeydi. Şimdi o state'deki array'i değiştirelim.Bunun için hole.js içinde handleLayout methodun da üstte kullanılmak üzere bir function props fırlatalım.
 
+```jsx
+ // ./src/components/hole.js
+ 
+ handleLayout = e => {
+    const {mainx, mainy,index } = this.props
+    const { x, y } = e.nativeEvent.layout;
+    this.setState({ x: mainx+x, y: mainy+y });
+    this.props.onHoleLayout(mainx + x, mainy + y, index);
+  };
+```
 
+Object spread yardımı ile holeLayout methodunda state'imizi güncelleyelim.![](/assets/Screen Shot 2017-05-07 at 04.00.26.png)
+
+### 2. PanResponder Element Yaratalım
+
+Toplamda bizim 9 tane topumuz olacak. Bunların kendine özgü renkleri olacak. Ve sürüklenip bırakılan top bir daha sürüklenmeyecek. Bu verilere dayanarak kendimize yine state'te tutacağımız bir array yaratalım.
+
+```js
+balls:[
+        { id: 1, value: "R", color: SharedStyle.color.red, selected: false },
+        { id: 2, value: "R", color: SharedStyle.color.red, selected: false },
+        { id: 3, value: "R", color: SharedStyle.color.red, selected: false },
+        { id: 4, value: "Y", color: SharedStyle.color.yellow, selected: false },
+        { id: 5, value: "Y", color: SharedStyle.color.yellow, selected: false },
+        { id: 6, value: "Y", color: SharedStyle.color.yellow, selected: false },
+        { id: 7, value: "B", color: SharedStyle.color.blue, selected: false },
+        { id: 8, value: "B", color: SharedStyle.color.blue, selected: false },
+        { id: 9, value: "B", color: SharedStyle.color.blue, selected: false }
+]
+```
+
+Bu array'i görselleştireceğimiz bir ball.js isimli bir component yaratalım sonra da ona drag&drop özellikleri ekleyelim.
+
+```jsx
+import React, { Component } from "react";
+import { View, Text, StyleSheet,PanResponder } from "react-native";
+
+// create a component
+class Ball extends Component {
+  
+  componentWillMount() {
+    this.panResponder = PanResponder.create({
+      onStartShouldSetPanResponder: (evt, gestureState) => true,
+      onMoveShouldSetPanResponder: (evt, gestureState) => true,
+    })
+  }
+  
+
+  render() {
+    return <View style={styles.container}  {...this.panResponder.panHandlers}/>;
+  }
+}
+```
+
+Başlangıçta componentimiz touch eventlere tepki versin ve touch eventlerle hareket edebilmesi için `onStartShouldSetPanResponder` ve `onMoveShouldSetPanResponder` fonksiyonlarının true döndürmesini sağladık. Bu fonksiyonlar tetiklendikten sonra iki tane daha fonksiyon tetiklenecektir. Bunlardan birincisi başlangıç değerlerini set edebileceğimiz, `onPanResponderGrant`;  parmağımız componenti sürüklemeye başlayınca ekranda dokunduğumuz yerlerin coordinatlarını almamızı sağlayan `onPanResponderMove`.
+
+> Önemli: Biz PanResponer API'ı kullanırken elementin değerlerini filan almıyoruz. Biz ekranda dokunduğumuz yerlerin koordinat değerlerini alıp, elementin style'ını değiştiriyoruz.
 
 
 
