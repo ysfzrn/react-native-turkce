@@ -1,4 +1,4 @@
-# ListView
+# ListView \(Depreacted, Önerilen FlatList kullanmanız\)
 
 ListView vertical olarak sırf performans gözeterek hazırlanmış bir component. Sadece ekranda görünen componentler render, edilir, diğer componentler cihazın performansını zorlamaz. Bir update işlemi geldiyse tüm liste tekrardan render edilmez, sadece ekranda görünenler render edilir. Bu da ciddi bir akıcılık kazandırır. Ama kabul edelim, biraz syntax ı karışık gelebilir. Tek tek nasıl yazarız ona bakalım.
 
@@ -51,7 +51,7 @@ const rows = [
    }
 ```
 
-**3-Data yı `DataSource.cloneWithRows(inputArray)` olarak çağıralım**
+**3-Data yı **`DataSource.cloneWithRows(inputArray)`** olarak çağıralım**
 
 ```js
  constructor() {

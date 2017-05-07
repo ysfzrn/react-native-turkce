@@ -35,9 +35,8 @@ Görevimizi anladıysak şimdi yapılacakları adım adım sıralayalım.
 
 1. Board çizelim. Board'ın koordinatlarını ve özelliklerini state'te tutalım.
 2. Bir PanResponder Element Yaratım. 
-3. Toplar için state'te array tutalım. Bu array'ı map ederek 2. adımda yarattığımız componenti çoğaltalım.
-4. Hover effect ekleyelim
-5. Sürüklediğimiz componenti drop ettikten sonraki kontrolleri ekleyelim.
+3. Hover effect ekleyelim
+4. Sürüklediğimiz componenti drop ettikten sonraki kontrolleri ekleyelim.
 
 ### 1.BOARD
 
@@ -290,7 +289,7 @@ class Ball extends Component {
  ...
 ```
 
-Component'i tutup elimizle sürükleyince tetiklenecek olan `onPanResponderMove `için bir fonksiyon atayalım.
+Component'i tutup elimizle sürükleyince tetiklenecek olan `onPanResponderMove`için bir fonksiyon atayalım.
 
 ```jsx
 // ./src/components/Ball.js
@@ -339,6 +338,8 @@ this.state.pan değiştikçe değişecek olan style yapıp, View'den oluşan bal
 ![](/assets/digdagdoe2.gif)
 
 Yine bir şeyler ters gidiyor. İlk defa sürüklerken bir sorun olmuyor fakat ikinci kez topa dokunduğumuzda topun pozisyonu uzaklara kaçıveriyor. Bunu çözmek için 2 tane global değişken yaratacağız ve bu iki değişkeni dinleyen listenerlarımız olacak. Topu son bıraktığımız yerin değerini kendilerinde tutup,  ikinci kez dokunduğumuzda tekrar tetiklenen, **onPanResponderGrant** methodunda bunlarda tuttuğumuz değerleri **this.state.pan** state'ine atacağız. O da dolayısıyla elementin style'ını update edecek.
+
+_Listenerları componentWillUnmount'da remove etmeyi unutmayın_
 
 ![](/assets/digdagdoe3.gif)
 
