@@ -421,7 +421,7 @@ export const hoverDropZone = (holes, itemX, itemY, width, height,headerHeight) =
 
 Burada ayrıntı belki de algoritmayı kurarken yaptığım bir hata, sayfadaki header boyutuna da ihtiyacım var. İşin açıkçası karelerin koordinatlarını hesaplarken onu da içine katıp bu parametreye burada ihtiyaç duymayabilirdik. Ama sorun değil.
 
-Şimdi app.js'de handlePositionChanging methodunda hoverDropZone'u çağıralım. Ordan dönen holes array'i ile state'i güncelleyelim.  
+Şimdi app.js'de handlePositionChanging methodunda hoverDropZone'u çağıralım. Ordan dönen holes array'i ile state'i güncelleyelim.
 
 ```js
 // ./src/app.js
@@ -439,10 +439,137 @@ Burada ayrıntı belki de algoritmayı kurarken yaptığım bir hata, sayfadaki 
     );
     this.setState({ holes: _holes });
   };
- ... 
+ ...
 ```
 
 Şimdi this.state.holes state'i sorumlu olduğu kareye kendi üzerinde neler döndüğünü anlatabilir. Kareye ona göre style ekleyelim.
 
 ![](/assets/digdagdoe4.gif)
+
+### 4-Drop - Release - Bırakma İşlemi
+
+Tekrar PanResponder componentimize dönüp yeni bir method ekliyoruz, `onPanResponderRelease:this.handleRelease` methodu.  Bu method ne yapacak ? Topun bırakıldığı koordinatları ve hangi topun bırakıldığını üst componente haber verecek.
+
+```jsx
+// ./src/components/ball.js
+...
+  handleRelease = (evt, gestureState) => {
+    const {ball } = this.props;
+    this.state.pan.flattenOffset();
+    this.props.onDrop(ball, evt.nativeEvent.pageX, evt.nativeEvent.pageY);
+  };
+...  
+```
+
+Üst component'te onDrop props'unu karşılayalım
+
+```jsx
+// ./src/app.js
+  ...
+{balls.map((item, i) => {
+            return (
+              <Ball
+                key={i}
+                ball={item}
+                onPositionChanging={this.handlePositionChanging}
+                onDrop={this.handleDrop}
+              />
+            );
+  })}
+  ...
+```
+
+Burada bir util fonksiyon daha yazalım, selectDropZone diye. Buda bizim balls ve holes array'imiz değiştirsin. Ve bizde o değiştirdiği array'ler ile state'lerimizi güncelleyelim.
+
+```js
+// ./src/util.js
+
+export const selectDropZone = (holes, itemX, itemY, width, height,balls, ball,headerHeight) => {
+  for (let i = 0; i < holes.length; i++) {
+    if (isDropZone(holes[i], itemX, itemY, width, height,headerHeight)) {
+      
+      holes[i].hovering = false;
+      holes[i].filled = true;
+      holes[i].color = ball.color;
+      holes[i].value = ball.value;
+    
+      balls = selectBall(balls, ball);
+    }
+  }
+
+  return {holes, balls};
+};
+
+
+export const selectBall=(balls ,ball)=>{
+  for (let i = 0; i < balls.length; i++) {
+          if (balls[i].id === ball.id) {
+               balls[i].selected = true;
+          }
+  }
+
+  return balls
+}
+```
+
+Yukarıdaki algoritma çok basit. for döngüsü ile ilk önce hangi karenin üstünde olduğuna karar veriyor. Sonra o karenin renk ve ilgili değerlerini değiştiriyor sonra da, hangi topun seçildiğine karar verip, o topun bir daha seçilmemesi adına selected özelliğini false'a çekiyor.
+
+Şimdi bu util fonksiyonlarımızı handleDrop methodunda çağıralım.
+
+```jsx
+// ./src/app.js
+...
+  handleDrop = (ball, itemX, itemY) => {
+    let _holes = this.state.holes;
+    let _balls = this.state.balls;
+
+    const result = selectDropZone(
+      _holes,
+      itemX,
+      itemY,
+      SharedStyle.hole.width,
+      SharedStyle.hole.height,
+      _balls,
+      ball,
+      SharedStyle.header.height
+    );
+    _holes = result.holes;
+    _balls = result.balls;
+
+    this.setState({ holes: _holes, balls: _balls });
+  };
+...
+```
+
+hole ve ball componentlerimizin style'larının yeni state'e göre şekil alması lazım. Onları ekleyelim. İlk önce hole componentine bakalım.  Hovering ise hoverColor, filled ise toptan aldığı renk, hiçbiri değilse beyaz gözükecek. \( Ne dersiniz bu yöntemi biraz değiştirerek basit bir kalemle çizim uygulaması yapılabilir mi ? \)
+
+![](/assets/digdagdoe5.gif)Şimdi ball.js componentine sen seçildinse ortadan kaybol diyelim.
+
+![](/assets/digdagdoe6.gif)
+
+Şimdi top bırakıldığında boardContainer'da değilse yada dolu bir karenin üzerindeyse yerine geriye dönmesini isteyelim. İşin burası çok basit sadece release methoduna Animated fonksiyonu ekleyeceğiz. 
+
+```jsx
+// ./src/components/ball.js
+...
+handleRelease = (evt, gestureState) => {
+    const {ball } = this.props;
+    this.state.pan.flattenOffset();
+    this.props.onDrop(ball, evt.nativeEvent.pageX, evt.nativeEvent.pageY);
+    Animated.spring(this.state.pan, {
+              toValue: {x:0 , y:0},
+              friction:4,    //canlılık değeri diyeceğim ama çok bir şey anlatmıyor 
+              tension:10     //hız kontrolü diyelim buna da
+           }).start()
+  };
+...
+```
+
+Animated.spring'de diyoruz ki; top bırakıldığında this.state.pan başlangıç değerini {x:0 , y:0} değerine çek. Bunu da kendine özel animasyonunla yap.
+
+![](/assets/digdagdoe7.gif)
+
+
+
+
 
