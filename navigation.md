@@ -8,7 +8,7 @@ Gerçekten kullanımı diğer kütüphanelere çok daha kolay. Redux entegrasyon
 
 ## airbnb/native-navigation
 
-{% video %}https://www.youtube.com/watch?v=tWitQoPgs8w&feature=youtu.be&t=630{% endvideo %}
+{% video %}https://www.youtube.com/watch?v=tWitQoPgs8w&feature=youtu.be&t=631{% endvideo %}
 
 
 
