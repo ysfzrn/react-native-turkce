@@ -2,6 +2,7 @@
     "plugins": [
         "jsbin",
         "youtube",
-        "responsive-iframes"
+        "responsive-iframes",
+        "video"
     ]
 }
