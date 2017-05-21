@@ -26,4 +26,6 @@ Gerçekten kullanımı diğer kütüphanelere çok daha kolay. Redux entegrasyon
 
 {% video %}https://www.youtube.com/watch?v=tWitQoPgs8w&feature=youtu.be&t=631{% endvideo %}
 
+Not:Sunum videosu gözükmüyorsa, adres çubuğundan **load unsafe script**'i aktif etmelisiniz.
+
 
