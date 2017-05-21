@@ -4,6 +4,12 @@ React Native'de sayfalar arası geçiş, router için söylenecek çok şey var.
 
 ## wix/react-native-navigation
 
-Gerçekten kullanımı diğer kütüphanelere çok daha kolay. Redux entegrasyonu diğerlerine çok çok daha kolay. Tek problem native bir component olduğu için, yükleme sırasında manuel link yapmak durumunda sizi bırakıyor. Dökümantasyonu da kütüphanenin büyüklüğüne göre biraz basit kaçmış gibi. Discord'da kütüphanenin yaratıcılarıyla konuştuğunuzda aslında kütüphanenin dökümante edilmemiş bir çok özelliğiyle karşılaşıyorsunuz. Örneğin, Android'de header tabbar ve ona stil vermekten henüz bahsedilmemiş durumda. Bunu yaratıcıları biz bu özelliği kendi uygulamamızda kullanmıyoruz bir sonraki versiyonlarda bu kısım değişebilir o yüzden dökümante etmedik diyorlar. Bu sizi korkutmasın ama kütüphane oldukça sağlam, stabil durumda ve arkasında güzel güçlü bir kominitesi var. 
+Gerçekten kullanımı diğer kütüphanelere çok daha kolay. Redux entegrasyonu diğerlerine çok çok daha kolay. Tek problem native bir component olduğu için, yükleme sırasında manuel link yapmak durumunda sizi bırakıyor. Dökümantasyonu da kütüphanenin büyüklüğüne göre biraz basit kaçmış gibi. Discord'da kütüphanenin yaratıcılarıyla konuştuğunuzda aslında kütüphanenin dökümante edilmemiş bir çok özelliğiyle karşılaşıyorsunuz. Örneğin, Android'de header tabbar ve ona stil vermekten henüz bahsedilmemiş durumda. Bunu yaratıcıları biz bu özelliği kendi uygulamamızda kullanmıyoruz bir sonraki versiyonlarda bu kısım değişebilir o yüzden dökümante etmedik diyorlar. Bu sizi korkutmasın, kütüphane oldukça sağlam, stable durumda ve arkasında güzel güçlü bir kominitesi var.
 
 ## airbnb/native-navigation
+
+2017 React Konferansında airbnb'den [Leland Richardson](https://twitter.com/intelligibabble) yeni bir native navigation component tanıttı, [airbnb/native-navigation](http://airbnb.io/native-navigation/) .React-Native de ki NavigatorIOS ve wix/react-native-navigation'dan sonra 3. native route kütüphanesi. Yalnız şimdilik beta sürümü yayında, airbnb kendi uygulamasında sorunsuz kullanmaya başladıktan sonra ilk versiyonu yayınlayacağını açıkladı. Sunumu izleyince çoğu geliştiriciyi bu haber heyecanlandırdı. Özellikle sayfa geçişlerinde animasyon eklemek hayli zorlayıcı olabiliyor. Bu tip native ve smooth geçişleri bize vaadeden bir kütüphane olacak. Bu kütüphane hazır olana kadar wix/react-native-navigation'ı kullanmanızı öneririm. Daha fazla bilgi ve navigation sorunsalına geniş bir açıdan bakmak için, aşağıdaki sunumu izleyebilirsiniz 
+{% video %}https://www.youtube.com/watch?v=tWitQoPgs8w&feature=youtu.be&t=631{% endvideo %}
+
+
+
