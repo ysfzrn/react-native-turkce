@@ -4,7 +4,7 @@ React Native'de sayfalar arası geçiş, router için söylenecek çok şey var.
 
 Bir kaç,  navigation kütüphanesi
 
-* [react-navigation](https://reactnavigation.org/)
+* [react-navigation](https://reactnavigation.org/) \( Javascript çözümler için de en iyisi \)
 
 * [react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
 
@@ -23,4 +23,7 @@ Gerçekten kullanımı diğer kütüphanelere çok daha kolay. Redux entegrasyon
 ## [airbnb/native-navigation](http://airbnb.io/native-navigation/)
 
 2017 React Konferansında airbnb'den [Leland Richardson](https://twitter.com/intelligibabble) yeni bir native navigation component tanıttı, [airbnb/native-navigation](http://airbnb.io/native-navigation/) .React-Native de ki NavigatorIOS ve wix/react-native-navigation'dan sonra 3. native route kütüphanesi. Yalnız şimdilik beta sürümü yayında, airbnb kendi uygulamasında sorunsuz kullanmaya başladıktan sonra ilk versiyonu yayınlayacağını açıkladı. Sunumu izleyince çoğu geliştiriciyi bu haber heyecanlandırdı. Özellikle sayfa geçişlerinde animasyon eklemek hayli zorlayıcı olabiliyor. Bu tip native ve smooth geçişleri bize vaadeden bir kütüphane olacak. Bu kütüphane hazır olana kadar wix/react-native-navigation'ı kullanmanızı öneririm. Daha fazla bilgi ve navigation sorunsalına geniş bir açıdan bakmak için, aşağıdaki sunumu izleyebilirsiniz
+
+{% video %}https://www.youtube.com/watch?v=tWitQoPgs8w&feature=youtu.be&t=631{% endvideo %}
+
 
