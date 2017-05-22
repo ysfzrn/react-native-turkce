@@ -1,7 +1,5 @@
 # IOS Kurulumu
 
-\(Burada yapacağımız işlem IOS için manuel linking yapmak. Resmi dökümanda geçen [Linking Libraries](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#step-3) kısmının bir benzeri sadece \)
-
 **1**- react native versiyonu olarak 0.43 ve üstünü kullanıyor olduğunuzdan emin olun.
 
 **2**- npm kullanıyorsanız 3 ve üstü versiyon kullandığınızdan emin olun.
@@ -89,4 +87,6 @@ $(SRCROOT)/../node_modules/react-native-navigation/ios
 ```
 
 ![](/assets/rnn-ios-4.gif)
+
+\(Burada yaptığımız işlem IOS için manuel linking yapmak. Resmi dökümanda geçen [Linking Libraries](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#step-3) kısmının bir benzeri sadece. Küçük bir tavsiye kolayınıza gelmese bile react-native link kullanmak yerine oldukça manuel linkleme seçeneğini seçip ne olup bittiğini görün, projenizde kontrolü kaybetmeyin. Ne olup bittiğini tam anladıktan sonra react-native link kullanmaya başlayın hata alırsanız o zaman düzeltebilecek halde olursunuz \)
 
