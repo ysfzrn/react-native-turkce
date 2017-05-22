@@ -38,7 +38,7 @@ export default class App {
   startApp() {
     Navigation.startSingleScreenApp({
       screen: {
-        screen: "chatapp.FirstScreen",
+        screen: "chatapp.FirstScreen",  //screen.js deki ile aynı olmak zorunda
         title: "Chat App"
       }
     });
