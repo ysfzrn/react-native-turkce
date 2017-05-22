@@ -73,7 +73,7 @@ export function registerScreens() {
 }
 ```
 
-9 - **FirstScreen.js** componentine bir tane button ekleyelim ve bastığımızda uygulamayı ikinci ekrana route edelim. Navigator'a register ettiğimiz her componentin birkaç props'a sahip oluyor. Route ederken de bu propslardan `push` u kullanıyoruz.
+9 - **FirstScreen.js** componentine bir tane button ekleyelim ve bastığımızda uygulamayı ikinci ekrana route edelim. Navigator'a register ettiğimiz her component navigator isimli props'a sahip oluyor. Route ederken de navigator propsunda yer alan `push` u kullanıyoruz.
 
 ```jsx
 // ./src/FirstScreen.js
@@ -100,6 +100,4 @@ class FirstScreen extends Component {
 ```
 
 ![](/assets/rnn-ios-6.gif)
-
-
 
