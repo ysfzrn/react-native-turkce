@@ -19,7 +19,7 @@ export function registerScreens() {
 }
 ```
 
-**5**- index.ios.js ve index.android.js ' de ekranlarımızı App isimli class'da set edelim.
+**5**- Oluşturduğumuz index.ios.js ve index.android.js ' de ekranlarımızı App isimli class'da set edelim.
 
 ```jsx
 //  ./src/index.ios.js veya ./src/index.android.js
