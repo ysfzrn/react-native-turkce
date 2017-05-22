@@ -42,5 +42,80 @@ project(':react-native-navigation').projectDir = new File(rootProject.projectDir
 
 ![](/assets/rnn-ios-5.gif)
 
-**7**- android/app/src/main/java/com/yourproject/
+**7**- **android/app/src/main/java/com/projenizin\_ismi/MainApplication.java **dosyanıza aşağıdaki java kodu kopyalayın, tümünü ezin.
+
+```java
+package com.projenizin_ismi;
+
+import android.app.Application;
+
+//import com.facebook.react.ReactApplication;
+import android.support.annotation.NonNull;
+import com.reactnativenavigation.NavigationApplication;
+import com.facebook.react.ReactNativeHost;
+import com.facebook.react.ReactPackage;
+import com.facebook.react.shell.MainReactPackage;
+import com.facebook.soloader.SoLoader;
+import java.util.Arrays;
+import java.util.List;
+
+public class MainApplication extends NavigationApplication {
+
+   @Override
+  public boolean isDebug() {
+    return BuildConfig.DEBUG;
+  }
+
+  @NonNull
+  @Override
+  public List<ReactPackage> createAdditionalReactPackages() {
+    return Arrays.<ReactPackage>asList(
+		  //Yeni native kütüphanelere buraya eklenecek, örneğin new VectorIconsPackage()
+    );
+  }
+
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    SoLoader.init(this, /* native exopackage */ false);
+  }
+
+}
+
+```
+
+**8**- **android/app/src/main/java/com/projenizin\_ismi/MainActivity.java **dosyanıza aşağıdaki java kodu kopyalayın, tümünü ezin.
+
+```java
+package com.projenizin_ismi;
+
+//import com.facebook.react.ReactActivity;
+import android.widget.LinearLayout;
+import android.graphics.Color;
+import android.widget.TextView;
+import android.widget.ImageView;
+import android.view.Gravity;
+import android.util.TypedValue;
+import com.reactnativenavigation.controllers.SplashActivity;
+
+public class MainActivity extends SplashActivity {
+
+    @Override
+    public LinearLayout createSplashLayout() {
+        LinearLayout view = new LinearLayout(this);
+        TextView textView = new TextView(this);
+        ImageView imageView = new ImageView(this);
+
+        view.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        view.setGravity(Gravity.CENTER);
+
+        view.addView(imageView);
+        return view;
+    }
+
+}
+
+```
+
+
 
