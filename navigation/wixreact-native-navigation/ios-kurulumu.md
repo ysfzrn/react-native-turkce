@@ -22,7 +22,7 @@
 
 ![](/assets/rnn-ios-2.gif)
 
-6- Yine Project Navigator'de bu kez **Build Settings**'i seçin. Search kısmına **Header Search Paths** yazın. ve aşağıdaki kodu kopyalayıp bu kısıma ekleyin ve mutlaka **recursive** seçeneğini seçin.
+**6**- Yine Project Navigator'de bu kez **Build Settings**'i seçin. Search kısmına **Header Search Paths** yazın. ve aşağıdaki kodu kopyalayıp bu kısıma ekleyin ve mutlaka **recursive** seçeneğini seçin.
 
 ```
 $(SRCROOT)/../node_modules/react-native-navigation/ios
