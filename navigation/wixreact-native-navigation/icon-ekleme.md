@@ -133,3 +133,60 @@ index.ios.js'de yazdığımız kodu index.android.js'e de kopyalayalım ve uygul
 
 ![](/assets/rnn-ios-9.gif)
 
+Android kullanıcıları çok ekranın altındaki tabBar'a alışkın değil o yüzden bunu TopTabBar yapalım. Bunun için index.android.js startApp fonksiyonunun aşağıdaki değiştirelim.
+
+```jsx
+ // ./src/index.android.js
+ 
+ startApp() {
+    Navigation.startSingleScreenApp({
+    screen: {
+    screen: 'chatapp.FirstScreen',
+    title:'Chat App',
+    topTabs: [
+      {
+        screenId: 'chatapp.FriendListScreen',
+        icon: friendListIcon,
+      },
+      {
+        screenId: 'chatapp.ProfileScreen',
+        icon: profileIcon,
+      }
+    ]
+   }});
+  }
+```
+
+Burada react-native-navigation yaratıcılarının hoşuna gitmeyen durum, topTabs kullanırken aslında chatapp.FirstScreen çok işe yaramaz halde fazladan yer alması. Bunu değiştirmeyi planlıyorlar ama şimdilik bun componenti biz tabBar'a style vermek için kullanabiliriz. O yüzden FirstScreen componentine aşağıdaki static style'ı tanımlayarak son hale bir bakalım.
+
+```jsx
+// ./src/FirstScreen.js
+import React, { Component } from "react";
+import { View, Text, StyleSheet, TouchableOpacity,PixelRatio } from "react-native";
+
+class FirstScreen extends Component {
+  static navigatorStyle = {
+    statusBarColor: '#1d84d6',
+
+    navBarBackgroundColor: '#2196f3', // Top color
+    navigationBarColor: '#1d84d6', // Bottom color
+    navBarTextColor: '#ffffff', // Title color
+
+    // Text
+    topTabTextColor: 'rgba(255, 255, 255, 0.7)',
+    selectedTopTabTextColor: '#ffffff',
+
+    // Icons
+    selectedTopTabIconColor: '#ffffff',
+    topTabIconColor: 'rgba(255, 255, 255, 0.7)',
+
+    selectedTopTabIndicatorColor: 'orange',
+    selectedTopTabIndicatorHeight: PixelRatio.get() * 2,
+
+    topTabScrollable: true,
+  }
+...
+```
+
+![](/assets/rnn-ios-10.gif)
+
