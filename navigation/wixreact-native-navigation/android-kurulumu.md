@@ -70,7 +70,7 @@ public class MainApplication extends NavigationApplication {
   @Override
   public List<ReactPackage> createAdditionalReactPackages() {
     return Arrays.<ReactPackage>asList(
-		  //Yeni native kütüphanelere buraya eklenecek, örneğin new VectorIconsPackage()
+          //Yeni native kütüphanelere buraya eklenecek, örneğin new VectorIconsPackage()
     );
   }
 
@@ -81,7 +81,6 @@ public class MainApplication extends NavigationApplication {
   }
 
 }
-
 ```
 
 **8**- **android/app/src/main/java/com/projenizin\_ismi/MainActivity.java **dosyanıza aşağıdaki java kodu kopyalayın, tümünü ezin.
@@ -114,7 +113,6 @@ public class MainActivity extends SplashActivity {
     }
 
 }
-
 ```
 
 

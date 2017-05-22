@@ -60,3 +60,46 @@ const app = new App();
 
 ![](/assets/Screen Shot 2017-05-22 at 04.05.30.png)
 
+**8**- Yukarıda resimdeki görüntüyü ios ve android emulatorde elde ettiyseniz şimdi **SecondScreen.js** isimli ikinci ekran ekleyelim.Bunu da screen.js ' de import edip, Navigator'a aşağıdaki gibi register edelim.
+
+```jsx
+import { Navigation } from 'react-native-navigation';
+import FirstScreen from './FirstScreen';
+import SecondScreen from './SecondScreen';
+
+export function registerScreens() {
+  Navigation.registerComponent('chatapp.FirstScreen', () => FirstScreen);
+  Navigation.registerComponent('chatapp.SecondScreen', () => SecondScreen);
+}
+```
+
+9 - **FirstScreen.js** componentine bir tane button ekleyelim ve bastığımızda uygulamayı ikinci ekrana route edelim. Navigator'a register ettiğimiz her componentin birkaç props'a sahip oluyor. Route ederken de bu propslardan `push` u kullanıyoruz.
+
+```jsx
+// ./src/FirstScreen.js
+...
+class FirstScreen extends Component {
+  handleRoute = () => {
+    this.props.navigator.push({
+      screen: "chatapp.SecondScreen",
+      title: "İkinci Ekran Başlık"
+    });
+  };
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>FirstScreen</Text>
+        <TouchableOpacity style={styles.button} onPress={this.handleRoute}>
+          <Text style={{ color: "#FFFFFF" }}> İkinci ekrana git </Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
+...
+```
+
+![](/assets/rnn-ios-6.gif)
+
+ 
+
