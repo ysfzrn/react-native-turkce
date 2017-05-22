@@ -37,10 +37,10 @@ project(':react-native-navigation').projectDir = new File(rootProject.projectDir
      compile "com.android.support:appcompat-v7:23.0.1"
      compile "com.facebook.react:react-native:+"
      compile project(':react-native-navigation')
- } 
+ }
 ```
 
 ![](/assets/rnn-ios-5.gif)
 
-
+**7**- android/app/src/main/java/com/yourproject/
 
