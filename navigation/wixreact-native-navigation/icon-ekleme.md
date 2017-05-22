@@ -99,11 +99,37 @@ export default class App {
     });
   }
 }
-
-
 ```
 
-Şimdi bir tek ekran olarak çalışan uygulamamızı, tabBar'a dönüştürelim.
+Şimdi bir tek ekran olarak çalışan uygulamamızı, aşağıdaki gibi  tabBar'a dönüştürelim.
 
+```jsx
+// ./src/index.ios.js
+...
+  startApp() {
+    Navigation.startTabBasedApp({
+        tabs: [
+          {
+            label: 'Arkadaşlar',
+            screen: 'chatapp.FriendListScreen',
+            icon: friendListIcon,
+            selectedIcon: friendListOutlineIcon,
+            title: 'Arkadaşlarım'
+          },
+          {
+            label: 'Profil',
+            screen: 'chatapp.ProfileScreen',
+            icon: profileIcon,
+            selectedIcon: profileOutlineIcon,
+            title: 'Profilim'
+          }
+        ]
+      });;
+  }
+  ...
+```
 
+index.ios.js'de yazdığımız kodu index.android.js'e de kopyalayalım ve uygulamayı tekrardan iki emulatorde de çalıştıralım.
+
+![](/assets/rnn-ios-9.gif)
 
