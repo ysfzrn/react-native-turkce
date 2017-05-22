@@ -28,5 +28,24 @@ return Arrays.<ReactPackage>asList(
 ...
 ```
 
-./src/index.ios.js dosyasına dönelim ve uygulamamızın başlangıç sayfasını bir tabBar'a dönüştürelim. Bunun için react-native-navigation'da `Navigation.startTabBasedApp` api'sini kullanacağız. Ama daha önce icon belirleyelim. Bizim arkadaş listesini göreceğimiz bir FriendList.js isimli bir ekranımız ve mesajları görebieceğimiz ChatScreen.js isimli bir componentimiz olsun.
+Bizim arkadaş listesini göreceğimiz bir FriendList.js isimli bir ekranımız ve mesajları görebieceğimiz ProfileScreen.js isimli bir componentimiz olsun.Ve aşağıdaki gibi register edelim.
+
+```jsx
+// ./src/screen.js
+
+import { Navigation } from 'react-native-navigation';
+import FirstScreen from './FirstScreen';
+import SecondScreen from './SecondScreen';
+import FriendListScreen from './FriendListScreen';
+import ProfileScreen from './ProfileScreen';
+
+export function registerScreens() {
+  Navigation.registerComponent('chatapp.FirstScreen', () => FirstScreen);
+  Navigation.registerComponent('chatapp.SecondScreen', () => SecondScreen);
+  Navigation.registerComponent('chatapp.FriendListScreen', () => FriendListScreen);
+  Navigation.registerComponent('chatapp.ProfileScreen', () => ProfileScreen);
+}
+```
+
+./src/index.ios.js dosyasına dönelim ve uygulamamızın başlangıç sayfasını bir tabBar'a dönüştürelim. Bunun için react-native-navigation'da `Navigation.startTabBasedApp` api'sini kullanacağız. Ama daha önce icon belirleyelim.FriendList için, IonicIcons'daki ios-people ve profil sayfası için ios-person iconlarını kullanalım.
 
