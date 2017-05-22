@@ -1,12 +1,12 @@
 # Temel Kullanım
 
-**1**- İlk yapmamız gereken her zaman olduğu gibi bir **src **isimli source klasörü oluşturmak. Ve onun içine bir registerScreen.js adlı dosyayı oluşturmak. Onun içinde de **FirstScreen.js** isimli ilk ekranımızı ekleyelim.
+**1**- İlk yapmamız gereken her zaman olduğu gibi bir **src **isimli source klasörü oluşturmak. Ve onun içinde de **FirstScreen.js** isimli ilk ekranımızı ekleyelim. \(Bildiğimiz react-native component\)
 
-**2**- Aynı yerde bir tane tüm ekranlarımızı yönetebileceğimiz, **screen.js** isimli bir dosya daha ekleyelim.
+**2**- Aynı yerde bir tane de ekranlarımızı navigator'e register edeceğimiz, **screen.js** isimli bir dosya ekleyelim.
 
-**3**- **screen.js**'den export ettiğimiz fonksiyonu kullanacağımız, projemizin ana çıkış kaynağı olan index.ios.js ve index.android.js isimli iki dosya oluşturalım.
+**3**- **screen.js**'den export ettiğimiz fonksiyonu kullanacağımız, projemizin ana çıkış kaynağı olan **index.ios.js** ve **index.android.js **isimli iki dosya oluşturalım.
 
-**4** - FirstScreen.js bildiğimiz bir react-native component onu screen.js de import edip, Navigasyon'da kullanacağımız bir ekran olduğunu aşağıdaki gibi belirtelim.
+**4** - **FirstScreen.js** bildiğimiz bir react-native component onu **screen.js** de import edip, Navigasyon'da kullanacağımız bir ekran olduğunu aşağıdaki gibi belirtelim yani register edelim.
 
 ```jsx
 //  ./src/screen.js
@@ -100,6 +100,4 @@ class FirstScreen extends Component {
 ```
 
 ![](/assets/rnn-ios-6.gif)
-
- 
 
