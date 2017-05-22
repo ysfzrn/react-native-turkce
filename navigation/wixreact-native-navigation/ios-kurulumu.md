@@ -1,5 +1,7 @@
 # IOS Kurulumu
 
+\(Burada yapacağımız işlem IOS için manuel linking yapmak. Resmi dökümanda geçen [Linking Libraries](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#step-3) kısmının bir benzeri sadece \)
+
 **1**- react native versiyonu olarak 0.43 ve üstünü kullanıyor olduğunuzdan emin olun.
 
 **2**- npm kullanıyorsanız 3 ve üstü versiyon kullandığınızdan emin olun.
@@ -78,7 +80,7 @@ $(SRCROOT)/../node_modules/react-native-navigation/ios
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   */
-  
+
 
   return YES;
 }
