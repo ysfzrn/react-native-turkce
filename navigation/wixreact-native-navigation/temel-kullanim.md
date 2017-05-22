@@ -12,7 +12,7 @@
 //  ./src/screen.js
 
 import { Navigation } from 'react-native-navigation';
-import FirstScreen from './FirsScreen';
+import FirstScreen from './FirstScreen';
 
 export function registerScreens() {
   Navigation.registerComponent('chatapp.FirstScreen', () => FirstScreen);
@@ -44,7 +44,6 @@ export default class App {
     });
   }
 }
-
 ```
 
 **6**- App class'ını proje root path'inde yer alan index.ios.js ve index.android.js'de çalıştıralım. Tabi bu bir class olduğu için bunu normal fonksiyon olarak çağıramayız o yüzden bir değişkene set edip çağırmalıyız.
