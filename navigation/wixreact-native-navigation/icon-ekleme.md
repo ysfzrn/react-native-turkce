@@ -28,7 +28,5 @@ return Arrays.<ReactPackage>asList(
 ...
 ```
 
-./src/index.ios.js dosyasına dönelim.
-
-
+./src/index.ios.js dosyasına dönelim ve uygulamamızın başlangıç sayfasını bir tabBar'a dönüştürelim. Bunun için react-native-navigation'da `Navigation.startTabBasedApp` api'sini kullanacağız. Ama daha önce icon belirleyelim. Bizim arkadaş listesini göreceğimiz bir FriendList.js isimli bir ekranımız ve mesajları görebieceğimiz ChatScreen.js isimli bir componentimiz olsun.
 
