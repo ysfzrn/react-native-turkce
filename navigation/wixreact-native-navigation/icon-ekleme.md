@@ -47,5 +47,63 @@ export function registerScreens() {
 }
 ```
 
-./src/index.ios.js dosyasına dönelim ve uygulamamızın başlangıç sayfasını bir tabBar'a dönüştürelim. Bunun için react-native-navigation'da `Navigation.startTabBasedApp` api'sini kullanacağız. Ama daha önce icon belirleyelim.FriendList için, IonicIcons'daki ios-people ve profil sayfası için ios-person iconlarını kullanalım.
+./src/index.ios.js dosyasına dönelim ve uygulamamızın başlangıç sayfasını bir tabBar'a dönüştürelim. Bunun için react-native-navigation'da `Navigation.startTabBasedApp` api'sini kullanacağız. Ama daha önce icon belirleyelim.FriendList için, IonicIcons'daki ios-people ve profil sayfası için ios-person iconlarını kullanalım. ./src/index.ios.js 'de App class'ımıza bir method ekleyelim adı populateIcons olsun.Bu bize Promise dönsün, Iconların yüklemesi tamamlandığında uygulamamız belirlediğimiz ilk ekrandan çalışmaya başlasın. Bunları yaptığımız aşğaıdaki kodu dikkatle lütfen inceleyin.
+
+```jsx
+// ./src/index.ios.js
+
+import { Navigation } from "react-native-navigation";
+import { registerScreens } from "./screen";
+import Icon from "react-native-vector-icons/Ionicons";
+
+registerScreens();
+
+export default class App {
+  constructor() {
+    this.populateIcons().then(() => {
+      this.startApp();
+    }).catch((error) => {
+      console.error(error);
+    });
+  }
+
+  populateIcons = function() {
+    return new Promise(function(resolve, reject) {
+      Promise.all([
+        Icon.getImageSource("ios-people", 30),
+        Icon.getImageSource("ios-people-outline", 30),
+        Icon.getImageSource("ios-person", 30),
+        Icon.getImageSource("ios-person-outline", 30)
+      ])
+        .then(values => {
+          friendListIcon = values[0];
+          friendListOutlineIcon = values[1];
+          profileIcon = values[2];
+          profileOutlineIcon = values[3];
+          resolve(true);
+        })
+        .catch(error => {
+          console.log(error);
+          reject(error);
+        })
+        .done();
+    });
+  };
+
+  startApp() {
+    Navigation.startSingleScreenApp({
+      screen: {
+        screen: "chatapp.FirstScreen",
+        title: "Chat App"
+      }
+    });
+  }
+}
+
+
+```
+
+Şimdi bir tek ekran olarak çalışan uygulamamızı, tabBar'a dönüştürelim.
+
+
 

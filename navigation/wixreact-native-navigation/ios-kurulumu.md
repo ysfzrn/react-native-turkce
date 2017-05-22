@@ -28,7 +28,7 @@
 $(SRCROOT)/../node_modules/react-native-navigation/ios
 ```
 
-![](/assets/rnn-ios-3.gif)
+![](/assets/rnn-ios-7.gif)
 
 **7**- Son olarak aşağıdaki kodu projenizin **AppDelegate.m** dosyasının tamamını ezerek kopyalayın.\( Evet tamamını ezerek \)
 
