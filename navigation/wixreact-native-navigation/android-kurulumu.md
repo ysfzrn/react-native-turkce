@@ -7,13 +7,13 @@ Android kurulumu ve kullanımı IOS implemantasyonuna göre daha çetrefilli. Ku
 **2**- npm kullanıyorsanız 3 ve üstü versiyon kullandığınızdan emin olun.
 
 ```
-   npm install react-native-navigation@latest
+   npm install react-native-navigation@1.1.79
 ```
 
 **3**- yarn kullanıyorsanız
 
 ```
-   yarn add react-native-navigation@latest
+   yarn add react-native-navigation@1.1.79
 ```
 
 **4**- **android/settings.gradle** içine aşağıdaki kod parçacığını ekleyin.
