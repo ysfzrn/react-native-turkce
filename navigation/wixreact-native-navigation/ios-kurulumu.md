@@ -5,13 +5,13 @@
 **2**- npm kullanıyorsanız 3 ve üstü versiyon kullandığınızdan emin olun.
 
 ```
-   npm install react-native-navigation@latest
+   npm install react-native-navigation@1.1.79
 ```
 
 **3**- yarn kullanıyorsanız
 
 ```
-   yarn add react-native-navigation@latest
+   yarn add react-native-navigation@1.1.79
 ```
 
 **4**-react-native init ile kurduğunuz projede ios bölümünü **XCode** ile açın. **Libraries** kısmına sağ tıklayıp **Add Files** seçeneğini seçin. **node\_modules** klasörüne kaydedilen, **react-native-navigation/ios/ReactNativeNavigation.xcodeproj**  projesini **Libraries** kısmına ekleyin.
