@@ -95,17 +95,15 @@ Burada `LayoutAnimation.spring();` olarak da ekleyebilirdik. Ama illâ hazır an
 > }
 > ```
 
-
-
-Şimdi şuradaki örneğe bir göz atalım. Kaynak:[https://dribbble.com/shots/1279908-UI-Animation-experiment-1](https://dribbble.com/shots/1279908-UI-Animation-experiment-1)
+Şimdi şuradaki örneğe bir göz atalım.[^1]
 
 ![](/assets/rnn-layoutanimation-3.gif)
 
-Biz de benzer bir örnek yaratalım. 
+Biz de benzer bir örnek yaratalım.
 
 ![](/assets/rnn-layoutanimation-4.gif)
 
-Burada tek yaptığımız baştaki koddaki Rectangle'ı component haline getirip, ScrollView içinde map edip, container componentte ki item'ları flexBox kullanarak wrap etmek  Animasyonu sağlamak için de LayoutAnimation satırının commentini açıp son haline bakalım. 
+Burada tek yaptığımız baştaki koddaki Rectangle'ı component haline getirip, ScrollView içinde map edip, container componentte ki item'ları flexBox kullanarak wrap etmek  Animasyonu sağlamak için de LayoutAnimation satırının commentini açıp son haline bakalım.
 
 ![](/assets/rnn-layoutanimation-5.gif)Tabi ki benim yaptığım gif sizi yanıltmasın aslında gayet smooth bir animasyon elde ettik burada.
 
@@ -113,5 +111,9 @@ Kodun tamamı için şuraya bakabilirsiniz.
 
 [https://gist.github.com/ysfzrn/e540a072e639656269e22e53f9b7da2d](https://gist.github.com/ysfzrn/e540a072e639656269e22e53f9b7da2d)
 
+---
 
+Kaynak
+
+[https://dribbble.com/shots/1279908-UI-Animation-experiment-1](https://dribbble.com/shots/1279908-UI-Animation-experiment-1)[^1]
 
