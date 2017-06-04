@@ -7,15 +7,15 @@ React Native'de animasyonlar için bize 2 tane API sunuluyor.
 * LayoutAnimation
 * Animated
 
-**LayoutAnimation**
+### [**LayoutAnimation**](/component-apilarcomponent-apilarmd/animasyon/layoutanimation.md)
 
 `LayoutAnimation`, `Animated` API'a göre çok daha az konfigurasyonu olan ve componentinizde ne özellik etkilenmişse animasyon olarak kullanabileceğiniz ama `Animated` API'a göre de sınırlı olan bir API.
 
 Burada göz önünde bulunduracağınız şey bir sonraki render'da ne etkilenecek. Örneğin `width` ve `height` için oldukça kullanışlı oluyor.
 
-`LayoutAnimation` ayrıca native bir çözüm. JavaScript'in içinde yaratılmış bir API değil. O yüzden smooth yani akıcı animasyonlar için kullanışlı. Şimdi nasıl kullanılıyor bir bakalım.
+`LayoutAnimation` ayrıca native bir çözüm. JavaScript'in içinde yaratılmış bir API değil. O yüzden smooth yani akıcı animasyonlar için kullanışlı.
 
+### [**Animated**](/component-apilarcomponent-apilarmd/animasyon/animated.md)
 
-
-
+`Animated` API, `LayoutAnimation'a` göre oldukça fazla konfigurasyonu olan ve karmaşık animasyonları yazacağınız bir API. Ve maalesef JavaScript tarafında çalışan bir API bu da daha çok animasyonlar da takılmalara sebep olabiliyor. Daha akıcı animasyonlar yapmak için takılmalarda `setNativeProps` ile native dünyada değişiklikler yapabilirsiniz.
 
