@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-
 ```
 
 ![](/assets/rnn-layoutanimation-1.gif)
@@ -73,12 +72,27 @@ handleSelect = () => {
     LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
     this.setState({ selected: !this.state.selected });
   };
-...  
+...
 ```
 
 ![](/assets/rnn-layoutanimation-2.gif)
 
 _\(yukarıdaki gif sizi aldatmasın gayet smooth bir animasyon sadece gif de takılma varmış gibi gözüküyor\)_
 
-Burada `LayoutAnimation.spring();` olarak da ekleyebilirdik. Ama illâ hazır animasyonları kullanmak yerine custom animasyonları da eklemek isterseniz, `configureNext'i` kullanmalısınız. `duration`, `create`, `update` methodlarını kullanabilirsiniz. Hazır fonksiyonlardan `spring`  dışında `easeInEaseOut` ve `linear` var. 
+Burada `LayoutAnimation.spring();` olarak da ekleyebilirdik. Ama illâ hazır animasyonları kullanmak yerine custom animasyonları da eklemek isterseniz, `configureNext'i` kullanmalısınız. `duration`, `create`, `update` methodlarını kullanabilirsiniz. Hazır fonksiyonlardan `spring`  dışında `easeInEaseOut` ve `linear` var.
+
+> Önemli Not: Android'de LayoutAnimation kullanırken mutlaka yapmanız gereken, 2 şey var. 
+>
+> ```jsx
+> var UIManager = require('UIManager'); //UIManager'ı import edin
+>
+> //componentDidMount aşağıdaki configurasyonu yapın
+> componentDidMount() {
+>       UIManager.setLayoutAnimationEnabledExperimental && 
+>       UIManager.setLayoutAnimationEnabledExperimental(true);
+> }
+>  
+> ```
+
+
 
