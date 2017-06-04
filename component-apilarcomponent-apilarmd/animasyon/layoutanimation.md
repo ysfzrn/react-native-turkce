@@ -105,7 +105,9 @@ Biz de benzer bir örnek yaratalım.
 
 Burada tek yaptığımız baştaki koddaki Rectangle'ı component haline getirip, ScrollView içinde map edip, container componentte ki item'ları flexBox kullanarak wrap etmek  Animasyonu sağlamak için de LayoutAnimation satırının commentini açıp son haline bakalım.
 
-![](/assets/rnn-layoutanimation-5.gif)Tabi ki benim yaptığım gif sizi yanıltmasın aslında gayet smooth bir animasyon elde ettik burada.
+![](/assets/rnn-layoutanimation-5.gif)
+
+Tabi ki benim yaptığım gif sizi yanıltmasın aslında gayet smooth bir animasyon elde ettik burada. Zaten performans monitorunde UI ve JS tarafınd 60 fps nin altına düşmediğini görebilirsiniz.
 
 Kodun tamamı için şuraya bakabilirsiniz.
 
