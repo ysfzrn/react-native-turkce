@@ -109,7 +109,7 @@ Burada tek yaptığımız baştaki koddaki Rectangle'ı component haline getirip
 
 Tabi ki benim yaptığım gif sizi yanıltmasın aslında gayet smooth bir animasyon elde ettik burada. Zaten performans monitorunde UI ve JS tarafınd 60 fps nin altına düşmediğini görebilirsiniz.
 
-Kodun tamamı için şuraya bakabilirsiniz.
+Kodun tamamı için şuraya bakabilirsiniz. 
 
 [https://gist.github.com/ysfzrn/e540a072e639656269e22e53f9b7da2d](https://gist.github.com/ysfzrn/e540a072e639656269e22e53f9b7da2d)
 
