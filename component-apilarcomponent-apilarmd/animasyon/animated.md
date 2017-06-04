@@ -1,8 +1,8 @@
 # Animated
 
-Anlat anlat bitmeyecek, kesin bir hiyerarşisi olmayan, resmi dökümanda dahi tüm özellikleriyle anlatılmamış en sevdiğim API. Burası benim kendi yorumum. Şimdi üçüncü ağızdan anlatmaya başlayalım.
+Anlat anlat bitmeyecek, kesin bir hiyerarşisi olmayan, resmi dökümanda dahi tüm özellikleriyle anlatılmamış en sevdiğim API. Burası benim kendi yorumum. Şimdi üçüncü ağızdan anlatmaya başlayalım. 
 
-Animated API özellikle syntax itibariyle karışık gelebilir. Bu dökümanda da tüm özellikleriyle bahsedebilmem çok zor. Sadece buraya sınırlı kalamayacağınız için kendi dökümanı hariç önereceğim kaynaklar aşağıdaki gibi;
+Animated API özellikle syntax itibariyle karışık gelebilir. Bu dökümanda tüm özellikleriyle bahsedebilmem çok zor. Sadece buraya sınırlı kalamayacağınız için kendi dökümanı hariç önereceğim kaynaklar aşağıdaki gibi;
 
 _ \(Bahsedilen tüm kaynaklar _[_browniefed_](https://github.com/browniefed)_ mahlaslı arkadaşa ait\)_
 
@@ -110,7 +110,7 @@ Bunun için **interPolation** yapacaz. İşin burasını anlamak çok önemli. M
  });
 ```
 
-animationValue olan `this.state.animValue` içinden çağırdığımız `interpolate` fonksiyonu içine `inputRange` ve `outputRange` keylerine sahip bir obje alıyor. `inputRange` **250**'den **--&gt;** **450**'ye doğru giderken,  `outputRange`'de **0deg**'den ---&gt; **360deg**'e doğru gidiyor. Bu arada mesela `inputRange` **350** civarrındayken tahminim `outputRange`'de **180deg**'ye yakın oluyordur. Biz araya girip _\(interpolate'in kelime anlamlarından biri araya girmek\)_ `inputRange` **350** iken **720deg** ol sonra **350** ve **450** arasında, kendini ayarla ve **360deg**'e doğru hızla ilerle diyebiliriz. 
+animationValue olan `this.state.animValue` içinden çağırdığımız `interpolate` fonksiyonu içine `inputRange` ve `outputRange` keylerine sahip bir obje alıyor. `inputRange` **250**'den **--&gt;** **450**'ye doğru giderken,  `outputRange`'de **0deg**'den ---&gt; **360deg**'e doğru gidiyor. Bu arada mesela `inputRange` **350** civarrındayken tahminim `outputRange`'de **180deg**'ye yakın oluyordur. Biz araya girip _\(interpolate'in kelime anlamlarından biri araya girmek\)_ `inputRange` **350** iken **720deg** ol sonra **350** ve **450** arasında, kendini ayarla ve **360deg**'e doğru hızla ilerle diyebiliriz.
 
 _Bu kadar basit bir mevzuyu anlatamadıysam lütfen beni uyarın._
 
@@ -132,6 +132,4 @@ const customStyle = {
 ```
 
 ![](/assets/rnn-animated-3.gif)Maalesef gif yapmak için kullandığım tool pek animasyonları doğru yansıtamadı. Kodun tamamını canlı olarak [şuradan ](https://snack.expo.io/rk0oekzGb)izleyebilirsiniz. \(  [https://snack.expo.io/rk0oekzGb](https://snack.expo.io/rk0oekzGb) \)
-
-
 
