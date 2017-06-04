@@ -81,7 +81,9 @@ _\(yukarıdaki gif sizi aldatmasın gayet smooth bir animasyon sadece gif de tak
 
 Burada `LayoutAnimation.spring();` olarak da ekleyebilirdik. Ama illâ hazır animasyonları kullanmak yerine custom animasyonları da eklemek isterseniz, `configureNext'i` kullanmalısınız. `duration`, `create`, `update` methodlarını kullanabilirsiniz. Hazır fonksiyonlardan `spring`  dışında `easeInEaseOut` ve `linear` var.
 
-> Önemli Not: Android'de LayoutAnimation kullanırken mutlaka yapmanız gereken, 2 şey var. 
+`configureNext`'e ikinci parametre olarak bir callback fonksiyonu da geçirebilirsiniz fakat bu durum sadece ios için geçerli.
+
+> Önemli Not: Android'de LayoutAnimation kullanırken mutlaka yapmanız gereken, 2 şey var.
 >
 > ```jsx
 > var UIManager = require('UIManager'); //UIManager'ı import edin
@@ -91,8 +93,25 @@ Burada `LayoutAnimation.spring();` olarak da ekleyebilirdik. Ama illâ hazır an
 >       UIManager.setLayoutAnimationEnabledExperimental && 
 >       UIManager.setLayoutAnimationEnabledExperimental(true);
 > }
->  
 > ```
+
+
+
+Şimdi şuradaki örneğe bir göz atalım. Kaynak:[https://dribbble.com/shots/1279908-UI-Animation-experiment-1](https://dribbble.com/shots/1279908-UI-Animation-experiment-1)
+
+![](/assets/rnn-layoutanimation-3.gif)
+
+Biz de benzer bir örnek yaratalım. 
+
+![](/assets/rnn-layoutanimation-4.gif)
+
+Burada tek yaptığımız baştaki koddaki Rectangle'ı component haline getirip, ScrollView içinde map edip, container componentte ki item'ları flexBox kullanarak wrap etmek  Animasyonu sağlamak için de LayoutAnimation satırının commentini açıp son haline bakalım. 
+
+![](/assets/rnn-layoutanimation-5.gif)Tabi ki benim yaptığım gif sizi yanıltmasın aslında gayet smooth bir animasyon elde ettik burada.
+
+Kodun tamamı için şuraya bakabilirsiniz.
+
+[https://gist.github.com/ysfzrn/e540a072e639656269e22e53f9b7da2d](https://gist.github.com/ysfzrn/e540a072e639656269e22e53f9b7da2d)
 
 
 
