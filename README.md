@@ -1,6 +1,6 @@
-# React Native Türkçe
+# React Native Türkçe 
 
-Hızlı, cross-platform, mobile uygulama yazmak için React Native 
+Hızlı, cross-platform, mobile uygulama yazmak için React Native
 
 Eğer web projesi geliştirmek anlamında tecrübeniz varsa, bu çok aşina olduğunuz geliştirme ortamıyla mobile uygulamalar geliştirebilmek React Native ile çok kolay.
 
