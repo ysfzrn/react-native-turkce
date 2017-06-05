@@ -1,6 +1,6 @@
-# Animated
+# Animated 
 
-Anlat anlat bitmeyecek, kesin bir hiyerarşisi olmayan, resmi dökümanda dahi tüm özellikleriyle anlatılmamış en sevdiğim API. Burası benim kendi yorumum. Şimdi üçüncü ağızdan anlatmaya başlayalım. 
+Anlat anlat bitmeyecek, kesin bir hiyerarşisi olmayan, resmi dökümanda dahi tüm özellikleriyle anlatılmamış en sevdiğim API. Burası benim kendi yorumum. Şimdi üçüncü ağızdan anlatmaya başlayalım.
 
 Animated API özellikle syntax itibariyle karışık gelebilir. Bu dökümanda tüm özellikleriyle bahsedebilmem çok zor. Sadece buraya sınırlı kalamayacağınız için kendi dökümanı hariç önereceğim kaynaklar aşağıdaki gibi;
 
