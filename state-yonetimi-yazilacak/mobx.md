@@ -10,7 +10,9 @@ Mobx'in arkasında yatan mantık da aynı. Uygulamanın state'inde herhangi bir 
 
 Flux ve redux da olduğu gibi, MobX'de de action'lar var olan state'i değiştirmek için varlar. Ama redux'da olduğu gibi state değişikliklerini reducer üzerinden değil, **direkt action fonksiyonunun içinde  yapıyoruz.  **![](/assets/mobxDiagram.png)
 
-TodoList ekranımız aşağıdaki gibi olsun.![](/assets/todoList4.png)
+1. TodoList ekranımız aşağıdaki gibi olsun.![](/assets/todoList4.png)
+
+### 1. Store diyebileceğimiz bir class oluşturalım.
 
 
 
