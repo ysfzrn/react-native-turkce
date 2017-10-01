@@ -79,7 +79,6 @@ export default class MobxRnnProvider extends Provider {
     };
   }
 }
-
 ```
 
 **7\) **Şimdi store'ları oluşturmaya başlayalım. 2 tane store olacak. 1 tanesi navigasyonu mobx üzerinden de yönetebileceğimiz, navigationStore. Diğeri, oyunun state'lerini yöneteceğimiz gameStore olacak. stores, klasörünün altında dabu iki store'u  export edeceğiz. \( Bu arada bu projede navigationStore kullanmak zorunda değildik. Sadece mobx ile nasıl kullanıldığına örnek olması bakımından yazma gereği duydum. \)
@@ -92,5 +91,7 @@ export default class MobxRnnProvider extends Provider {
 
 ![](/assets/Screen Shot 2017-10-01 at 15.42.03.png)
 
+**10\) **Şimdi başta yarattığımız root.js isimli dosyamıza geçelim. Ve aşağıdaki gibi düzenleyelim. Burada root.js bir react componenti değil bir javascript class'ı. Ve bu class'ın içinde başta çalışacak constructor methodunda, mobx'in reaction fonksiyonunu kullanıyoruz. reaction, navigationStore'da, route observable değeri değiştiğinde aşağıdaki startApp methodunu sürekli çalıştırmasını istiyoruz. Sürekli dememin sebebi constructor class'da bir kere çalıştırılır. Aslında reaction ile listener eklemiş oluyoruz. Daha sonra da navigationStore'da appInitialized methodunu çağırıp, ilk ekranımız home'u çağırmasını sağlıyoruz.
 
+![](/assets/Screen Shot 2017-10-01 at 15.58.41.png)
 
