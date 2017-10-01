@@ -1,4 +1,4 @@
-# YILAN OYUNU
+# REACT NATIVE İLE YILAN OYUNU  \( PART 1 \)
 
 İlk bölümün source kodlarına şuradaki branch'den erişebilirsiniz:[ ](https://github.com/ysfzrn/crazysnake/tree/firstpart)[https://github.com/ysfzrn/crazysnake/tree/firstpart](https://github.com/ysfzrn/crazysnake/tree/firstpart)
 
