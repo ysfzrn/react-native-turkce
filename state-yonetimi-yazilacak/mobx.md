@@ -22,7 +22,7 @@ Flux ve redux da olduğu gibi, MobX'de de action'lar var olan state'i değiştir
 
 > yarn add --dev babel-plugin-transform-decorators-legacy
 
-Paketimizi ekledikten sonra, **babelrc** dosyasının içini aşağıdaki gibi değiştiriyoruz
+Paketimizi ekledikten sonra, .**babelrc** dosyasının içini aşağıdaki gibi değiştiriyoruz
 
 > {
 >
