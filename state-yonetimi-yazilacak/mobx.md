@@ -46,7 +46,7 @@ Paketimizi ekledikten sonra, .**babelrc** dosyasının içini aşağıdaki gibi 
 >
 > `}`
 
-**4\) **Şimdi todoStore diye isimlendireceğimiz sınıfımızı yaratalım. Başlangıç state'leri değişken olarak tanımlayıp, başlarına observable decorator koyduk. Böylece bu state'lerde değişiklik olduğu zaman, observable componentlerimiz bunları algılayıp tekrar render edilecekler. 
+**4\) **Şimdi todoStore diye isimlendireceğimiz sınıfımızı yaratalım. Başlangıç state'leri değişken olarak tanımlayıp, başlarına observable decorator koyduk. Böylece bu state'lerde değişiklik olduğu zaman, observable componentlerimiz bunları algılayıp tekrar render edilecekler.
 
 ```js
 import mobx, { observable } from "mobx";
@@ -89,7 +89,7 @@ const todoStore = new Store()
 export default todoStore;
 ```
 
-**6\)** MobX'de bir diğer temel kavram @computed decorator'ü. Computed methodları, birden fazla observable değerinin değişikliğinden etkilenen yeni bir değer türeteceğimiz zaman kullanıyoruz. Aşağıdaki örneğe bakalım. Status'u _all_ olan, ya da _done_ olan todo list'de olan elemanları _filteredTodos_ değişkeninde tutmak ya da önyüz'de _todos_ listesini filtrelemek yerine, çoğu yazılım dilinde hali hazırda olan getter, setter methodları yapıyoruz.    
+**6\)** MobX'de bir diğer temel kavram @computed decorator'ü. Computed methodları, birden fazla observable değerinin değişikliğinden etkilenen yeni bir değer türeteceğimiz zaman kullanıyoruz. Aşağıdaki örneğe bakalım. Status'u _all_ olan, ya da _done_ olan todo list'de olan elemanları _filteredTodos_ değişkeninde tutmak ya da önyüz'de _todos_ listesini filtrelemek yerine, çoğu yazılım dilinde hali hazırda olan getter, setter methodları yapıyoruz.
 
 ```js
 import mobx, { observable, action, computed } from "mobx";
@@ -111,16 +111,16 @@ class Store {
     statusChange(status){
         this.selectedStatus = status;
     }
-    
+
     @computed get filterTodos() {
         if(this.selectedStatus === 'all'){
             return this.todos;
         } else if( this.selectedStatus === 'done' ){
-    	return this.todos.filter(
-			todo => todo.status === true);
+        return this.todos.filter(
+            todo => todo.status === true);
         } else if( this.selectedStatus === 'todo' ){
-    	return this.todos.filter(
-			todo => todo.status === false);
+        return this.todos.filter(
+            todo => todo.status === false);
         }
     }
 
@@ -128,6 +128,25 @@ class Store {
 
 const todoStore = new Store()
 export default todoStore;
+```
+
+**7\) **Şimdi react-native ile entegrasyonuna göz atalım. **@observer** decorator'ünü componentin başına ekliyoruz ve Store'u import edip, store içinde ne varsa method, state, her birine erişebiliyoruz.
+
+```jsx
+import { observer } from "mobx-react/native";
+import TodoStore from './store'
+
+@observer
+export default class hellomobx extends Component {
+  render() {
+    console.log(this.props);
+    return (
+      <View style={styles.container}>
+        <Text>{TodoStore.selectedStatus}</Text>
+      </View>
+    );
+  }
+}
 ```
 
 
