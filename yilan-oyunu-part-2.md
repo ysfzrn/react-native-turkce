@@ -62,7 +62,7 @@ const SharedStyle ={
 export default SharedStyle
 ```
 
-Home ekranımız da aşağıdaki gibi olacak. Bu yazı genel olarak MobX üzerine yazıldığı için kullanılan componentlerin ve ekranların tasarımı üzerinde çok durmayacağım. Ama şunu söylemek zorundayım. Buradaki **inject** ve **observer** decoratorlerine dikkat edin.
+Home ekranımız da aşağıdaki kodda yazıldığı gibi olacak. Bu yazı genel olarak MobX üzerine yazıldığı için kullanılan componentlerin ve ekranların tasarımı üzerinde çok durmayacağım. Ama şunu söylemek zorundayım. Buradaki **inject** ve **observer** decoratorlerine dikkat edin.
 
 **@observer** decoratorü ile bu ekranımızın observable değerlerine göre render edilmesini sağlıyoruz. \( İsimlendirme gayet basit, observable, takip edilen değerler, observer, bu değerleri takip eden demek. \)
 
