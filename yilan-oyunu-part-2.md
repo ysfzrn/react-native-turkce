@@ -8,6 +8,8 @@
 
 Şimdi ekranımızın tasarımına geçelim. Ekranlarda ortak ilişkili tutacağım stilleri, bir style dosyasında tutmayı tercih ediyorum. İşimi daha kolaylaştırıyor. Ve daha çok tema opsiyonu nasıl olurmuş diye deneme şansım oluyor. Burada kullanacağımız stil dosyası aşağıdaki olacak.
 
+Burada önemli olarak yılanımızın her bir parçası yani segment'i 10px değerin de olacak. Ve yılanın hareket edeceği board'da herhangi bir uyumsuzluk yaşamaması için, board'ın genişliği, telefonun ekran genişliğine göre şekillenmesi ve width değerinin 10'nun katlarından bir değere sahip olması gerekiyor. Bunun için sharedStyle.js içinde definiteWidth adlı bir method yarattım.
+
 ```js
 //src/util/SharedStyle.js
 import { Dimensions, Platform } from "react-native";
@@ -138,5 +140,5 @@ export default Home;
 
 Gelelim PLAY butonuna bastığımızda MobX üzerinden ekranı değiştirmeye. Bu işi yukarıdaki component de `handlePlay` methodunda yapıyoruz. navigationStore'da yazdığımız,  handleChangeRoute methodunu çağırıyoruz. Sadece yaptığı iş navigationStore'da route observable değerini değiştirip, değerini "gameScreen" olarak güncellemek. O da ilk bölümde anlattığımız, root.js içindeki reaction'ı tetikleyip, this.startApp methodunu çağıracak.
 
-Şimdi oyunun ana kısmı olan gameScreen ekranımıza geçelim.
+Şimdi oyunun ana kısmı olan gameScreen ekranımıza geçelim. Bu bölüm oldukça uzun olacağından bunu 3. bölümde anlatalım.
 
