@@ -14,7 +14,27 @@ Oyunumuz 3 ekrandan oluşacak.
 
 Hadi başlayalım :\)
 
+**1\) **Projemizi react-native-cli ile yaratalım.
 
+> `react-native init crazysnake `
+
+**2\) **Projemizin klasörüne girip \(cd crazysnake\), kullanacağımız dependency paketlerini indirelim. 
+
+> `yarn add lodash mobx mobx-react react-native-navigation`
+>
+> `yarn add --devbabel-plugin-transform-decorators-legacy`
+
+**3\) ** babelrc dosyamızı düzenleyip, decorator'lerin çalışmasını sağlayalım.
+
+> `{`
+>
+> `'presets': ['react-native'],`
+>
+> `'plugins': ['transform-decorators-legacy']`
+>
+> `}`
+
+**4\) **Mobx için yaptıklarımızdan sonra react-native-navigation paketine geçelim. Bu pkaet wix ekibinin yazdığı native bir kütüphane olduğundan entegrasyonu anroid ve ios için ayrı ayrı yapmak gerekiyor. Bu paketin kurulumunu daha önce yazdığımız [şu makalede](https://ysfzrn.gitbooks.io/react-native-turkce/navigation/wixreact-native-navigation.html) bulabilirsiniz. Buradaki adımları eksiksiz yaptığınıza emin olun.
 
 
 
