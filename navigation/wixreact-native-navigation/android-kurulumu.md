@@ -45,7 +45,7 @@ project(':react-native-navigation').projectDir = new File(rootProject.projectDir
 **7**- **android/app/src/main/java/com/projenizin\_ismi/MainApplication.java **dosyanıza aşağıdaki java kodu kopyalayın, tümünü ezin.
 
 ```java
-package com.projenizin_ismi;
+package com.projenizin_ismi; // !!! bunu değiştirmeyi unutma
 
 import android.app.Application;
 
@@ -86,7 +86,7 @@ public class MainApplication extends NavigationApplication {
 **8**- **android/app/src/main/java/com/projenizin\_ismi/MainActivity.java **dosyanıza aşağıdaki java kodu kopyalayın, tümünü ezin.
 
 ```java
-package com.projenizin_ismi;
+package com.projenizin_ismi;   // !!! bunu değiştirmeyi unutma
 
 //import com.facebook.react.ReactActivity;
 import android.widget.LinearLayout;
