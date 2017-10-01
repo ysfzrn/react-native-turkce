@@ -16,21 +16,35 @@ Flux ve redux da olduğu gibi, MobX'de de action'lar var olan state'i değiştir
 
 **1\)**  İlk yapmamız gereken mobx ve mobx-react paketlerini projemizin dependency paketlerine eklemek
 
-> yarn add mobx mobx-react
+> `yarn add mobx mobx-react`
 
 **2\)** MobX, javascript'e ES7 ile gelen decoratorler ile genellikle yazılır. \( decorator kullanmadan da yazabilirsiniz ama okunabilirlik açısında tavsiye etmiyorum. \). Bu decoratorleri etkin kılmak için babel-plugin-transform-decorators-legacy paketini projemizin devDependencies'e  ekliyoruz
 
-> yarn add --dev babel-plugin-transform-decorators-legacy
+> `yarn add --dev babel-plugin-transform-decorators-legacy`
 
 Paketimizi ekledikten sonra, .**babelrc** dosyasının içini aşağıdaki gibi değiştiriyoruz
 
-> {
+> `{`
 >
-> 'presets': \['react-native'\],
+> `'presets': ['react-native'],`
 >
-> 'plugins': \['transform-decorators-legacy'\]
+> `'plugins': ['transform-decorators-legacy']`
 >
-> }
+> `}`
 
-**3\) **
+**3\) **Eğer VsCode kullanıyorsanız, editörünüzün decoratorlere kızmaması için projenizde **tsconfig.json** isimli bir dosya oluşturup, aşağıdaki satırları kopyalaıp kaydedin.
+
+> `{`
+>
+> `    "compilerOptions": {`
+>
+> `        "experimentalDecorators": true,`
+>
+> `        "allowJs": true`
+>
+> `    }`
+>
+> `}`
+
+
 
