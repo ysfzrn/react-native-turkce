@@ -64,7 +64,7 @@ Home ekranımız da şöyle olacak. Bu yazı genel olarak MobX üzerine yazıld�
 
 **@inject** decoratorü ise MobX'de store elemanlarını componentlerde kullanabilmemizi sağlayan bir diğer yöntem. İlgili store'u burada import edip de kullanabilirdik. Ama ben @inject decoratorünü kullanarak, store elemanlarına direkt erişmek yerine, componentin props'larından erişmeyi tercih ediyorum. Hangi yöntem daha doğru ben de bilmiyorum sadece belki gerektiği zaman lifecycle methodlarını \( componentWillReceiveProps gibi \) kullanmaya ihtiyacım olur diye @inject ile props'dan almak daha mantıklı geliyor.
 
-Artık props üzerinde storelara erişebiliyorum. `const { gameStore } = this.props`; ile `gameStore.highScore`'u `ScoreText `componentine gönderebilirim.
+Artık props üzerinde storelara erişebiliyorum. `const { gameStore } = this.props`; ile `gameStore.highScore`'u `ScoreText`componentine gönderebilirim.
 
 ```jsx
 //import liraries
@@ -136,5 +136,7 @@ const styles = StyleSheet.create({
 export default Home;
 ```
 
-Gelelim PLAY butonuna bastığımızda MobX üzerinden ekranı değiştirmeye. Bu işi yukarıdaki component de `handlePlay` methodunda yapıyoruz. navigationStore'da yazdığımız,  handleChangeRoute methodunu çağırıyoruz. Sadece yaptığı iş navigationStore'da route observable değerini değiştirmek. O da ilk bölümde anlattığımız, root.js içindeki reaction'ı tetikleyip, this.startApp methodunu çağıracak.
+Gelelim PLAY butonuna bastığımızda MobX üzerinden ekranı değiştirmeye. Bu işi yukarıdaki component de `handlePlay` methodunda yapıyoruz. navigationStore'da yazdığımız,  handleChangeRoute methodunu çağırıyoruz. Sadece yaptığı iş navigationStore'da route observable değerini değiştirip, değerini "gameScreen" olarak güncellemek. O da ilk bölümde anlattığımız, root.js içindeki reaction'ı tetikleyip, this.startApp methodunu çağıracak.
+
+Şimdi oyunun ana kısmı olan gameScreen ekranımıza geçelim.
 
