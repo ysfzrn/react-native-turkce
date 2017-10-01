@@ -35,6 +35,6 @@
 * [State Yönetimi](state-yonetimi-yazilacak.md)
   * [mobx](state-yonetimi-yazilacak/mobx.md)
   * Redux \(Yazılacak\)
-* [Yılan Oyunu](yilan-oyunu.md)
+* [Yılan Oyunu Part 1](yilan-oyunu.md)
 * [Android Apk Oluşturma](google-play-store-deployment-yazilacak.md)
 
