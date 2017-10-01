@@ -79,17 +79,17 @@ import { Button, ScoreText} from "../components";
 @observer
 class Home extends Component {
   static navigatorStyle = {
-    navBarHidden: true
+    navBarHidden: true  // default olarak gelen navigationBar'ın görünmemesi için
   };
 
   componentDidMount() {
     const { gameStore } = this.props;
-    gameStore.getHighScore();
+    gameStore.getHighScore();  //highScore değerini al
   }
 
   handlePlay=()=>{
     const { nav } = this.props;
-    nav.handleChangeRoute("gameScreen");
+    nav.handleChangeRoute("gameScreen");   //gameScreen ekranına git
   }
 
   render() {
