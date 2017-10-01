@@ -142,5 +142,5 @@ export default Home;
 
 Gelelim PLAY butonuna bastığımızda MobX üzerinden ekranı değiştirmeye. Bu işi yukarıdaki component de `handlePlay` methodunda yapıyoruz. navigationStore'da yazdığımız,  handleChangeRoute methodunu çağırıyoruz. Sadece yaptığı iş navigationStore'da route observable değerini değiştirip, değerini "gameScreen" olarak güncellemek. O da ilk bölümde anlattığımız, root.js içindeki reaction'ı tetikleyip, this.startApp methodunu çağıracak.
 
-Şimdi oyunun ana kısmı olan gameScreen ekranımıza geçelim. Bu bölüm oldukça uzun olacağından bunu 3. bölümde anlatalım.
+İlk ekran için söylenecekler bu kadar, şimdi oyunun ana kısmı olan gameScreen ekranımıza geçelim. Bu bölüm oldukça uzun olacağından bunu 3. bölümde anlatalım.
 
