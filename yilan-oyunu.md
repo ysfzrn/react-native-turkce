@@ -1,4 +1,4 @@
-# YILAN OYUNU 
+# YILAN OYUNU
 
 İlk bölümün source kodlarına şuradaki branch'den erişebilirsiniz:[ ](https://github.com/ysfzrn/crazysnake/tree/firstpart)[https://github.com/ysfzrn/crazysnake/tree/firstpart](https://github.com/ysfzrn/crazysnake/tree/firstpart)
 
@@ -93,7 +93,7 @@ export default class MobxRnnProvider extends Provider {
 
 ![](/assets/Screen Shot 2017-10-01 at 15.42.03.png)
 
-**10\) **Şimdi başta yarattığımız root.js isimli dosyamıza geçelim. Ve aşağıdaki gibi düzenleyelim. Burada root.js bir react componenti değil bir javascript class'ı. Ve bu class'ın içinde başta çalışacak constructor methodunda, mobx'in reaction fonksiyonunu kullanıyoruz. reaction, navigationStore'da, route observable değeri değiştiğinde aşağıdaki startApp methodunu sürekli çalıştırmasını istiyoruz. Sürekli dememin sebebi constructor class'da bir kere çalıştırılır. Aslında reaction ile listener eklemiş oluyoruz. Daha sonra da navigationStore'da appInitialized methodunu çağırıp, ilk ekranımız home'u çağırmasını sağlıyoruz.
+**10\) **Şimdi başta yarattığımız root.js isimli dosyamıza geçelim. Ve aşağıdaki gibi düzenleyelim. Burada root.js bir react componenti değil bir javascript class'ı. Ve bu class'ın içinde başta çalışacak constructor methodunda, mobx'in reaction fonksiyonunu kullanıyoruz. reaction, computed methodlara benzese de, observable state değiştiğinde yeni bir değer üretmek yerine, side effect oluşturmamızı sağlar. Aşağıdaki kodda yapılan işlem, Store.nav.route değeri değiştiğinde, startApp methodunu çalıştır.
 
 ![](/assets/Screen Shot 2017-10-01 at 15.58.41.png)
 
