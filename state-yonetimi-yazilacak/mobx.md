@@ -36,15 +36,99 @@ Paketimizi ekledikten sonra, .**babelrc** dosyasının içini aşağıdaki gibi 
 
 > `{`
 >
-> `    "compilerOptions": {`
+> `"compilerOptions": {`
 >
-> `        "experimentalDecorators": true,`
+> `"experimentalDecorators": true,`
 >
-> `        "allowJs": true`
->
-> `    }`
+> `"allowJs": true`
 >
 > `}`
+>
+> `}`
+
+**4\) **Şimdi todoStore diye isimlendireceğimiz sınıfımızı yaratalım. Başlangıç state'leri değişken olarak tanımlayıp, başlarına observable decorator koyduk. Böylece bu state'lerde değişiklik olduğu zaman, observable componentlerimiz bunları algılayıp tekrar render edilecekler. 
+
+```js
+import mobx, { observable } from "mobx";
+
+class Store {
+    @observable todos=[];
+    @observable selectedStatus="all";
+}
+
+const todoStore = new Store()
+export default todoStore;
+```
+
+**5\) **State'leri değiştirecek olan action'larımızı, @action decorator'u yardımı ile tanımlayalım. Observable değişkenlere redux'da olduğu gibi bir reducer aracılığıyla değil, zaten class içinde tanımlı olduklarından method içinde müdahele edebiliyoruz.
+
+```js
+import mobx, { observable, action } from "mobx";
+
+class Store {
+    @observable todos=[];
+    @observable selectedStatus="all";
+
+    @action('adding todo item')
+    addTodo(todo){
+        this.todos.push({
+            id: this.todos[this.todos.length - 1].id +1,
+            status: false,
+            text: todo
+        })
+    }
+
+    @action('Selected status changed')
+    statusChange(status){
+        this.selectedStatus = status;
+    }
+
+}
+
+const todoStore = new Store()
+export default todoStore;
+```
+
+**6\)** MobX'de bir diğer temel kavram @computed decorator'ü. Computed methodları, birden fazla observable değerinin değişikliğinden etkilenen yeni bir değer türeteceğimiz zaman kullanıyoruz. Aşağıdaki örneğe bakalım. Status'u _all_ olan, ya da _done_ olan todo list'de olan elemanları _filteredTodos_ değişkeninde tutmak ya da önyüz'de _todos_ listesini filtrelemek yerine, çoğu yazılım dilinde hali hazırda olan getter, setter methodları yapıyoruz.    
+
+```js
+import mobx, { observable, action, computed } from "mobx";
+
+class Store {
+    @observable todos=[];
+    @observable selectedStatus="all";
+
+    @action('adding todo item')
+    addTodo(todo){
+        this.todos.push({
+            id: this.todos[this.todos.length - 1].id +1,
+            status: false,
+            text: todo
+        })
+    }
+
+    @action('Selected status changed')
+    statusChange(status){
+        this.selectedStatus = status;
+    }
+    
+    @computed get filterTodos() {
+        if(this.selectedStatus === 'all'){
+            return this.todos;
+        } else if( this.selectedStatus === 'done' ){
+    	return this.todos.filter(
+			todo => todo.status === true);
+        } else if( this.selectedStatus === 'todo' ){
+    	return this.todos.filter(
+			todo => todo.status === false);
+        }
+    }
+
+}
+
+const todoStore = new Store()
+export default todoStore;
+```
 
 
 
