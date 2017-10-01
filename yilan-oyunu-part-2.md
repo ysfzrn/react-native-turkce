@@ -1,5 +1,7 @@
 # REACT NATIVE İLE YILAN OYUNU  \( PART 2 \)
 
+İkinci bölümün source kodlarına şuradaki branch'den erişebilirsiniz:[ ](https://github.com/ysfzrn/crazysnake/tree/firstpart)[https://github.com/ysfzrn/crazysnake/tree/secondpart](https://github.com/ysfzrn/crazysnake/tree/secondpart)
+
 ![](/assets/Screen Shot 2017-10-01 at 14.25.18.png)
 
 **1\) **Home ekranımızda, gameStore'dan gelecek en yüksek skor bilgisi var. Bu bilgi telefon hafızasında tutulacak. Bunu sağlamak için **AsyncStorage**'ı kullanabiliriz.
