@@ -95,3 +95,7 @@ export default class MobxRnnProvider extends Provider {
 
 ![](/assets/Screen Shot 2017-10-01 at 15.58.41.png)
 
+Son olarak react-native run-ios ve react-native run-android komutlarıyla aşağıdaki gibi sonuç aldıysanız, oyunumuzun ikinci bölümüne geçebiliriz.
+
+![](/assets/Screen Shot 2017-10-01 at 16.12.24.png)
+
