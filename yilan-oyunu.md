@@ -1,4 +1,6 @@
-# YILAN OYUNU
+# YILAN OYUNU 
+
+İlk bölümün source kodlarına şuradaki branch'den erişebilirsiniz:[ ](https://github.com/ysfzrn/crazysnake/tree/firstpart)[https://github.com/ysfzrn/crazysnake/tree/firstpart](https://github.com/ysfzrn/crazysnake/tree/firstpart)
 
 React Native, MobX ve react-native-navigation kullanarak, basit bir yılan oyunu yapalım.
 
