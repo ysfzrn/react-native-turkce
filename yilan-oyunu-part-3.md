@@ -233,3 +233,62 @@ componentDidMount() {
 
 ![](/assets/snaketest3.gif)
 
+Yılan, özgürce hareket etmeye başladı. Şimdi bu yılanı doyurmak için board'da random şekilde belirecek olan elma componentini yaratalım. Bunun için gameStore'da aşağıdaki işlemleri yapalım. elma board içinde segmentRate'in katları \( yani 10'nun katları \) koordinatlarda belirmesi lazım ki, yılanımız elmayı yiyebilsin.
+
+```js
+// src/stores/gameStore.js
+class GameStore {
+  ...
+  @observable food = { x: 50, y: 50 }; //elmanın başlangıçta belireceği yer.
+  ...
+  @action("make food")
+  handleMakeFood() {
+    const frameX = (boardWidth -10) / segmentRate;
+    const frameY = BoardHeight / segmentRate;
+
+    this.food.x = this.getRandomInt(0, frameX) * segmentRate;
+    this.food.y = this.getRandomInt(0, frameY) * segmentRate;
+  }
+
+  getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+```
+
+Elma componentini de gameScreen ekranında board içine koyalım.
+
+```jsx
+       ...
+       <Board>
+         {snake.map((segment, i) => {
+            return <Segment key={segment.id} id={segment.id} x={segment.x} y={segment.y} />;
+          })}
+          <Food x={ gameStore.food.x } y={ gameStore.food.y }/>
+        </Board>  
+       ...
+```
+
+Yılan elmayı yedi mi kontrolü ekleyelim. Bu methodu yılan her bir segment ilerleyişinde çağırıp kontrol edelim. Yılan her elmayı yediğinde handleMakeFood methodunu çağırıp, yeni bir elma oluşturalım ve score state'ini +1 arttıralım ve snake array'ini bir tane daha eleman ekleyelim. Son olarak da yılan her 3 elma yediğinde hızını arttıralım. 
+
+```js
+@action("Did the snake eat the food ?")
+  handleEatFood() {
+    if (this.snake[0].x === this.food.x && this.snake[0].y === this.food.y) {
+      this.score = this.score + 1;
+      this.snake.push({
+        id: this.snake[this.snake.length - 1].id + 1,
+        x: this.snake[this.snake.length - 1].x,
+        y: this.snake[this.snake.length - 1].y
+      });
+      if( this.score % 3 === 0 ){
+       this.intervalRate = this.intervalRate + 5;
+      }
+       
+      this.handleMakeFood();
+    }
+  }
+```
+
+
+
