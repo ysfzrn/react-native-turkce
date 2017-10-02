@@ -253,7 +253,6 @@ class GameStore {
   getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  
 ```
 
 Elma componentini de gameScreen ekranında board içine koyalım.
@@ -269,7 +268,7 @@ Elma componentini de gameScreen ekranında board içine koyalım.
        ...
 ```
 
-Yılan elmayı yedi mi kontrolü ekleyelim. Bu methodu yılan her bir segment ilerleyişinde çağırıp kontrol edelim. Yılan her elmayı yediğinde handleMakeFood methodunu çağırıp, yeni bir elma oluşturalım ve score state'ini +1 arttıralım ve snake array'ini bir tane daha eleman ekleyelim. Son olarak da yılan her 3 elma yediğinde hızını arttıralım. 
+Yılan elmayı yedi mi kontrolü ekleyelim. Bu methodu yılan her bir segment ilerleyişinde çağırıp kontrol edelim. Yılan her elmayı yediğinde handleMakeFood methodunu çağırıp, yeni bir elma oluşturalım ve score state'ini +1 arttıralım ve snake array'ini bir tane daha eleman ekleyelim. Son olarak da yılan her 3 elma yediğinde hızını arttıralım. Aşağıdaki method bunları yapacak.
 
 ```js
 @action("Did the snake eat the food ?")
@@ -284,7 +283,7 @@ Yılan elmayı yedi mi kontrolü ekleyelim. Bu methodu yılan her bir segment il
       if( this.score % 3 === 0 ){
        this.intervalRate = this.intervalRate + 5;
       }
-       
+
       this.handleMakeFood();
     }
   }
