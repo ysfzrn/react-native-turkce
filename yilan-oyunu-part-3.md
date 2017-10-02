@@ -2,7 +2,7 @@
 
 ![](/assets/Screen Shot 2017-10-01 at 14.25.18.png)
 
-İlk olarak gameScreen ekranını registerScreen.js içinde register edelim. 
+İlk olarak gameScreen ekranını registerScreen.js içinde register edelim.
 
 ```js
 import { Navigation } from "react-native-navigation";
@@ -55,12 +55,11 @@ export default class App {
     }
   }
 }
-
 ```
 
 Aşağıdaki gibi board'u oluşuralım.
 
-![](/assets/Screen Shot 2017-10-02 at 03.00.13.png)gameStore'a dönelim ve oyunun nasıl state'lere ihtiyacı olduğuna bakalım. 
+![](/assets/Screen Shot 2017-10-02 at 03.00.13.png)gameStore'a dönelim ve oyunun nasıl state'lere ihtiyacı olduğuna bakalım.
 
 ```js
 "use strict";
@@ -87,13 +86,11 @@ class GameStore {
 }
 
 export default new GameStore();
-
 ```
 
-Yılan her bir parçası Segment.js olarak isimlendirdiğim, component'ten oluşacak. Segment component'ine bakalım. Aşağıda görüldüğü bir absolute position'a sahip bir component. Ve dışarıdan left ve top, propslarını alıyor. Yani üstte verdiğimiz yılan başlangıç koordinatlarına göre yılanımız şekil alıyor. Herbir segment sharedStyle'dan gelen 10px lik, yükseklik ve genişliğe sahip. Böylece gameStore'da bulunan segmentRate'e göre uygun bir hareket sergileyecek. 
+Yılan her bir parçası Segment.js olarak isimlendirdiğim, component'ten oluşacak. Segment component'ine bakalım. Aşağıda görüldüğü bir absolute position'a sahip bir component. Ve dışarıdan left ve top, propslarını alıyor. Yani üstte verdiğimiz yılan başlangıç koordinatlarına göre yılanımız şekil alıyor. Herbir segment sharedStyle'dan gelen 10px lik, yükseklik ve genişliğe sahip. Böylece gameStore'da bulunan segmentRate'e göre uygun bir hareket sergileyecek.
 
 ```jsx
-
 //src/components/segment.js
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
@@ -124,7 +121,6 @@ const styles = StyleSheet.create({
 
 //make this component available to the app
 export default Segment;
-
 ```
 
 Şimdi yılanımızı, gameStore'daki snake array'ini map ederek board'umuzun içine koyalım.
@@ -176,15 +172,15 @@ let globalID;
   ...
 ```
 
-Buradaki kodu üste yazdığımız paragrafa göre inceleyelim. 
+Buradaki kodu üste yazdığımız paragrafa göre inceleyelim.
 
-İlk önce var olan snake array'inin bir kopyasını oluşturdum. Javascript'in , çoklu levelli  array'lerde eşitlemede referans verip, asıl array'i değiştirmemesi için lodash'ın cloneDeep methodunu kullandım. 
+İlk önce var olan snake array'inin bir kopyasını oluşturdum. Javascript'in , çoklu levelli  array'lerde eşitlemede referans verip, asıl array'i değiştirmemesi için lodash'ın cloneDeep methodunu kullandım.
 
 ```js
-let temp = _.cloneDeep(this.snake.slice());  
+let temp = _.cloneDeep(this.snake.slice());
 ```
 
-for döngüsü ile tüm array'i dönüyoruz. Eğer array'in ilk elemanı, yani yılanımızın başı değilse segment, yılanın yönü farketmeksizin kendisinden bir önceki segmentin değerlerini almasını istiyoruz. lastSegment değerini bu yüzden tutuyoruz.  
+for döngüsü ile tüm array'i dönüyoruz. Eğer array'in ilk elemanı, yani yılanımızın başı değilse segment, yılanın yönü farketmeksizin kendisinden bir önceki segmentin değerlerini almasını istiyoruz. lastSegment değerini bu yüzden tutuyoruz.
 
 ```js
 if (i !== 0) { 
@@ -192,7 +188,7 @@ if (i !== 0) {
 }
 ```
 
-Yılanın yönü, sağa veya sola doğru ise sadece x koordinat düzleminde işlem yapacağız demek. Sağa giderken yılanın başı, segmentRate kadar ilerleyecek. Eğer board'un sonuna geldiyse, board'un tekrar başına gidecek. Ve diğer segmentler de kendinden önceki segmentin değerlerini alacak. 
+Yılanın yönü, sağa veya sola doğru ise sadece x koordinat düzleminde işlem yapacağız demek. Sağa giderken yılanın başı, segmentRate kadar ilerleyecek. Eğer board'un sonuna geldiyse, board'un tekrar başına gidecek. Ve diğer segmentler de kendinden önceki segmentin değerlerini alacak.
 
 ```js
 if (this.currentDirection === "right") {
@@ -206,8 +202,32 @@ if (this.currentDirection === "right") {
             this.snake[i].x = this.lastSegment.x;
             this.snake[i].y = this.lastSegment.y;
           }
-}  
+}
 ```
+
+Bu işlemleri sürekli tekrar etmemizi sağlayacak kod parçacığına gelelim. requestAnimationFrame, saniyede 1000 kez frame geçişi yapabiliyor. Yılanımızın hızını kontrol etmek için requestAnimationFrame'i setTimeout ile beraber kullanıyoruz. Böylece frame geçiş hızını ayarlayabiliyoruz. 
+
+```js
+...
+globalID = setTimeout(()=>{
+        requestAnimationFrame(this.handleMoveSnake);
+}, 1000 / this.intervalRate);
+```
+
+Yılanın yönü sağa doğru iken yaptığımız işlemleri, sola, yukarı, aşağı olarak da aynı mantıkla if koşulları ekleyip çoğaltıyoruz. Kalabalık etmesin diye tekrar eden işlemleri buraya yazmak istemiyorum.
+
+Daha sonra gameScreen ekranının componentDidMount methodua aşağıdaki kod parçacığını ekleyelim. Yılanın hareket ettiğini görelim. \( Tabi burada .gif almak için kullandığım tool'da tam bir smooth animation göremeyebilirsiniz, ama nasıl performanslı çalıştığını performans monitor'de görebilirsiniz. \)
+
+```js
+...
+componentDidMount() {
+    const { gameStore } = this.props;
+    gameStore.handleMoveSnake();
+}
+...
+```
+
+![](/assets/snaketest2.gif)
 
 
 
