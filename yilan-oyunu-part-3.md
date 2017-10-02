@@ -1,6 +1,6 @@
 # REACT NATIVE İLE YILAN OYUNU  \( PART 3 \)
 
-![](/assets/Screen Shot 2017-10-01 at 14.25.18.png)
+Üçüncü bölümün source kodlarına şuradaki branch'den erişebilirsiniz:[ ](https://github.com/ysfzrn/crazysnake/tree/firstpart)[https://github.com/ysfzrn/crazysnake/tree/thirdpart](https://github.com/ysfzrn/crazysnake/tree/thirdpart)![](/assets/Screen Shot 2017-10-01 at 14.25.18.png)
 
 İlk olarak gameScreen ekranını registerScreen.js içinde register edelim.
 
