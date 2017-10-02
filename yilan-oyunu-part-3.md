@@ -289,5 +289,5 @@ Yılan elmayı yedi mi kontrolü ekleyelim. Bu methodu yılan her bir segment il
   }
 ```
 
-
+![](/assets/snaketest4.gif)
 
