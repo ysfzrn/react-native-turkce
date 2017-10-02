@@ -37,6 +37,6 @@
   * Redux \(Yazılacak\)
 * [Yılan Oyunu Part 1](yilan-oyunu.md)
 * [Yılan Oyunu Part 2](yilan-oyunu-part-2.md)
-* [Yılan Oyunu \( PART 3 \)](yilan-oyunu-part-3.md)
+* [Yılan Oyunu Part 3](yilan-oyunu-part-3.md)
 * [Android Apk Oluşturma](google-play-store-deployment-yazilacak.md)
 

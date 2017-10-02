@@ -291,14 +291,12 @@ Yılan elmayı yedi mi kontrolü ekleyelim. Bu methodu yılan her bir segment il
 
 ![](/assets/snaketest4.gif)
 
-Şimdi yılan kendi kuyruğuna çarptığında oyunun bitmesini sağlayalım. Bunun için handleMoveSnake action methoduna bir kontrol daha ekleyelim. Burada da yapacağımız yılanın başı yani ilk segment, yılanın başka herhangi segmentiyle aynı koordinat değerlerine sahip olup olmadığını kontrol etmek. Eğer kuyruğuna çarpmışsa,  requestAnimationFrame'i, cancelAnimationFrame ile sonlandıracağız. Elde edilen score, var olan en yüksek skordan daha büyük ise telefon hafızasına AsyncStorage ile yeni skoru set edeceğiz. Ve `NavigationStore.handleChangeRoute('gameOverScreen');` ile de gameOver ekranına yönlendirme yapacağız. 
+Şimdi yılan kendi kuyruğuna çarptığında oyunun bitmesini sağlayalım. Bunun için handleMoveSnake action methoduna bir kontrol daha ekleyelim. Burada da yapacağımız yılanın başı yani ilk segment, yılanın başka herhangi segmentiyle aynı koordinat değerlerine sahip olup olmadığını kontrol etmek. Eğer kuyruğuna çarpmışsa,  requestAnimationFrame'i, cancelAnimationFrame ile sonlandıracağız. Elde edilen score, var olan en yüksek skordan daha büyük ise telefon hafızasına AsyncStorage ile yeni skoru set edeceğiz. Ve `NavigationStore.handleChangeRoute('gameOverScreen');` ile de gameOver ekranına yönlendirme yapacağız.
 
 > Burada dikkat etmenizi istediğim 2 tane husus var.
 >
 > 1. cancelAnimationFrame, requestAnimationFrame'i durdurması için mutlaka sonunda return yapmanız gerekmektedir. Eğer yapmazsanız kod aşağı doğru derlenmeye devam edecektir.
 > 2. MobX'de store'ları birbiri içinde import edip , birbirlerinin methodlarını çağırmasını sağlayabilirsiniz.
-
-
 
 ```js
 //src/stores/gameStore.js
@@ -320,7 +318,7 @@ class GameStore{
           return;
       }
     }
-   
+
   globalID = setTimeout(()=>{
         requestAnimationFrame(this.handleMoveSnake);
        }, 1000 / this.intervalRate);
@@ -329,5 +327,33 @@ class GameStore{
 }
 ```
 
+En son ekranımızın üzerinden de kısa bir şekilde geçelim. Sayfanın başındaki tasarıma bakarsanız, gameOver ekranında oyunu yeniden başlatacak bir tane buton var. Burada yapacağımız tek şey, NavigationStore.handleChangeRoute\('gameScreen'\); ile ekranı tekrar gameScreen'e çekmek ve başlangıçtaki state'lere geri dönmek. Aşağıdaki gibi;
 
+```js
+//src/stores/gameStore.js
+...
+class GameStore{
+   ...
+  @action("restart handler")
+  handleRestart(){
+    NavigationStore.handleChangeRoute('gameScreen');
+    this.intervalRate = 5;
+    this.currentDirection = "right";
+    this.lastSegment = 10;
+    this.rightButtonText = "up";
+    this.leftButtonText = "down";
+    this.score = 0;
+    this.highScore = 0;
+    this.food = { x: 50, y: 50 };
+    this.snake = [
+      { id: 1, x: 20, y: 0 },
+      { id: 2, x: 10, y: 0 },
+      { id: 3, x: 0, y: 0 }
+    ];
+  }}   
+
+}
+```
+
+Hepsi bu kadar. Bir sonraki bölümde bu oyunun Google Play Store'a ve AppStore'a deploy edilmesinden ve aşamalarından bahsedeceğiz.
 
