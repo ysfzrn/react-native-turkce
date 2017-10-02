@@ -205,7 +205,7 @@ if (this.currentDirection === "right") {
 }
 ```
 
-Bu işlemleri sürekli tekrar etmemizi sağlayacak kod parçacığına gelelim. requestAnimationFrame, saniyede 1000 kez frame geçişi yapabiliyor. Yılanımızın hızını kontrol etmek için requestAnimationFrame'i setTimeout ile beraber kullanıyoruz. Böylece frame geçiş hızını ayarlayabiliyoruz. 
+Bu işlemleri sürekli tekrar etmemizi sağlayacak kod parçacığına gelelim. requestAnimationFrame, saniyede 1000 kez frame geçişi yapabiliyor. Yılanımızın hızını kontrol etmek için requestAnimationFrame'i setTimeout ile beraber kullanıyoruz. Böylece frame geçiş hızını ayarlayabiliyoruz.
 
 ```js
 ...
@@ -229,5 +229,7 @@ componentDidMount() {
 
 ![](/assets/snaketest2.gif)
 
+Şimdi yön kontrollerini ekleyelim. Yön kontrollerinin mantığı, ilk bölümde belirttiğimiz gibi eski Nokia telefonlarda 3 ve 7  tuşlarıyla oynar gibi olacak. Sağdaki yön tuşu sağa ve yukarı götürecek, soldaki yön tuşu sola ve aşağı götürecek. Bunun için gameStore'a 2 tane daha action ekleyelim, handleRightButton ve handleLeftButton.![](/assets/Screen Shot 2017-10-02 at 04.28.18.png)Daha sonra gameScreen ekranına da butonları ekleyelim.
 
+![](/assets/snaketest3.gif)
 
