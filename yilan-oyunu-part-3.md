@@ -291,3 +291,43 @@ Yılan elmayı yedi mi kontrolü ekleyelim. Bu methodu yılan her bir segment il
 
 ![](/assets/snaketest4.gif)
 
+Şimdi yılan kendi kuyruğuna çarptığında oyunun bitmesini sağlayalım. Bunun için handleMoveSnake action methoduna bir kontrol daha ekleyelim. Burada da yapacağımız yılanın başı yani ilk segment, yılanın başka herhangi segmentiyle aynı koordinat değerlerine sahip olup olmadığını kontrol etmek. Eğer kuyruğuna çarpmışsa,  requestAnimationFrame'i, cancelAnimationFrame ile sonlandıracağız. Elde edilen score, var olan en yüksek skordan daha büyük ise telefon hafızasına AsyncStorage ile yeni skoru set edeceğiz. Ve `NavigationStore.handleChangeRoute('gameOverScreen');` ile de gameOver ekranına yönlendirme yapacağız. 
+
+> Burada dikkat etmenizi istediğim 2 tane husus var.
+>
+> 1. cancelAnimationFrame, requestAnimationFrame'i durdurması için mutlaka sonunda return yapmanız gerekmektedir. Eğer yapmazsanız kod aşağı doğru derlenmeye devam edecektir.
+> 2. MobX'de store'ları birbiri içinde import edip , birbirlerinin methodlarını çağırmasını sağlayabilirsiniz.
+
+
+
+```js
+//src/stores/gameStore.js
+...
+class GameStore{
+   ...
+  @action("Snake is moving")
+  handleMoveSnake =() => {
+      ...
+     //isGameOver control
+      for(let i = 1; i < this.snake.slice().length; i++){
+      if(this.snake[0].x === this.snake[i].x && this.snake[0].y === this.snake[i].y ){
+          if( this.score > this.highScore ){
+            AsyncStorage.setItem('snakeHighScore', JSON.stringify(this.score));
+          }
+          cancelAnimationFrame(this.handleMoveSnake);
+          NavigationStore.handleChangeRoute('gameOverScreen');
+          clearTimeout(globalID);
+          return;
+      }
+    }
+   
+  globalID = setTimeout(()=>{
+        requestAnimationFrame(this.handleMoveSnake);
+       }, 1000 / this.intervalRate);
+  }   
+
+}
+```
+
+
+
