@@ -10,8 +10,8 @@
   * [Props Mantığı](props-mantigi.md)
   * [State Mantığı](state-mantigi.md)
 * [React Native Nedir ?](react-native-nedir-.md)
-* Installation
-  * [Window Installation](window-installation.md)
+* [Installation](installation.md)
+  * [Windows Installation](window-installation.md)
   * [macOS Installation](macintosh-installation.md)
 * [React Native Başlangıç](react-native-baslangic.md)
 * [Style ve FlexBox](flexbox-style.md)
