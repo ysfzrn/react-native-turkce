@@ -12,7 +12,7 @@
 * [React Native Nedir ?](react-native-nedir-.md)
 * Installation
   * [Window Installation](window-installation.md)
-  * [Macintosh Installation \(Yazılacak\)](macintosh-installation.md)
+  * [macOS Installation](macintosh-installation.md)
 * [React Native Başlangıç](react-native-baslangic.md)
 * [Style ve FlexBox](flexbox-style.md)
 * [Temel Component'ler](temel-componentler.md)
