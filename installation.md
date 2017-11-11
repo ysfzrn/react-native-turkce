@@ -1,6 +1,6 @@
 # Installation
 
-* [Windows Installation](/windows-installation.md)
+* [Windows Installation](/window-installation.md)
 * [macOS Installation](/macintosh-installation.md)
 
 
