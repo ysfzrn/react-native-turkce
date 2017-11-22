@@ -32,19 +32,12 @@
     * [Android Kurulumu](navigation/wixreact-native-navigation/android-kurulumu.md)
     * [Temel Kullanım](navigation/wixreact-native-navigation/temel-kullanim.md)
     * [Icon Ekleme-TabBar](navigation/wixreact-native-navigation/icon-ekleme.md)
+  * [react-navigation](navigation/react-navigation.md)
 * [State Yönetimi](state-yonetimi-yazilacak.md)
   * [mobx](state-yonetimi-yazilacak/mobx.md)
   * Redux \(Yazılacak\)
-* [Yılan Oyunu Tutorial](yilan-oyunu-tutorial.md)
-  * [Yılan Oyunu Part 1](#)
-
-  * [Yılan Oyunu Part 2](#)
-
-  * [Yılan Oyunu Part 3](#)
-* [Yılan Oyunu Part 2](yilan-oyunu-part-2.md)
 * [Yılan Oyunu Part 1](yilan-oyunu.md)
+* [Yılan Oyunu Part 2](yilan-oyunu-part-2.md)
 * [Yılan Oyunu Part 3](yilan-oyunu-part-3.md)
 * [Android Apk Oluşturma](google-play-store-deployment-yazilacak.md)
-
-
 
