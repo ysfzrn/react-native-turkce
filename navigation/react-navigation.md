@@ -4,8 +4,6 @@ react-native core ekibi navigation, sayfa yönlendirme de herkesi memnun edecek 
 
 > react-navigation, sayfa yönlendirme işine yapılan native bir çözüm değil. O yüzden performansına uygulamanızı yazarken her zaman dikkat etmeniz gerekir. Uygulamanızda mobx veya redux gibi bir state yönetim aracı kullanıyorsanız, sayfalar arası çok yüklü propslar geçirmiyorsanız çok performans sıkıntısı yaşamazsınız.
 
-
-
 ### Kurulum
 
 Aslında karşımızda bir javascript kütüphanesi var. O yüzden tek yapmamız gereken, npm veya yarn ile uygulamamıza dependency olarak eklemek.
@@ -28,7 +26,7 @@ react-navigation'da, mutlaka kendisinin içinde olan 3 navigator'den en az birin
 
 ### StackNavigator
 
-Tüm navigator'lerde olduğu gibi StackNavigator, parametre olarak bir obje alıyor. Bu objenin key'leri bizim sayfa route'larımız. Sayfayı yönlendirirken bu key'lerden faydalanacağız. 
+Tüm navigator'lerde olduğu gibi StackNavigator, parametre olarak bir obje alıyor. Bu objenin key'leri bizim sayfa route'larımız. Sayfayı yönlendirirken bu key'lerden faydalanacağız.
 
 Aşağıdaki örnekten Home ve Details key'leri de bir objeyi gösteriyor. Objenin içinde sabit key'lerimiz var. En önemlisi screen key'lerine, container componentlerimiz olan HomeScreen ve DetailsScreen componentlerini atadığımıza dikkat edin.
 
