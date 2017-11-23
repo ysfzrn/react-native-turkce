@@ -31,6 +31,10 @@ Bir component DOM'dan çıkarılmak üzereyken çağrılan fonksiyondur.
 
 * componentWillMount
 
+
+
+
+
 ##### **constructor\( \)**
 
 ```js
@@ -39,7 +43,7 @@ Bir component DOM'dan çıkarılmak üzereyken çağrılan fonksiyondur.
   this.state = {
     color: props.initialColor
   };
-} 
+}
 ```
 
 constructor methodu içinde componentin propslarını kullanmak isterseniz, `super(props) '`u  çağırmalısınız. Aksi takdirde props'ları görmeyecektir. Diğer methodlardaki gibi `this.props`'u bu method için kullanamazsınız. Onun yerinde yukarıda örnekte olduğu gibi `props.initialColor` gibi kullanabilirsiniz.
@@ -100,11 +104,9 @@ shouldComponentUpdate( nextProps, nextState ){
 
 Bu method, yeni props ve state alındığında, **render\(\)** dan önce çalışır. React bu methodu başlangıçta çağırmaz.  Bu method içinde state set edilmez. Bunun yerine önceden bahsettiğimiz **componentWillReceiveProps\(\) kullanılabilir**
 
-
-
 ##### componentDidUpdate\( prevProps, prevState \)
 
-shouldComponent false dönerse bu method çağrılmaz. 
+shouldComponent false dönerse bu method çağrılmaz.
 
 render methodundan sonra hemen çağrılan methoddur. Hali hazırdaki props değeri ile bir önceki propsu karşılaştırmak için idealdir. Props değişikliği varsa network istekleri de buradan yapılabilir.
 
@@ -113,6 +115,4 @@ render methodundan sonra hemen çağrılan methoddur. Hali hazırdaki props değ
 ##### componentWillUnmount\(\)
 
 Şahsen benim abi bu method çok iyi ya dediğim ama nadiren kullandığım bir fonksiyon. Componentimiz artık yok edilecekken, yok edilmeden hemen önce çağrılan method. Componentin başında yaptığımız bir listener'ı kaldırmak için, önceden yapılmış bir network requestini iptal etmek için, özetle bir şeyleri sıfırlamak için çok ideal bir yer. Component'e gitmeden önce hesap sorduğumuz yer diyelim.
-
-
 
