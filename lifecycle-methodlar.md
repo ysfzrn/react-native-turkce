@@ -31,9 +31,7 @@ Bir component DOM'dan çıkarılmak üzereyken çağrılan fonksiyondur.
 
 * componentWillMount
 
-
-
-
+-----------------------------
 
 ##### **constructor\( \)**
 
