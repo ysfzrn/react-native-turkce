@@ -32,7 +32,7 @@
     * [Android Kurulumu](navigation/wixreact-native-navigation/android-kurulumu.md)
     * [Temel Kullanım](navigation/wixreact-native-navigation/temel-kullanim.md)
     * [Icon Ekleme-TabBar](navigation/wixreact-native-navigation/icon-ekleme.md)
-  * [react-navigation \(TODO\)](navigation/react-navigation.md)
+  * [react-navigation](navigation/react-navigation.md)
 * [State Yönetimi](state-yonetimi-yazilacak.md)
   * [mobx](state-yonetimi-yazilacak/mobx.md)
   * Redux \(Yazılacak\)
