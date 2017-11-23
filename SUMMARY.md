@@ -34,6 +34,7 @@
     * [Icon Ekleme-TabBar](navigation/wixreact-native-navigation/icon-ekleme.md)
   * [react-navigation](navigation/react-navigation.md)
     * [İç İçe Navigator Kullanımı](navigation/react-navigation/ic-ic-e-navigator-kullan-i-m-i.md)
+    * Header Seçenekleri \( Yazılacak \)
 * [State Yönetimi](state-yonetimi-yazilacak.md)
   * [mobx](state-yonetimi-yazilacak/mobx.md)
   * Redux \(Yazılacak\)
