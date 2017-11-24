@@ -26,6 +26,7 @@
   * [Animasyon](component-apilarcomponent-apilarmd/animasyon.md)
     * [LayoutAnimation](component-apilarcomponent-apilarmd/animasyon/layoutanimation.md)
     * [Animated](component-apilarcomponent-apilarmd/animasyon/animated.md)
+      * [Animated.Event\( \)](component-apilarcomponent-apilarmd/animasyon/animated/animatedevent.md)
   * [PanResponder](component-apilarcomponent-apilarmd/panresponder.md)
 * [Navigation](navigation.md)
   * [wix/react-native-navigation](navigation/wixreact-native-navigation.md)
