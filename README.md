@@ -1,4 +1,4 @@
-# React Native Türkçe 
+# React Native Türkçe
 
 Hızlı, cross-platform, mobile uygulama yazmak için React Native
 
@@ -11,6 +11,12 @@ Ve unutmayın, React Native gerçek anlamda bir mobil uygulama yazma imkânı su
 Bu dökümantasyonu hem kendi öğrendiklerimi daha da pekiştirmek,  hem de başka yazılımcı ya da yazılımcı adayı arkadaşlara faydası olabilir diye tutmayı, güncellemeyi amaçlıyorum. Her türlü görüş, öneri ve eleştirilerinizi lütfen esirgemeyin.
 
 ###### Katkıda bulunmak, ben de şu konuyu anlatmak istiyorum derseniz şuraya mail atabilirsiniz [ysfzrn@gmail.com](/ysfzrn@gmail.com)
+
+###### veya 
+
+###### şu repo'ya [https://github.com/ysfzrn/react-native-turkce](https://github.com/ysfzrn/react-native-turkce) pull request gönderebilirsiniz.
+
+
 
 
 
