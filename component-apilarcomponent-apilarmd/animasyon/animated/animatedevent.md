@@ -33,3 +33,5 @@ onPanResponderMove: Animated.event([
 
 Burada,  ikinci parametre `gestureState` , yukarıdaki örnekte state'ler dx ve dy değerleri.  Kullanıcı ekrana ilk dokunuşundan, parmağını ne kadar kaydırırsa, ardışık olarak her harekette, state'in değerini güncelleyecektir.
 
+animated değer değiştikten sonra, onu istediğiniz gibi interpolate ederek animasyonlarınızı oluşturabilirsiniz
+
