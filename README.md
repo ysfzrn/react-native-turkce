@@ -18,3 +18,12 @@ Bu dökümantasyonu hem kendi öğrendiklerimi daha da pekiştirmek,  hem de ba�
 
 
 
+
+
+#### Emeği geçenler
+
+* Yusuf Zeren
+* [pleycpl](https://github.com/pleycpl)
+
+
+
