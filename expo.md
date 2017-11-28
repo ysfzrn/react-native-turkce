@@ -11,10 +11,8 @@
 
 Expo Projesi, ilk başlayanların react-native'e göz atması, hızlı bir şey denemek adına ya da kod paylaşmak için çok kullanışlı. Ancak internet hızınız düşükse development süreci çok çetrefilli olabilir. Performans sorunlarından dolayı da, şimdilik bu platform üzerinde gerçek bir proje çıkarmayı düşünmeseniz iyi edersiniz.
 
+{% video %} https://www.youtube.com/watch?time_continue=89&v=IQI9aUlouMI {% endvideo %}
 
-
-
-
-
+Not:Sunum videosu gözükmüyorsa, adres çubuğundan **load unsafe script**'i aktif etmelisiniz.
 
 
