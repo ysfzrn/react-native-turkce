@@ -1,6 +1,6 @@
 # Gnu/Linux Installation
 
-Bu kurulum anlatılımı, popüler Linux dağıtımı olan Ubuntu işletim sistemine göre uyarlanmıştır. 
+Bu kurulum anlatılımı, popüler Linux dağıtımı olan Ubuntu işletim sistemine göre uyarlanmıştır. Sudo komutu ile başlayan komutlardan sonra şifrenizi 
 
 ## 1 - Nodejs ve NPM kurulumu
 Linux için kurulum yapmak için öncelikle terminal'i (Türkçe sistemlerde uçbirim) açıyoruz. Ardından Ubuntu repositorylerinin (Yazılımların adreslerinin bulunduğu adres depoları) güncellemek için şu komutu terminale giriyoruz. 
@@ -87,7 +87,26 @@ Bu adım internetten veri indirdiği için uzun sürebilir lütfen sabırlı olu
 
 ![](/assets/LinuxAndroidStudioSetup8.png)
 
-Artık Android Studio'yu kullanmaya başlayabiliriz. Uygulamalar arasında "Android Studio" diye aratın ve Android Studio logosuna çift tıklayın. Daha sonra Configure --> SDK Manager yoluna tıklayın. Çıkan ekranda önce resimdeki "Show Pakage Details", daha sonra diğer üzeri fosforlanmış yerlere tıklayın.
+Artık Android Studio'yu kullanmaya başlayabiliriz. Uygulamalar arasında "Android Studio" diye aratın ve Android Studio logosuna çift tıklayın. Daha sonra Configure --> SDK Manager yoluna tıklayın. Çıkan ekranda önce resimdeki "Show Pakage Details", daha sonra diğer üzeri fosforlanmış yerlere ve sonra ok butonuna tıklayın.
 
 ![](/assets/LinuxSDKManager.png)
 
+Şimdi Android değişkenlerini sistemimize ekleyelim. Terminali açıp aşağıdaki komutları çalıştıralım.
+
+`export ANDROID_HOME=$HOME/Android/Sdk`
+
+`export PATH=$PATH:$ANDROID_HOME/tools`
+
+`export PATH=$PATH:$ANDROID_HOME/platform-tools`
+
+## 4 - AVD (Android Virtual Devices) Kurulumu 
+
+
+
+## 4 - İlk Projemizi Oluşturalım
+
+Öncelikle terminal ekranınızı açın. Daha sonra şu komutları çalıştıralım çalıştırın.
+
+`react-native init helloNative`
+
+### - 
