@@ -5,22 +5,22 @@ Bu kurulum anlatılımı, popüler Linux dağıtımı olan Ubuntu işletim siste
 ## 1 - Nodejs ve NPM kurulumu
 Linux için kurulum yapmak için öncelikle terminal'i (Türkçe sistemlerde uçbirim) açıyoruz. Ardından Ubuntu repositorylerinin (Yazılımların adreslerinin bulunduğu adres depoları) güncellemek için şu komutu terminale giriyoruz. 
 
-'sudo apt-get update'
+`sudo apt-get update`
 
 Şimdi repolarımızı güncellediğimize göre nodejs ve npm (nodejs package manager) kurulumuna başlayabiliriz. Aşağıdaki komuta birde resimde bulunmayan yüklemeyi otomatik onaylamak için -y komutu ekledim. Kurulum için şu komutu terminalde çalışıtırın. 
 
-'sudo apt-get install -y nodejs npm'
+`sudo apt-get install -y nodejs npm`
 
 ![NPM Kurulumu](/assets/npmvenodejskurulum.png)
 
 Daha sonra npm paketlerimizi yüklerken nodejs'in çağrılırken sorun çıkarmaması için şu komutu terminalde çalıştıralım. Bu komut node ve nodejs ile hard link adı verilen bir ilişki (Windows ortamındaki kısa yol  gibi düşünün) oluşturarak iki komut çağrıldığındada aynı şekilde çalışmasını sağlar.
 
-'ln -s /usr/bin/nodejs /usr/bin/node'
+`ln -s /usr/bin/nodejs /usr/bin/node`
 
 ### - React Native CLI Kurulumu
 React Native komutlarımınızı çalıştığımız paketi yüklemek  için aşağıdaki komutu terminalden çalıştırın. 
 
-'sudo npm install -g react-native-cli'
+`sudo npm install -g react-native-cli`
 
 ![](/assets/LinuxReactNativeCLI.png)
 
@@ -29,36 +29,36 @@ Android emülatörümüzün çalışabilmesi için JDK'nın (java developer kit)
 
 Aşağıdaki kodu terminelden çalıştığımızda oracle java reposunu sitemimize eklemiş oluyoruz.
 
-'sudo add-apt-repository ppa:webupd8team/java -y'
+`sudo add-apt-repository ppa:webupd8team/java -y`
 
 Yeni bir repo eklediğimizden ötürü sistemimizi şu komutla güncellememiz gerekiyor. Bu işlem biraz zaman alabilir.
 
-'sudo apt-get update'
+`sudo apt-get update`
 
 Sonunda Java kurulumu yapacağımız komutu çalıştırıyoruz. Bu işlem biraz zaman alabilir.
  
-'sudo apt-get install oracle-java8-installer' 
+`sudo apt-get install oracle-java8-installer`
 
 Şimdi yüklemiş olduğumuz java sürünü sistemin ortam değişkenlerine kaydedeceğiz. Bunun için şu komutu çalıştırın.
 
-'sudo apt-get install oracle-java8-set-default'
+`sudo apt-get install oracle-java8-set-default`
 
 ## 3 - Android Studio Kurulumu
 Android SDK'leri (Software development kit / Yazılım geliştirme kiti) ve AVD (Android virtual machine) içerdiğinden dolayı Android Studio'yu kurmamız gerekmektedir. Öncelikle [Buradan](https://developer.android.com/studio/index.html) güncel Android studio sürmünü masaüstümüze indirelim. Sonra masaüstümğze gelip sağ --> Open Terminal sonra aşağıdaki komutu çalıştıralım. 
 
-'unzip indirdiğimiz dosyanınn adı -d $HOME' 
+`unzip indirdiğimiz dosyanınn adı -d $HOME`
 
 Örnek olarak,
 
-'unzip android-studio-ide-171.4443003-linux.zip -d $HOME'
+`unzip android-studio-ide-171.4443003-linux.zip -d $HOME`
 
 Bu komut indirdiğimiz zip paketinin içesindekileri Home klasörüne çıkartıyor. Şimdi kurulum scriptinin olduğu klasöre gidelim. Bunun için şu kodu çalıştıralım. 
 
-'cd $HOME/android-studio/bin'
+`cd $HOME/android-studio/bin`
 
 Sıra geldi Scriptimizi çalıştırmaya...
 
-'./studio.sh'
+`./studio.sh`
 
 Şimdi karşımıza çıkan ekranlarda üzerini sarı ile çizdiğim yerleri seçerek devam ediyoruz.
 ![](/assets/LinuxAndroidStudioSettingLocation.png)
