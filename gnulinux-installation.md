@@ -44,7 +44,11 @@ Sonunda Java kurulumu yapacağımız komutu çalıştırıyoruz. Bu işlem biraz
 `sudo apt-get install oracle-java8-set-default`
 
 ## 3 - Android Studio Kurulumu
-Android SDK'leri (Software development kit / Yazılım geliştirme kiti) ve AVD (Android virtual machine) içerdiğinden dolayı Android Studio'yu kurmamız gerekmektedir. Öncelikle [Buradan](https://developer.android.com/studio/index.html) güncel Android studio sürmünü masaüstümüze indirelim. Sonra masaüstümğze gelip sağ --> Open Terminal sonra aşağıdaki komutu çalıştıralım. 
+Android SDK'leri (Software development kit / Yazılım geliştirme kiti) ve AVD (Android virtual machine) içerdiğinden dolayı Android Studio'yu kurmamız gerekmektedir. İşletim sisteminiz 64bit ise şu paketleri terminalden yüklemeniz gerekmekte.
+
+`sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386`
+ 
+Öncelikle [Buradan](https://developer.android.com/studio/index.html) güncel Android studio sürmünü masaüstümüze indirelim. Sonra masaüstümğze gelip sağ --> Open Terminal sonra aşağıdaki komutu çalıştıralım. 
 
 `unzip indirdiğimiz dosyanınn adı -d $HOME`
 
@@ -56,7 +60,7 @@ Bu komut indirdiğimiz zip paketinin içesindekileri Home klasörüne çıkartı
 
 `cd $HOME/android-studio/bin`
 
-Sıra geldi Scriptimizi çalıştırmaya...
+Sıra geldi Scriptimizi çalıştırmaya... Script çalışırken söyleyene kadar terminal penceresini kapatmayın.
 
 `./studio.sh`
 
@@ -79,9 +83,11 @@ Bu adım internetten veri indirdiği için uzun sürebilir lütfen sabırlı olu
 
 ![](/assets/LinuxAndroidStudioSetup7.png)
 
-Şimdi çıkan ekranda Configure --> Create Desktop Entry yoluna tıklayınız. Daha sonra şifrenizi soran pencereye şifrenizi girip ok butonuna basınız. 
+Şimdi terminal penceresini kapatabilirsiniz. Çıkan ekranda Configure --> Create Desktop Entry yoluna tıklayınız. Daha sonra şifrenizi soran pencereye şifrenizi girip ok butonuna basınız. 
 
 ![](/assets/LinuxAndroidStudioSetup8.png)
 
-Artık Android Studio'yu kullanmaya başlayabiliriz. Uygulamar arasında "Android Studio" diye aratın ve Android Studio logosuna çift tıklayın. 
+Artık Android Studio'yu kullanmaya başlayabiliriz. Uygulamalar arasında "Android Studio" diye aratın ve Android Studio logosuna çift tıklayın. Daha sonra Configure --> SDK Manager yoluna tıklayın. Çıkan ekranda önce resimdeki "Show Pakage Details", daha sonra diğer üzeri fosforlanmış yerlere tıklayın.
+
+![](/assets/LinuxSDKManager.png)
 
