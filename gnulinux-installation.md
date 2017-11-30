@@ -27,7 +27,7 @@ React Native komutlarımınızı çalıştığımız paketi yüklemek  için aş
 ## 2 - JDK Kurulumu
 Android emülatörümüzün çalışabilmesi için JDK'nın (java developer kit)bilgisayarımızda kurulu olması gerekiyor. Yalnız öncelikle uyarmak isterim ki React Native JDK olarak OpenJDK değil OracleJDK kurulmasını istiyor. Bu yazının yazıldığı tarihte en güncel Java sürümünün Java 9 ve React Native'in resmi sitesinde Java 8 ve üzeri JDKları desteklediğini söylemesine karşın, Java 9 kurulumundan sonra gradle(ilerde nedir öğrenceksiniz) tabanlı sorunlar olması nedeniyle burada Java 8 JDK anlatılacaktır. 
 
-Aşağıdaki kodu terminelden çalıştığımızda oracle java reposunu sitemimize eklemiş oluyoruz.
+Aşağıdaki kodu terminelden çalıştığımızda oracle java reposunu sistemimize eklemiş oluyoruz.
 
 `sudo add-apt-repository ppa:webupd8team/java -y`
 
