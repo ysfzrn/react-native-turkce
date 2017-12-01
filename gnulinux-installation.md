@@ -1,6 +1,6 @@
 # Gnu/Linux Installation
 
-Bu kurulum anlatılımı, popüler Linux dağıtımı olan Ubuntu işletim sistemine göre uyarlanmıştır. Sudo komutu ile başlayan komutlardan sonra şifrenizi girmenizi isterse giriniz. Sıkça karşılaşılan sorunları en aşağıda anlattım. Lütfen sorun çıkarsa bunları deneyiniz.
+Bu kurulum anlatılımı, popüler Linux dağıtımı olan Ubuntu işletim sistemine göre uyarlanmıştır. Sudo komutu ile başlayan komutlardan sonra şifrenizi girmenizi isterse giriniz. 
 
 ## 1 - Nodejs ve NPM kurulumu
 Linux için kurulum yapmak için öncelikle terminal'i (Türkçe sistemlerde uçbirim) açıyoruz. Ardından Ubuntu repositorylerinin (Yazılımların adreslerinin bulunduğu adres depoları) güncellemek için şu komutu terminale giriyoruz. 
@@ -102,6 +102,8 @@ Daha sonra ise aşağıdaki komutları kopyalıyarak terminale yapıştıralım.
 `export PATH=$PATH:$ANDROID_HOME/tools`
 
 `export PATH=$PATH:$ANDROID_HOME/platform-tools`
+
+![](/assets/LinuxPathAyarı.gif)
 
 ## 4 - AVD (Android Virtual Devices) Kurulumu 
 Öncelikle yeni bir proje oluşturup Android Studio ana ekranına ulaşıyoruz. Daha sonra AVD simgesine tıklayıp yeni bir avd oluşturuyoruz. Bu yazının yazılıdığı tarih de Android API 27 seviyeli cihazlara React Native desteği verildiği için ben bu seviyede bir AVD oluşturuyorum. Eğer bir sürüm bazlı bir sorun yaşarsanız Android 6.0 (API 23) bir AVD ile React Native uygulamanızı ayağa kaldırmayı deneyin. Ben kurulum esnasında API 27'yi bilgisayarıma indirdiğim için burada indirme yapmadan direk geçebildim. Eğer yaratmak istediğiniz sanal cihaz seviyeesinin üzerinde 'Download' yazısı varsa onun üzerine tıklayıp indirmelisiniz. 
