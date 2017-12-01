@@ -16,14 +16,11 @@ Bu dökümantasyonu hem kendi öğrendiklerimi daha da pekiştirmek,  hem de ba�
 
 ###### şu repo'ya [https://github.com/ysfzrn/react-native-turkce](https://github.com/ysfzrn/react-native-turkce) pull request gönderebilirsiniz.
 
-
-
-
-
 #### Emeği geçenler
 
 * Yusuf Zeren
-* [pleycpl](https://github.com/pleycpl)
+* [Haydar Şahin](https://twitter.com/haydarsahinblog) \( Gnu/Linux Kurulumu \)
+* [pleycpl](https://github.com/pleycpl)  \( Kod, kelime hataları düzeltildi \)
 
 
 
