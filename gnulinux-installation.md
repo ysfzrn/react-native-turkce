@@ -100,13 +100,17 @@ Artık Android Studio'yu kullanmaya başlayabiliriz. Uygulamalar arasında "Andr
 `export PATH=$PATH:$ANDROID_HOME/platform-tools`
 
 ## 4 - AVD (Android Virtual Devices) Kurulumu 
+Öncelikle yeni bir proje oluşturup Android Studio ana ekranına ulaşıyoruz. Daha sonra AVD simgesine tıklayıp yeni bir avd oluşturuyoruz. Bu yazının yazılıdığı tarih de Android API 27 seviyeli cihazlara React Native desteği verildiği için ben bu seviyede bir AVD oluşturuyorum. Eğer bir sürüm bazlı bir sorun yaşarsanız Android 6.0 (API 23) bir AVD ile React Native uygulamanızı ayağa kaldırmayı deneyin. Ben kurulum esnasında API 27'yi bilgisayarıma indirdiğim için burada indirme yapmadan direk geçebildim. Eğer yaratmak istediğiniz sanal cihaz seviyeesinin üzerinde 'Download' yazısı varsa onun üzerine tıklayıp indirmelisiniz. 
 
+![](/assets/LinuxAVDKurulumu.gif)
 
+## 5 - İlk Projemizi Oluşturalım
 
-## 4 - İlk Projemizi Oluşturalım
-
-Öncelikle terminal ekranınızı açın. Daha sonra şu komutları çalıştıralım çalıştırın.
+Öncelikle terminal ekranınızı açın. Daha sonra şu komutları çalıştıralım çalıştırın. Bu komut Home dizinize 'helloNative' adlı bir klasör açıp içine React Native için gerekli dosyaları koyacaktır.
 
 `react-native init helloNative`
 
-### - 
+### - AVD'yi çalıştırma
+AVD'nin açılması sisteminizin özelliklerine göre uzun sürebilir ana ekran gelene kadar bekleyin. Performans için bilgisayarınızda çalışan gereksiz programları kapatın. AVD çalışmaya başladıktan sonra Android Studio'yu kapatmanız sisteminizi hızlandıracaktır.
+
+![](/assets/LinuxAVDCalistirma.gif)
