@@ -106,7 +106,7 @@ Artık Android Studio'yu kullanmaya başlayabiliriz. Uygulamalar arasında "Andr
 
 ## 5 - İlk Projemizi Oluşturalım
 
-Öncelikle terminal ekranınızı açın. Daha sonra şu komutları çalıştıralım çalıştırın. Bu komut Home dizinize 'helloNative' adlı bir klasör açıp içine React Native için gerekli dosyaları koyacaktır.
+Öncelikle terminal ekranınızı açın. Daha sonra şu komutları çalıştırın. Bu komut Home dizinize 'helloNative' adlı bir klasör açıp içine React Native için gerekli dosyaları koyacaktır.
 
 `react-native init helloNative`
 
