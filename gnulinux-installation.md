@@ -1,6 +1,6 @@
 # Gnu/Linux Installation
 
-Bu kurulum anlatılımı, popüler Linux dağıtımı olan Ubuntu işletim sistemine göre uyarlanmıştır. Sudo komutu ile başlayan komutlardan sonra şifrenizi 
+Bu kurulum anlatılımı, popüler Linux dağıtımı olan Ubuntu işletim sistemine göre uyarlanmıştır. Sudo komutu ile başlayan komutlardan sonra şifrenizi girmenizi isterse giriniz. Sıkça karşılaşılan sorunları en aşağıda anlattım. Lütfen sorun çıkarsa bunları deneyiniz.
 
 ## 1 - Nodejs ve NPM kurulumu
 Linux için kurulum yapmak için öncelikle terminal'i (Türkçe sistemlerde uçbirim) açıyoruz. Ardından Ubuntu repositorylerinin (Yazılımların adreslerinin bulunduğu adres depoları) güncellemek için şu komutu terminale giriyoruz. 
@@ -91,7 +91,11 @@ Artık Android Studio'yu kullanmaya başlayabiliriz. Uygulamalar arasında "Andr
 
 ![](/assets/LinuxSDKManager.png)
 
-Şimdi Android değişkenlerini sistemimize ekleyelim. Terminali açıp aşağıdaki komutları çalıştıralım.
+Şimdi Android değişkenlerini sistemimize ekleyelim. Sistemimize her açtığımızada bunu yapmamıza gerek kalmasın diye tüm değişkenlerimizi export etmesi '$HOME/.bash_profile' dosyasına yazmamız gerek. Öncelikle $HOME/.bash_profile dosyamızı açmak için komut satırına şu kodu girelim. 
+
+`nano $HOME/.bash_profile`
+
+Daha sonra ise aşağıdaki komutları kopyalıyarak terminale yapıştıralım. Ctrl + X kombinasyonu ile dosyamızı kapatma emri verelim, değişikliği kaydetmek için 'y' harfine basalım ve enter tuşuyla onaylayalım. En sonda tek seferliye mahsus aşağıdaki kodları kopyalıyarak direk terminale yapıştıralım.
 
 `export ANDROID_HOME=$HOME/Android/Sdk`
 
@@ -106,11 +110,17 @@ Artık Android Studio'yu kullanmaya başlayabiliriz. Uygulamalar arasında "Andr
 
 ## 5 - İlk Projemizi Oluşturalım
 
-Öncelikle terminal ekranınızı açın. Daha sonra şu komutları çalıştırın. Bu komut Home dizinize 'helloNative' adlı bir klasör açıp içine React Native için gerekli dosyaları koyacaktır.
+Öncelikle terminal ekranınızı açın. Daha sonra şu komutları çalıştırın. Bu komut Home dizinize 'helloNative' adlı bir klasör açıp içine React Native için gerekli dosyaları koyacaktır. İkinci komut ise proje dosyamızın içine girmenizi sağlayacaktır.
 
 `react-native init helloNative`
 
+`cd helloNative`
+
 ### - AVD'yi çalıştırma
-AVD'nin açılması sisteminizin özelliklerine göre uzun sürebilir ana ekran gelene kadar bekleyin. Performans için bilgisayarınızda çalışan gereksiz programları kapatın. AVD çalışmaya başladıktan sonra Android Studio'yu kapatmanız sisteminizi hızlandıracaktır.
+AVD'nin açılması sisteminizin özelliklerine göre uzun sürebilir ana ekran gelene kadar bekleyin. Performans için bilgisayarınızda çalışan gereksiz programları kapatın. AVD çalışmaya başladıktan sonra Android Studio'yu kapatmanız sisteminizi hızlandıracaktır. 
 
 ![](/assets/LinuxAVDCalistirma.gif)
+
+AVD tamamen açıldıysa artık projemizi attach edebiliriz. Bunun için terminale şu komutu yazılım.
+
+`react-native run-android"`
