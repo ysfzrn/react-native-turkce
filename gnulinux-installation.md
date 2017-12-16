@@ -125,4 +125,4 @@ AVD'nin açılması sisteminizin özelliklerine göre uzun sürebilir ana ekran 
 
 AVD tamamen açıldıysa artık projemizi attach edebiliriz. Bunun için terminale şu komutu yazılım.
 
-`react-native run-android"`
+`react-native run-android`
