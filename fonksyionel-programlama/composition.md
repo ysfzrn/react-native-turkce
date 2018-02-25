@@ -32,11 +32,6 @@ Bir fonksiyon, input olarak, bir fonksiyon ve çoklu parametreler alır, output 
 const  partial=(fn, …args)=>{ fn.bind(null, …args)  }
 ```
 
-* İlk …args \( rest operator \) gelen parametreleri bundled yapıp array’e dönüştürür.
-* İkinci …args \( spread operator \) , array’ı sırayla dağıtır
-
-* İlk parametreyi null geçiyoruz, çünkü gelen context’i değiştirmek istemiyoruz. Fonksiyon dönmesini sağlıyoruz.
-
 #### Pipe Fonksiyon
 
 İki ya da daha fazla fonksiyonu input olarak alıp, parametre olan bu fonksiyonları, bir önceki fonksiyonunun outputu ile sırayla çalıştırabilecek şekilde ayarlayan ve output olarak bize tek fonksiyon dönen fonksiyonlar, **pipe fonksiyonlardır.**
@@ -61,10 +56,10 @@ const pipe = (...fns) =>  fns.reduce(_pipe );
 ```js
     const add = (a, b, c = 0) => a + b + c;
     const multiply = (a, b) => a * b;
-    const dec = (a) => a - 1; 
+    const dec = (a) => a - 1;
 ```
 
-Bunları hep beraber, comeTogether adlı fonksiyonda pipe yardımı ile  birleştirelim.
+Bunları hep beraber, comeTogether adlı fonksiyonda pipe yardımı ile  birleştirelim yani compose edelim.
 
 ```js
     const comeTogether = pipe(multiply, dec, partial(add, 10, 3));
@@ -84,7 +79,7 @@ Artık bir sürü iş yapan fonksiyonumuzu aşağıdaki şekilde çağırabiliri
 
 
 
-
+_Not: Burada bahsedilen, curry, partial ve pipe fonksiyonlarının içeriğini daha da ayrıntılı biçimde analiz edeceğimiz bir yazı yazmayı planlıyorum. Fakat bu kısıtlı zamanda şimdilik hem kendim için hem de ufak önbilgi edinmek isteyenler için bu kadarını paylaşmak istedim. Yoksa bu adı geçen fonksiyonlar yoktan var olmadı. Bilindik kısaltılmış es6 ile yazılan javascript fonksiyonları  ama ilk bakışta ne olduğu ve anlaşılması zor fakat kullanımı itibari ile standart fonksiyonlar._
 
 Kaynak: [Master the JavaScript Interview: What is Function Composition](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-function-composition-20dfb109a1a0)
 
