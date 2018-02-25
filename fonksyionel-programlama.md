@@ -29,8 +29,10 @@ function double(x){
 }
 
 //es6
-const double = x => x * 2  
+const double = x => x * 2
 ```
+
+`double` fonksiyonu nereden çağrırılırsa çağırılsın, herhangi bir şeye bağımlı olmadan, aynı input'ta aynı sonucu verecektir. `double(5)` her yerde 10 sonucunu verecektir. 10 gördüğünüz yere `double(5)` yazmanız hiçbir şey farkettirmeyecektir. Çünkü double\(5\) bir pure fonksiyondur. Karşı örnek olarak en basitinden `math.random( )` fonksiyonu çağrıldığı her yerde, zaten input almıyor, farklı sonuç verecektir. Dolayısıyla `math.random( )` ' a pure fonksiyon diyemeyiz.
 
 
 
