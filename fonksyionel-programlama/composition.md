@@ -77,6 +77,7 @@ Artık bir sürü iş yapan fonksiyonumuzu aşağıdaki şekilde çağırabiliri
 * `multiply`'dan dönen 8 değerini `dec` aldı ve 1 eksiltti, 7 buldu.
 * `dec`'den dönen 7 değerini `add` fonksiyonu direkt alamadı. Çünkü o çoklu parametreyle çalışan bir fonksiyon olduğu için `partial` fonksiyonunun yardımına ihtiyaç duydu. `partial` fonksiyonu yardımı ile `add` fonksiyonu 7 yi aldı, 10 ve 3 ile toplayıp 20 değerini döndü. 
 
+[source code](http://jsbin.com/fitilob/1/edit?js,output)
 
 
 _Not: Burada bahsedilen, curry, partial ve pipe fonksiyonlarının içeriğini daha da ayrıntılı biçimde analiz edeceğimiz bir yazı yazmayı planlıyorum. Fakat bu kısıtlı zamanda şimdilik hem kendim için hem de ufak önbilgi edinmek isteyenler için bu kadarını paylaşmak istedim. Yoksa bu adı geçen fonksiyonlar yoktan var olmadı. Bilindik kısaltılmış es6 ile yazılan javascript fonksiyonları  ama ilk bakışta ne olduğu ve anlaşılması zor fakat kullanımı itibari ile standart fonksiyonlar._
