@@ -1,6 +1,6 @@
 # FONKSİYONEL PROGRAMLAMA NEDİR
 
-React Native ile ilgili bir içerikte bu konunun ne işi var demeyin sakın. Çünkü yeni javascript dünyasında son 3-4 senedir yazılan kodlar buradaki prensiplere dayanarak yazılmakta. Yazılan kodları anlayabilmek adına, bu prensipler nedir hem okurken, hem de yazarken göz ardı etmemiz gereken bilgiler. Ayrıca Redux ile ilgili bir yazı yazmak istiyordum fakat fonksiyonel programlamaya değinmeden Redux'ı öğrenmeye kalkmak biraz bir şeyler çalışıyor ama nasıl çalışıyor anlamıyorum moduna itiyor insanı ve Redux kullanmanın avantajlarını ve dezavantajlarını tam olarak göremiyoruz. Bu yüzden Redux öğrenmekten çok daha kıymetli olacağını düşündüğüm fonksiyonel programlama ile ilgili bir şeyler karalamak istedim.
+React Native ile ilgili bir içerikte bu konunun ne işi var demeyin sakın. Çünkü yeni javascript dünyasında son 3-4 senedir yazılan kodlar buradaki prensiplere dayanarak yazılmakta. Yazılan kodları anlayabilmek adına, bu prensipler nedir hem okurken, hem de yazarken göz ardı etmememiz gereken bilgiler. Ayrıca Redux ile ilgili bir yazı yazmak istiyordum fakat fonksiyonel programlamaya değinmeden Redux'ı öğrenmeye kalkmak biraz bir şeyler çalışıyor ama nasıl çalışıyor anlamıyorum moduna itiyor insanı ve Redux kullanmanın avantajlarını ve dezavantajlarını tam olarak göremiyoruz. Bu yüzden Redux öğrenmekten çok daha kıymetli olacağını düşündüğüm fonksiyonel programlama ile ilgili bir şeyler karalamak istedim.
 
 Bu seride yazılacak bilgiler [şuradaki](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0) makalenin birebir değil ama kısmen çevirisi sayılabilir.
 
@@ -38,7 +38,7 @@ Pure fonksiyonların bir diğer özelliği, **hiçbir side effect\( yan etkileri
 
 Javascript'te bir objenin argümanları, özellikleri, o objenin referanslarıdır. Eğer bir fonksiyon dışarıdan o objenin referanslarını değiştirirse bu objeyi mutasyona uğratmak yani mutate etmek yani değiştirmek artık ne derseniz deyin, bu durum pure fonksiyonlarda asla olmaması gereken bir durumdur. \( Redux'la beraber çalışırsanız göreceğiniz en keskin kural Redux'ta kullanacağınız reducer'ları pure fonksiyonlardan oluşturmanız gerekmektedir \).
 
-Örneğin; aşağıda kullanılan push methodu mutate bir fonksiyondur. Ve objenin referanslarını değiştirir. Bu istenmeyen bir durum yaratabilir. Kodun tahmin edilebilirliğini ve güvenilirliğini kötü etkileyebilir. 
+Örneğin; aşağıda kullanılan push methodu mutate bir fonksiyondur. Ve objenin referanslarını değiştirir. Bu istenmeyen bir durum yaratabilir. Kodun tahmin edilebilirliğini ve güvenilirliğini kötü etkileyebilir.
 
 ```js
 const addToCart=(cart, item)=>{
@@ -67,7 +67,7 @@ const addToCart=(cart, item)=>{
 }
 ```
 
-Örnek olarak [şuradaki](https://codepen.io/ericelliott/pen/MyojLq) impure fonksiyonu, pure yapmaya çalışabilirsiniz. 
+Örnek olarak [şuradaki](https://codepen.io/ericelliott/pen/MyojLq) impure fonksiyonu, pure yapmaya çalışabilirsiniz.
 
 Bir sonraki yazıda React'ın temellerini oluşturan, composition mantığından yani fonksiyon birleştirmekten bahsedeceğiz.
 
