@@ -12,28 +12,79 @@ Esasında, ortaokul matematiğinde gördüğümüz fog yani bileşke fonksiyonla
 
 c\(x\) = f\(g\(x\)\)
 
-Composition'ın derinlerine dalmadan esas temelleri olan, curry ve partial fonksiyonlar nedir onlara bir göz atalım.
+Fonksiyonları birleştirirken kullanılan diğer temel fonksiyon türlerine göz atalım.
 
 ### Curry, Partial ve Pipe Fonksiyonlar
 
-Bir fonksiyon, input olarak çoklu parametreli bir fonksiyonu alıp, output olarak **tek parametreli bir fonksiyon** dönüyorsa, bu bir **curry fonksiyondur**.
+#### Curry Fonksiyon
 
-Bir fonksiyon, input olarak, bir fonksiyon ve çoklu parametreler alır, output olarak **daha az parametreyle bir fonksiyon** dönüyorsa, bu bir partial fonksiyondur.
+Bir fonksiyon, input olarak bir fonksyion ve çoklu parametre alıp, output olarak **tek parametreli bir fonksiyon** dönüyorsa, bu bir **curry fonksiyondur**.
 
-İki ya da daha fazla fonksiyonu input olarak alıp, parametre olan bu fonksiyonları, bir önceki fonksiyonunun outputu ile sırayla çalıştıran fonksiyonlar da pipe fonksiyonlardır.
+```js
+const curry = fn => (...args) => fn.bind(null, ...args);
+```
 
-**Partial Fonksiyon**
+#### **Partial Fonksiyon**
+
+Bir fonksiyon, input olarak, bir fonksiyon ve çoklu parametreler alır, output olarak **daha az parametreyle bir fonksiyon** dönüyorsa, bu bir **partial fonksiyondur**.
 
 ```js
 const  partial=(fn, …args)=>{ fn.bind(null, …args)  }
 ```
 
-* İlk …args \( rest operator \) gelen parametreleri bundled yapıp array’e dönüştürür
+* İlk …args \( rest operator \) gelen parametreleri bundled yapıp array’e dönüştürür.
 * İkinci …args \( spread operator \) , array’ı sırayla dağıtır
 
-* İlk parametreyi null geçiyoruz, çünkü gelen context’i değiştirmek istemiyoruz. Function dönmesini sağlıyoruz.
+* İlk parametreyi null geçiyoruz, çünkü gelen context’i değiştirmek istemiyoruz. Fonksiyon dönmesini sağlıyoruz.
+
+#### Pipe Fonksiyon
+
+İki ya da daha fazla fonksiyonu input olarak alıp, parametre olan bu fonksiyonları, bir önceki fonksiyonunun outputu ile sırayla çalıştırabilecek şekilde ayarlayan ve output olarak bize tek fonksiyon dönen fonksiyonlar, **pipe fonksiyonlardır.**
+
+```js
+const _pipe = (f, g) => (...args) =>  g(f(...args))
+const pipe = (...fns) =>  fns.reduce(_pipe );
+```
+
+Şimdi terimsel tanımlamaları geçip, bu fonksiyonları nasıl kullanacağız ona bakalım.
+
+İlk önce kullanacağımız standart, fonksiyonlarımızı yazalım.
+
+```js
+    const _pipe = (f, g) => (...args) => g(f(...args))
+    const pipe = (...fns) => fns.reduce(_pipe);
+    const partial = (fn, ...args) => fn.bind(null, ...args);
+```
+
+Şimdi de kullanacağımız pure fonksiyonlarımıza bakalım.
+
+```js
+    const add = (a, b, c = 0) => a + b + c;
+    const multiply = (a, b) => a * b;
+    const dec = (a) => a - 1; 
+```
+
+Bunları hep beraber, comeTogether adlı fonksiyonda pipe yardımı ile  birleştirelim.
+
+```js
+    const comeTogether = pipe(multiply, dec, partial(add, 10, 3));
+```
+
+Artık bir sürü iş yapan fonksiyonumuzu aşağıdaki şekilde çağırabiliriz.
+
+```js
+    const result = comeTogether(2, 4);  // 20
+```
+
+**Sahne arkasında neler olup bitti ?**
+
+* İlk önce `multiply` fonksiyonu, 2 ve 4 ü çarpttı ve 8 buldu.
+* `multiply`'dan dönen 8 değerini `dec` aldı ve 1 eksiltti, 7 buldu.
+* `dec`'den dönen 7 değerini `add` fonksiyonu direkt alamadı. Çünkü o çoklu parametreyle çalışan bir fonksiyon olduğu için `partial` fonksiyonunun yardımına ihtiyaç duydu. `partial` fonksiyonu yardımı ile `add` fonksiyonu 7 yi aldı, 10 ve 3 ile toplayıp 20 değerini döndü. 
 
 
 
 
+
+Kaynak: [Master the JavaScript Interview: What is Function Composition](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-function-composition-20dfb109a1a0)
 
