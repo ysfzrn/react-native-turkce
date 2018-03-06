@@ -29,7 +29,7 @@ Bir componentin state ya da propsunun değişmesiyle, tekrardan render edilmesi 
 
 Bir component DOM'dan çıkarılmak üzereyken çağrılan fonksiyondur.
 
-* componentWillMount
+* componentWillUnmount( )
 
 -----------------------------
 
