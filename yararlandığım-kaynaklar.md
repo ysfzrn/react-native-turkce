@@ -8,6 +8,8 @@
 * [Facebook React Native Community](https://www.facebook.com/groups/react.native.community/?ref=nf_target&fref=nf)
 * [React Rocks](https://react.rocks/)
 * [Twitter List](https://twitter.com/yosooff/lists/statics)
+* [handlebarlabs.com](https://learn.handlebarlabs.com/p/react-native-basics-build-a-currency-converter)
+
 
 #### React Native Resmi Dökümantasyonu {#0a81}
 
@@ -15,7 +17,7 @@ Kendi dökümantasyonu için söyleyecek çok bir şey yok. React Native yazıyo
 
 #### React Native Express {#0a81}
 
-React Native öğrenmeye hızlı bir başlangıç yapmak istiyorsanız, oldukça faydalı bir kaynak. 
+React Native öğrenmeye hızlı bir başlangıç yapmak istiyorsanız, oldukça faydalı bir kaynak.
 
 #### StackOverFlow {#2f40}
 
