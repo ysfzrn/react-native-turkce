@@ -1,7 +1,5 @@
-# STATE YÖNETİMİ
+# State Yönetimi
 
-* [Mobx](/state-yonetimi-yazilacak/mobx.md)
+* [Mobx](mobx.md)
 * Redux
-
-
 

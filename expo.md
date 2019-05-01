@@ -1,4 +1,4 @@
-# EXPO
+# expo
 
 [Exponent](https://expo.io/) ekibinin yaptığı react-native ile online kod yazmayı mümkün kılan [snack.expo projesi](https://snack.expo.io/), react-native yazmak için en hızlı yol.
 
@@ -11,12 +11,5 @@
 
 Expo Projesi, ilk başlayanların react-native'e göz atması, hızlı bir şey denemek adına ya da kod paylaşmak için çok kullanışlı. Ancak internet hızınız düşükse development süreci çok çetrefilli olabilir. Performans sorunlarından dolayı da, şimdilik bu platform üzerinde gerçek bir proje çıkarmayı düşünmeseniz iyi edersiniz.
 
-{% video %}https://www.youtube.com/watch?v=IQI9aUlouMI&feature=youtu.be&t=631{% endvideo %}
-
-
 Not:Sunum videosu gözükmüyorsa, adres çubuğundan **load unsafe script**'i aktif etmelisiniz.
-
-
-
-
 
