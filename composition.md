@@ -18,7 +18,7 @@ Fonksiyonları birleştirirken kullanılan diğer temel fonksiyon türlerine gö
 
 ### Curry Fonksiyon
 
-Bir fonksiyon, input olarak bir fonksyion ve çoklu parametre alıp, output olarak **tek parametreli bir fonksiyon** dönüyorsa, bu bir **curry fonksiyondur**.
+Bir fonksiyon, input olarak bir fonksiyon ve çoklu parametre alıp, output olarak **tek parametreli bir fonksiyon** dönüyorsa, bu bir **curry fonksiyondur**.
 
 ```javascript
 const curry = fn => (...args) => fn.bind(null, ...args);
