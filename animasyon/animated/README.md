@@ -4,7 +4,7 @@ Anlat anlat bitmeyecek, kesin bir hiyerarşisi olmayan, resmi dökümanda dahi t
 
 Animated API özellikle syntax itibariyle karışık gelebilir. Bu dökümanda tüm özellikleriyle bahsedebilmem çok zor. Sadece buraya sınırlı kalamayacağınız için kendi dökümanı hariç önereceğim kaynaklar aşağıdaki gibi;
 
- _\(Bahsedilen tüm kaynaklar_ [_browniefed_](https://github.com/browniefed) _mahlaslı arkadaşa ait\)_
+_\(Bahsedilen tüm kaynaklar_ [_browniefed_](https://github.com/browniefed) _mahlaslı arkadaşa ait\)_
 
 * [İngilizce döküman](http://browniefed.com/react-native-animation-book/api/ANIMATED_SETVALUE.html)
 * [Temel anlamda Animated API egghead eğitim videoları](https://egghead.io/lessons/react-animated-timing-and-easing-to-animate-styles-of-a-react-native-view)
@@ -71,7 +71,7 @@ handleSelect = () => {
 };
 ```
 
-![](../../.gitbook/assets/rnn-animated-1.gif)Oley, setState olmadan tekrar tekrar render ettik. Ama bir saniye hiç animasyona benzer bir tarafı yok bunun :\(
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/rnn-animated-1.gif)Oley, setState olmadan tekrar tekrar render ettik. Ama bir saniye hiç animasyona benzer bir tarafı yok bunun :\(
 
 Animasyonu sağlamak için bize 3 tane animasyon tipi sunuluyor ve bir çok ihtiyacı karşılıyor daha doğrusu ben karşılamadığı bir case görmedim.Bunlar;
 
@@ -95,7 +95,7 @@ Animasyonu sağlamak için bize 3 tane animasyon tipi sunuluyor ve bir çok ihti
   };
 ```
 
-![](../../.gitbook/assets/rnn-animated-2.gif)burada kullandığımız this.state.animValue'ya göre sadece height özelliğini animasyon yaptık. Bununla beraber rengini değiştirip biraz da döndürelim.
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/rnn-animated-2.gif)burada kullandığımız this.state.animValue'ya göre sadece height özelliğini animasyon yaptık. Bununla beraber rengini değiştirip biraz da döndürelim.
 
 Bunun için **interPolation** yapacaz. İşin burasını anlamak çok önemli. Mesela aşağıdaki kodu inceleyerek anlamaya çalışalım;
 
@@ -127,5 +127,5 @@ const customStyle = {
 };
 ```
 
-![](../../.gitbook/assets/rnn-animated-3.gif)Maalesef gif yapmak için kullandığım tool pek animasyonları doğru yansıtamadı. Kodun tamamını canlı olarak [şuradan ](https://snack.expo.io/rk0oekzGb)izleyebilirsiniz. \( [https://snack.expo.io/rk0oekzGb](https://snack.expo.io/rk0oekzGb) \)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/rnn-animated-3.gif)Maalesef gif yapmak için kullandığım tool pek animasyonları doğru yansıtamadı. Kodun tamamını canlı olarak [şuradan ](https://snack.expo.io/rk0oekzGb)izleyebilirsiniz. \( [https://snack.expo.io/rk0oekzGb](https://snack.expo.io/rk0oekzGb) \)
 

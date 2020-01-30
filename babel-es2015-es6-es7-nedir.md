@@ -4,7 +4,7 @@
 
 React Native yazarken biz JavaScript yazıyoruz ama eski tarzda değil. Bizim yazdığımız bazı özel fonksiyonlarımızın \(Map\(\), async, vb\) çalışabilmesi için **Babel** derleyicisine ihtiyacımız var. Babel, JavaScript kodunu derleyen, onu Native platformun anlayacağı dile çeviren temel araç.
 
-### Babel Ayarları ****
+### Babel Ayarları _\*\*_
 
 Babel ayarlarımızı, **.babelrc** konfigurasyon dosyamıza yazdığımız obje tanımlamasıyla yapıyoruz. Bu dosyaya ihtiyacımız olan plugini ekleyip, bu pluginin sunduğu sentaksı, platformun anlayacağı dile çevir diye Babel'e komut veriyoruz.
 
@@ -18,7 +18,7 @@ Eski tarz JavaScript yazmıyoruz demiştik. Kullandığımız yeni tarzımızın
 
 \(Spoiler: Zamanla ECMAScript'in sentaksını görüp nasıl ya, bu fonksiyon mu şimdi gibisinden tepkiler vereceğinize eminim ve bu çok normal ama alıştıkça seviyorsunuz. Eğer sevmezseniz, kasmayın ve siz eski tarzda yazmaya devam edin. Zaten mevcut uygulamaların production hallerinin, hep eski tarzda yazıldığı söyleniyor. Babel kullanmalısınız ama ES6 ve ES7 ile yazmak zorunda değilsiniz. \)
 
-Gelecek bölümde, **ES6, ES7** ve **JSX**  in daha da içine girelim.
+Gelecek bölümde, **ES6, ES7** ve **JSX** in daha da içine girelim.
 
 Babel'in kendi plugin dökümantasyonu: [https://babeljs.io/docs/plugins/\#transform-plugins](https://babeljs.io/docs/plugins/#transform-plugins)
 

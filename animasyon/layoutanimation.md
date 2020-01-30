@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-![](../.gitbook/assets/rnn-layoutanimation-1.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/rnn-layoutanimation-1.gif)
 
 Şimdi LayoutAnimation'ın magic kısmına gelelim.
 
@@ -75,7 +75,7 @@ handleSelect = () => {
 ...
 ```
 
-![](../.gitbook/assets/rnn-layoutanimation-2.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/rnn-layoutanimation-2.gif)
 
 _\(yukarıdaki gif sizi aldatmasın gayet smooth bir animasyon sadece gif de takılma varmış gibi gözüküyor\)_
 
@@ -97,15 +97,15 @@ Burada `LayoutAnimation.spring();` olarak da ekleyebilirdik. Ama illâ hazır an
 
 Şimdi şuradaki örneğe bir göz atalım.
 
-![](../.gitbook/assets/rnn-layoutanimation-3.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/rnn-layoutanimation-3.gif)
 
 Biz de benzer bir örnek yaratalım.
 
-![](../.gitbook/assets/rnn-layoutanimation-4.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/rnn-layoutanimation-4.gif)
 
 Burada tek yaptığımız baştaki koddaki Rectangle'ı component haline getirip, ScrollView içinde map edip, container componentte ki item'ları flexBox kullanarak wrap etmek Animasyonu sağlamak için de LayoutAnimation satırının commentini açıp son haline bakalım.
 
-![](../.gitbook/assets/rnn-layoutanimation-5.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/rnn-layoutanimation-5.gif)
 
 Tabi ki benim yaptığım gif sizi yanıltmasın aslında gayet smooth bir animasyon elde ettik burada. Zaten performans monitorunde UI ve JS tarafınd 60 fps nin altına düşmediğini görebilirsiniz.
 

@@ -4,7 +4,7 @@
 
 Uygulamamızın görseli şöyle olsun.
 
-![](.gitbook/assets/todolist.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/todolist.png)
 
 Global olarak RN cli'yi yüklemediyseniz
 
@@ -36,7 +36,7 @@ IOS için \( Xcode yüklü ise sadece aşağıdaki kodu çalıştır \)
 
 React Native CLI , aşağıdaki gibi bir proje verecek bize.
 
-![](.gitbook/assets/todo1.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/todo1.png)
 
 Burada android ve ios klasörlerimiz var. Olaya native deneyimi yaşatan kısım burası. Başta bahsettiğimiz gibi bu klasörler içinde bize native componentleri React Native, bir köprü ile bize sunuyor. Bu klasörlere nasıl dokunacağımıza sonra bakacağız.
 
@@ -57,9 +57,9 @@ import Main from './src'
 AppRegistry.registerComponent('mytodolist', () => Main);
 ```
 
-Yeni klasör yapımız aşağıdaki gibi oldu, ![](.gitbook/assets/screen-shot-2017-03-11-at-20.39.53.png)
+Yeni klasör yapımız aşağıdaki gibi oldu, ![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-03-11-at-20.39.53.png)
 
 Bir sonraki adımımızda Main componentimizi aşağıdaki gibi düzenlemeye başlayabiliriz. En yukarıdaki görseli elde etmek için biraz flexbox olayına el atalım.
 
-![](.gitbook/assets/screen-shot-2017-03-11-at-20.54.41.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-03-11-at-20.54.41.png)
 

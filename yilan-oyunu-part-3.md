@@ -1,6 +1,6 @@
 # Yılan Oyunu Part 3
 
-Üçüncü bölümün source kodlarına şuradaki branch'den erişebilirsiniz:[ ](https://github.com/ysfzrn/crazysnake/tree/firstpart)[https://github.com/ysfzrn/crazysnake/tree/thirdpart](https://github.com/ysfzrn/crazysnake/tree/thirdpart)![](.gitbook/assets/screen-shot-2017-10-01-at-14.25.18.png)
+Üçüncü bölümün source kodlarına şuradaki branch'den erişebilirsiniz:[ ](https://github.com/ysfzrn/crazysnake/tree/firstpart)[https://github.com/ysfzrn/crazysnake/tree/thirdpart](https://github.com/ysfzrn/crazysnake/tree/thirdpart)![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-10-01-at-14.25.18.png)
 
 İlk olarak gameScreen ekranını registerScreen.js içinde register edelim.
 
@@ -59,7 +59,7 @@ export default class App {
 
 Aşağıdaki gibi board'u oluşuralım.
 
-![](.gitbook/assets/screen-shot-2017-10-02-at-03.00.13.png)gameStore'a dönelim ve oyunun nasıl state'lere ihtiyacı olduğuna bakalım.
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-10-02-at-03.00.13.png)gameStore'a dönelim ve oyunun nasıl state'lere ihtiyacı olduğuna bakalım.
 
 ```javascript
 "use strict";
@@ -125,7 +125,7 @@ export default Segment;
 
 Şimdi yılanımızı, gameStore'daki snake array'ini map ederek board'umuzun içine koyalım.
 
-![](.gitbook/assets/screen-shot-2017-10-02-at-03.19.41.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-10-02-at-03.19.41.png)
 
 ## Peki bu yılan nasıl hareket edecek ?
 
@@ -227,11 +227,11 @@ componentDidMount() {
 ...
 ```
 
-![](.gitbook/assets/snaketest2.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/snaketest2.gif)
 
-Şimdi yön kontrollerini ekleyelim. Yön kontrollerinin mantığı, ilk bölümde belirttiğimiz gibi eski Nokia telefonlarda 3 ve 7 tuşlarıyla oynar gibi olacak. Sağdaki yön tuşu sağa ve yukarı götürecek, soldaki yön tuşu sola ve aşağı götürecek. Bunun için gameStore'a 2 tane daha action ekleyelim, handleRightButton ve handleLeftButton.![](.gitbook/assets/screen-shot-2017-10-02-at-04.28.18.png)Daha sonra gameScreen ekranına da butonları ekleyelim.
+Şimdi yön kontrollerini ekleyelim. Yön kontrollerinin mantığı, ilk bölümde belirttiğimiz gibi eski Nokia telefonlarda 3 ve 7 tuşlarıyla oynar gibi olacak. Sağdaki yön tuşu sağa ve yukarı götürecek, soldaki yön tuşu sola ve aşağı götürecek. Bunun için gameStore'a 2 tane daha action ekleyelim, handleRightButton ve handleLeftButton.![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-10-02-at-04.28.18.png)Daha sonra gameScreen ekranına da butonları ekleyelim.
 
-![](.gitbook/assets/snaketest3.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/snaketest3.gif)
 
 Yılan, özgürce hareket etmeye başladı. Şimdi bu yılanı doyurmak için board'da random şekilde belirecek olan elma componentini yaratalım. Bunun için gameStore'da aşağıdaki işlemleri yapalım. elma board içinde segmentRate'in katları \( yani 10'nun katları \) koordinatlarda belirmesi lazım ki, yılanımız elmayı yiyebilsin.
 
@@ -289,7 +289,7 @@ Yılan elmayı yedi mi kontrolü ekleyelim. Bu methodu yılan her bir segment il
   }
 ```
 
-![](.gitbook/assets/snaketest4.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/snaketest4.gif)
 
 Şimdi yılan kendi kuyruğuna çarptığında oyunun bitmesini sağlayalım. Bunun için handleMoveSnake action methoduna bir kontrol daha ekleyelim. Burada da yapacağımız yılanın başı yani ilk segment, yılanın başka herhangi segmentiyle aynı koordinat değerlerine sahip olup olmadığını kontrol etmek. Eğer kuyruğuna çarpmışsa, requestAnimationFrame'i, cancelAnimationFrame ile sonlandıracağız. Elde edilen score, var olan en yüksek skordan daha büyük ise telefon hafızasına AsyncStorage ile yeni skoru set edeceğiz. Ve `NavigationStore.handleChangeRoute('gameOverScreen');` ile de gameOver ekranına yönlendirme yapacağız.
 

@@ -68,7 +68,7 @@ halfES6(8);  //4
 halfES6_2(10); //5
 ```
 
-\[[http://jsbin.com/docuhuy/2/embed?live\]\(http://jsbin.com/docuhuy/2/embed?live"&gt;JS](http://jsbin.com/docuhuy/2/embed?live]%28http://jsbin.com/docuhuy/2/embed?live">JS)\)
+\[\[[http://jsbin.com/docuhuy/2/embed?live\]\(http://jsbin.com/docuhuy/2/embed?live"&gt;JS\]\(http://jsbin.com/docuhuy/2/embed?live\]%28http://jsbin.com/docuhuy/2/embed?live"&gt;JS\)\](http://jsbin.com/docuhuy/2/embed?live]%28http://jsbin.com/docuhuy/2/embed?live">JS]%28http://jsbin.com/docuhuy/2/embed?live]%28http://jsbin.com/docuhuy/2/embed?live">JS%29\)\)
 
 ## Modüller
 

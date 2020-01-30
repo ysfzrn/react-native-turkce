@@ -31,7 +31,7 @@ Bir elemente drag-drop özelliği eklemek istediğimizde, yukarıdaki kod parça
 
 Kodun tamamı için [https://github.com/ysfzrn/react-native-panresponder-demo](https://github.com/ysfzrn/react-native-panresponder-demo)
 
-![](.gitbook/assets/digdagdoe.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/digdagdoe.gif)
 
 Görevimizi anladıysak şimdi yapılacakları adım adım sıralayalım.
 
@@ -116,7 +116,7 @@ export default SharedStyle
 
 Tekrar app.js' e dönelim. Bir adet header componenti ve Board'umuz için bir boardContainer yaratalım.boardContainer style'a dikkat edin. SharedStyle'da verdiğimiz **width** ve **borderWidth** değerlerin 3 katının toplamını verdik ki boardContainer'ımız tam anlamıyla karelerimiz için kapsayıcı olsun.
 
-![](.gitbook/assets/screen-shot-2017-05-07-at-02.32.12.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-05-07-at-02.32.12.png)
 
 Önce bir tane **Hole.js** isimli bir component yapıp holes state'inde tuttuğumuz datayı görselleştirmeye başlayalım.
 
@@ -156,15 +156,15 @@ const styles = StyleSheet.create({
 export default Hole;
 ```
 
-![](.gitbook/assets/screen-shot-2017-05-07-at-02.44.57.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-05-07-at-02.44.57.png)
 
 **boardContainer tam bir kapsayıcı olmuşa benzemiyor. Bunun için boardContainer'a, flexWrap i eklememiz gerekiyor.**
 
-![](.gitbook/assets/screen-shot-2017-05-07-at-02.46.45.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-05-07-at-02.46.45.png)
 
 Sıra geldi karelerimizin sayfadaki pozisyonlarını bulmaya. Bunun için react-native'de birkaç yöntem var. Ama en pratiği her element yaratıldığında tetiklenen **onLayout** methodu.
 
-![](.gitbook/assets/screen-shot-2017-05-07-at-02.52.52.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-05-07-at-02.52.52.png)
 
 Bir şeyler ters gidiyor. onLayout methodunu çağırdık koordinatları aldık ama bu koordinatlar hole componentin kendi üstündeki View'e göre boardContainer'a göre değerleri. Bize sayfaya göre olanı lazım. Bunun için bizim boardContainer'ın koordinatlarına da ihtiyacımız var. app.js'e dönüp boardContainer'ın koordinatlarını alıp, hole componentin her birine bunları gönderelim. onLayout merhodu component mount edildikten sonra çağrıldığı için bir render koşulu ekleyelim. mainx ve mainy belli değil ise ekranda bir loader gösterelim.
 
@@ -196,7 +196,7 @@ Bir şeyler ters gidiyor. onLayout methodunu çağırdık koordinatları aldık 
 
 Şimdi hole.js componentimizde koordinat bulma işlemine mainx ve mainy props'larını da katalım. Aşağıdaki koordinatlar gayet doğru gözüküyor.
 
-![](.gitbook/assets/screen-shot-2017-05-07-at-03.50.29.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-05-07-at-03.50.29.png)
 
 Yukarıda karelere ait array'i yaratırken bir başlangıç objesi set etmiştik ve onda pozisyon değereri {x:0, y:0} şeklindeydi. Şimdi o state'deki array'i değiştirelim.Bunun için hole.js içinde handleLayout methodun da üstte kullanılmak üzere bir function props fırlatalım.
 
@@ -211,7 +211,7 @@ Yukarıda karelere ait array'i yaratırken bir başlangıç objesi set etmiştik
   };
 ```
 
-Object spread yardımı ile holeLayout methodunda state'imizi güncelleyelim.![](.gitbook/assets/screen-shot-2017-05-07-at-04.00.26.png)
+Object spread yardımı ile holeLayout methodunda state'imizi güncelleyelim.![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-05-07-at-04.00.26.png)
 
 ## 2. PanResponder Element Yaratalım
 
@@ -337,13 +337,13 @@ this.state.pan değiştikçe değişecek olan style yapıp, View'den oluşan bal
 
 Şimdi örnek tek bir Ball componentini app.js' e import edip neler oluyor bir bakalım.
 
-![](.gitbook/assets/digdagdoe2.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/digdagdoe2.gif)
 
-Yine bir şeyler ters gidiyor. İlk defa sürüklerken bir sorun olmuyor fakat ikinci kez topa dokunduğumuzda topun pozisyonu uzaklara kaçıveriyor. Bunu çözmek için 2 tane global değişken yaratacağız **\(this.\_animatedValueX, this.animatedValueY\)**  ve bu iki değişkeni dinleyen listenerlarımız olacak. Topu son bıraktığımız yerin değerini kendilerinde tutup, ikinci kez dokunduğumuzda tekrar tetiklenen, **onPanResponderGrant** methodunda bunlarda tuttuğumuz değerleri **this.state.pan** state'ine atacağız. O da dolayısıyla elementin style'ını update edecek.
+Yine bir şeyler ters gidiyor. İlk defa sürüklerken bir sorun olmuyor fakat ikinci kez topa dokunduğumuzda topun pozisyonu uzaklara kaçıveriyor. Bunu çözmek için 2 tane global değişken yaratacağız **\(this.\_animatedValueX, this.animatedValueY\)** ve bu iki değişkeni dinleyen listenerlarımız olacak. Topu son bıraktığımız yerin değerini kendilerinde tutup, ikinci kez dokunduğumuzda tekrar tetiklenen, **onPanResponderGrant** methodunda bunlarda tuttuğumuz değerleri **this.state.pan** state'ine atacağız. O da dolayısıyla elementin style'ını update edecek.
 
 _Listenerları componentWillUnmount'da remove etmeyi unutmayın_
 
-![](.gitbook/assets/digdagdoe3.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/digdagdoe3.gif)
 
 Şimdi tüm toplarımızı map edelim
 
@@ -356,7 +356,7 @@ _Listenerları componentWillUnmount'da remove etmeyi unutmayın_
 ...
 ```
 
-![](.gitbook/assets/screen-shot-2017-05-07-at-05.23.26.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/screen-shot-2017-05-07-at-05.23.26.png)
 
 ## 3-Hover Effect Ekleme
 
@@ -444,7 +444,7 @@ Burada ayrıntı belki de algoritmayı kurarken yaptığım bir hata, sayfadaki 
 
 Şimdi this.state.holes state'i sorumlu olduğu kareye kendi üzerinde neler döndüğünü anlatabilir. Kareye ona göre style ekleyelim.
 
-![](.gitbook/assets/digdagdoe4.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/digdagdoe4.gif)
 
 ## 4-Drop - Release - Bırakma İşlemi
 
@@ -543,9 +543,9 @@ Yukarıdaki algoritma çok basit. for döngüsü ile ilk önce hangi karenin üs
 
 hole ve ball componentlerimizin style'larının yeni state'e göre şekil alması lazım. Onları ekleyelim. İlk önce hole componentine bakalım. Hovering ise hoverColor, filled ise toptan aldığı renk, hiçbiri değilse beyaz gözükecek. \( Ne dersiniz bu yöntemi biraz değiştirerek basit bir kalemle çizim uygulaması yapılabilir mi ? \)
 
-![](.gitbook/assets/digdagdoe5.gif)Şimdi ball.js componentine sen seçildinse ortadan kaybol diyelim.
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/digdagdoe5.gif)Şimdi ball.js componentine sen seçildinse ortadan kaybol diyelim.
 
-![](.gitbook/assets/digdagdoe6.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/digdagdoe6.gif)
 
 Şimdi top bırakıldığında boardContainer'da değilse yada dolu bir karenin üzerindeyse yerine geriye dönmesini isteyelim. İşin burası çok basit sadece release methoduna Animated fonksiyonu ekleyeceğiz.
 
@@ -567,7 +567,7 @@ handleRelease = (evt, gestureState) => {
 
 Animated.spring'de diyoruz ki; top bırakıldığında this.state.pan başlangıç değerini {x:0 , y:0} değerine çek. Bunu da kendine özel animasyonunla yap.
 
-![](.gitbook/assets/digdagdoe7.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/digdagdoe7.gif)
 
 Bu kadar, kodun tamamı için [https://github.com/ysfzrn/react-native-panresponder-demo](https://github.com/ysfzrn/react-native-panresponder-demo)
 

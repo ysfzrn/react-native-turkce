@@ -41,7 +41,7 @@ class LinkButton extends React.Component {
 }
 ```
 
-![](.gitbook/assets/desktop22.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/desktop22.png)
 
 Bir önceki sayfadaki ekranımızı, propslar yardımı ile jsbin de composition yaparak oluşturalım.  
 [source code](http://jsbin.com/mebesol/12/edit?js,output)
@@ -58,5 +58,5 @@ Burada herhangi bir asenkron state değişimi sorunu ile karşılaşmamanız ad�
 
 Burada Container componentimizdeki state timer yardımıyla count state'ini her bir saniyede bir arttırıp state'i altındaki componentlere props olarak veriyor. **FlexItem** componenti de çift sayılarda kendi count propsunu , tekli sayılarda da children propsunu göstererek bir davranış sergiliyor.
 
-Sonuç olarak burada bizim yaptığımız  ****yukarıdan aşağıya doğru senkron bir state yönetimini göstermekti. Çok karmaşık işlemlerde state yönetimini daha önceden de söylediğimiz gibi Redux ile React Native yazarak yapmaya çalışacağız. Ama eğer siz state yönetiminde herhangi bir sorun yaşamıyorsanız Redux ya da Mobx gibi state yönetim sistemine ihtiyacınız yok.
+Sonuç olarak burada bizim yaptığımız _\*\*_yukarıdan aşağıya doğru senkron bir state yönetimini göstermekti. Çok karmaşık işlemlerde state yönetimini daha önceden de söylediğimiz gibi Redux ile React Native yazarak yapmaya çalışacağız. Ama eğer siz state yönetiminde herhangi bir sorun yaşamıyorsanız Redux ya da Mobx gibi state yönetim sistemine ihtiyacınız yok.
 

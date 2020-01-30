@@ -12,7 +12,7 @@ Linux için kurulum yapmak için öncelikle terminal'i \(Türkçe sistemlerde u�
 
 `sudo apt-get install -y nodejs npm`
 
-![NPM Kurulumu](.gitbook/assets/npmvenodejskurulum.png)
+![NPM Kurulumu](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/npmvenodejskurulum.png)
 
 Daha sonra npm paketlerimizi yüklerken nodejs'in çağrılırken sorun çıkarmaması için şu komutu terminalde çalıştıralım. Bu komut node ve nodejs ile hard link adı verilen bir ilişki \(Windows ortamındaki kısa yol gibi düşünün\) oluşturarak iki komut çağrıldığındada aynı şekilde çalışmasını sağlar.
 
@@ -24,7 +24,7 @@ React Native komutlarımınızı çalıştığımız paketi yüklemek için aşa
 
 `sudo npm install -g react-native-cli`
 
-![](.gitbook/assets/linuxreactnativecli.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxreactnativecli.png)
 
 ## 2 - JDK Kurulumu
 
@@ -68,31 +68,31 @@ Sıra geldi Scriptimizi çalıştırmaya... Script çalışırken söyleyene kad
 
 `./studio.sh`
 
-Şimdi karşımıza çıkan ekranlarda üzerini sarı ile çizdiğim yerleri seçerek devam ediyoruz. ![](.gitbook/assets/linuxandroidstudiosettinglocation.png)
+Şimdi karşımıza çıkan ekranlarda üzerini sarı ile çizdiğim yerleri seçerek devam ediyoruz. ![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxandroidstudiosettinglocation.png)
 
-![](.gitbook/assets/linuxandroidstudiosetup1.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxandroidstudiosetup1.png)
 
-![](.gitbook/assets/linuxandroidstudiosetup2.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxandroidstudiosetup2.png)
 
-![](.gitbook/assets/linuxandroidstudiosetup3.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxandroidstudiosetup3.png)
 
-![](.gitbook/assets/linuxandroidstudiosetup4.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxandroidstudiosetup4.png)
 
-![](.gitbook/assets/linuxandroidstudiosetup5.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxandroidstudiosetup5.png)
 
-![](.gitbook/assets/linuxandroidstudiosetup6.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxandroidstudiosetup6.png)
 
 Bu adım internetten veri indirdiği için uzun sürebilir lütfen sabırlı olun.
 
-![](.gitbook/assets/linuxandroidstudiosetup7.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxandroidstudiosetup7.png)
 
 Şimdi terminal penceresini kapatabilirsiniz. Çıkan ekranda Configure --&gt; Create Desktop Entry yoluna tıklayınız. Daha sonra şifrenizi soran pencereye şifrenizi girip ok butonuna basınız.
 
-![](.gitbook/assets/linuxandroidstudiosetup8.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxandroidstudiosetup8.png)
 
 Artık Android Studio'yu kullanmaya başlayabiliriz. Uygulamalar arasında "Android Studio" diye aratın ve Android Studio logosuna çift tıklayın. Daha sonra Configure --&gt; SDK Manager yoluna tıklayın. Çıkan ekranda önce resimdeki "Show Pakage Details", daha sonra diğer üzeri fosforlanmış yerlere ve sonra ok butonuna tıklayın.
 
-![](.gitbook/assets/linuxsdkmanager.png)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxsdkmanager.png)
 
 Şimdi Android değişkenlerini sistemimize ekleyelim. Sistemimize her açtığımızada bunu yapmamıza gerek kalmasın diye tüm değişkenlerimizi export etmesi '$HOME/.bash\_profile' dosyasına yazmamız gerek. Öncelikle $HOME/.bash\_profile dosyamızı açmak için komut satırına şu kodu girelim.
 
@@ -106,13 +106,13 @@ Daha sonra ise aşağıdaki komutları kopyalıyarak terminale yapıştıralım.
 
 `export PATH=$PATH:$ANDROID_HOME/platform-tools`
 
-![](.gitbook/assets/linuxpathayari.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxpathayari.gif)
 
 ## 4 - AVD \(Android Virtual Devices\) Kurulumu
 
 Öncelikle yeni bir proje oluşturup Android Studio ana ekranına ulaşıyoruz. Daha sonra AVD simgesine tıklayıp yeni bir avd oluşturuyoruz. Bu yazının yazılıdığı tarih de Android API 27 seviyeli cihazlara React Native desteği verildiği için ben bu seviyede bir AVD oluşturuyorum. Eğer bir sürüm bazlı bir sorun yaşarsanız Android 6.0 \(API 23\) bir AVD ile React Native uygulamanızı ayağa kaldırmayı deneyin. Ben kurulum esnasında API 27'yi bilgisayarıma indirdiğim için burada indirme yapmadan direk geçebildim. Eğer yaratmak istediğiniz sanal cihaz seviyeesinin üzerinde 'Download' yazısı varsa onun üzerine tıklayıp indirmelisiniz.
 
-![](.gitbook/assets/linuxavdkurulumu.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxavdkurulumu.gif)
 
 ## 5 - İlk Projemizi Oluşturalım
 
@@ -126,7 +126,7 @@ Daha sonra ise aşağıdaki komutları kopyalıyarak terminale yapıştıralım.
 
 AVD'nin açılması sisteminizin özelliklerine göre uzun sürebilir ana ekran gelene kadar bekleyin. Performans için bilgisayarınızda çalışan gereksiz programları kapatın. AVD çalışmaya başladıktan sonra Android Studio'yu kapatmanız sisteminizi hızlandıracaktır.
 
-![](.gitbook/assets/linuxavdcalistirma.gif)
+![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/linuxavdcalistirma.gif)
 
 AVD tamamen açıldıysa artık projemizi attach edebiliriz. Bunun için terminale şu komutu yazılım.
 

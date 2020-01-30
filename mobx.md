@@ -10,7 +10,7 @@ Mobx'in arkasında yatan mantık da aynı. Uygulamanın state'inde herhangi bir 
 
 Şimdi mobx'de ki temel kavramları basit bir TODO List örneğiyle açıklayalım.Belki TODO List örneği görmekten bir kısmınıza kusma geliyor olabilir ama söz bundan sonraki örneğimizi bir react-native, mobx ve react-native-navigation kullanarak bir oyun geliştirerek yapacağız.
 
-Flux ve redux da olduğu gibi, MobX'de de action'lar var olan state'i değiştirmek için varlar. Ama redux'da olduğu gibi state değişikliklerini reducer üzerinden değil, **direkt action fonksiyonunun içinde yapıyoruz.** ![](.gitbook/assets/mobxdiagram.png)
+Flux ve redux da olduğu gibi, MobX'de de action'lar var olan state'i değiştirmek için varlar. Ama redux'da olduğu gibi state değişikliklerini reducer üzerinden değil, **direkt action fonksiyonunun içinde yapıyoruz.** ![](https://github.com/ysfzrn/react-native-turkce/tree/37853d6e5cb460c3118cb5ab0091ea8bf845ba4d/.gitbook/assets/mobxdiagram.png)
 
 ## React Native - Mobx Entegrasyonu
 

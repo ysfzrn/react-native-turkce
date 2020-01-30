@@ -63,7 +63,7 @@ Component mount edildiğinde apar topar çağrılan methodumuz. DOM'a etki eden 
 
 ### static getDerivedStateFromProps\( props, state \)
 
-Bu methodumuz, component her yeni props aldığında çağrılır. \( render methodundan önce \) static bir fonksiyon olduğu için component'in diğer objelerine erişemez fakat props ve state diye iki parametreye sahip olduğu için, component'in geçmiş propslarını constructor methodunda state'e atıp, yeni gelen props'ları, props parametresi ile karşılaştırıp, kendi mantığınıza göre state'i güncelleyip, component'in tekrar render edilmesini ya da edilmemesini sağlayabilirsiniz. \( Diğer methodlara göre biraz karışık, bir örnekle açıklayalım \)  
+Bu methodumuz, component her yeni props aldığında çağrılır. \( render methodundan önce \) static bir fonksiyon olduğu için component'in diğer objelerine erişemez fakat props ve state diye iki parametreye sahip olduğu için, component'in geçmiş propslarını constructor methodunda state'e atıp, yeni gelen props'ları, props parametresi ile karşılaştırıp, kendi mantığınıza göre state'i güncelleyip, component'in tekrar render edilmesini ya da edilmemesini sağlayabilirsiniz. \( Diğer methodlara göre biraz karışık, bir örnekle açıklayalım \)
 
 ```javascript
 static getDerivedStateFromProps(props, state){
@@ -98,9 +98,9 @@ shouldComponentUpdate( nextProps, nextState ){
 
 ### getSnapshotBeforeUpdate\(prevProps, prevState\)
 
-Her props alındığında bu method çağrılır \(render methodundan sonra\). Bu method componentDidUpdate ile kullanılmalıdır ve boolean değer dönmelidir. Bu methodun döndüğü değer componentDidUpdate'in 3. parametresi olacaktır. 
+Her props alındığında bu method çağrılır \(render methodundan sonra\). Bu method componentDidUpdate ile kullanılmalıdır ve boolean değer dönmelidir. Bu methodun döndüğü değer componentDidUpdate'in 3. parametresi olacaktır.
 
-Aşağıdaki örnekte, getSnapshotBeforeUpdate methodundaki koşula göre true veya false değeri dönüyor. ComponentDidUpdate methodu da  getSnapshotBeforeUpdate methodundan gelen snapshot parametresi yardımıyla gerekli aksiyonu alıyor. Özellikle bir api'nin sonucuna göre animasyonu harekete geçirme için çok kullanışlı ve performanslı bir yöntem
+Aşağıdaki örnekte, getSnapshotBeforeUpdate methodundaki koşula göre true veya false değeri dönüyor. ComponentDidUpdate methodu da getSnapshotBeforeUpdate methodundan gelen snapshot parametresi yardımıyla gerekli aksiyonu alıyor. Özellikle bir api'nin sonucuna göre animasyonu harekete geçirme için çok kullanışlı ve performanslı bir yöntem
 
 ```javascript
 getSnapshotBeforeUpdate = (prevProps) => {
@@ -121,8 +121,6 @@ getSnapshotBeforeUpdate = (prevProps) => {
     }
   };
 ```
-
-
 
 ### componentDidUpdate\( prevProps, prevState, snapShot \)
 
