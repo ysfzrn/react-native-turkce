@@ -8,7 +8,7 @@ React Native yazarken biz JavaScript yazıyoruz ama eski tarzda değil. Bizim ya
 
 Babel ayarlarımızı, **.babelrc** konfigurasyon dosyamıza yazdığımız obje tanımlamasıyla yapıyoruz. Bu dosyaya ihtiyacımız olan plugini ekleyip, bu pluginin sunduğu sentaksı, platformun anlayacağı dile çevir diye Babel'e komut veriyoruz.
 
-Örneğin, React Native yazarken biz [babel-preset-react-native](https://github.com/facebook/react-native/tree/master/babel-preset) pluginini kullanıyoruz. Bu bizim React Native kodumuzu, IOS ve Android simulatörlerimizin anlayacağı dile çeviriyor. Ekstra plugin kullanmak istiyorsak .babelrc dosyamıza eklemeler yapabiliriz.
+Örneğin, React Native yazarken biz [metro-react-native-babel-preset](https://www.npmjs.com/package/metro-react-native-babel-preset) pluginini kullanıyoruz. Bu bizim React Native kodumuzu, IOS ve Android simulatörlerimizin anlayacağı dile çeviriyor. Ekstra plugin kullanmak istiyorsak .babelrc dosyamıza eklemeler yapabiliriz.
 
 Gerçi react native projesine başlarken .babelrc dosyasını otomatik olarak bize veriyor. Ve çoğu durumda bu dosyayı açıp da değiştirmeye ihtiyacımız olmayacak.
 
